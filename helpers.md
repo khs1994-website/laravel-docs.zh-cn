@@ -566,7 +566,7 @@ Laravel 包含各种各样的全局「辅助」PHP 函数，这些方法中的�
 <a name="method-kebab-case"></a>
 #### `kebab_case()` {#collection-method}
 
-`lebab_case` 函数将给定的字符串转换为 `短横线隔开式`：
+`kebab_case` 函数将给定的字符串转换为 `短横线隔开式`：
 
     $value = kebab_case('fooBar');
 
@@ -762,7 +762,7 @@ Laravel 包含各种各样的全局「辅助」PHP 函数，这些方法中的�
 
 使用 HTTPS 协议生成资源文件的 URL:
 
-    echo secure_asset('foo/bar.zip', $title, $attributes = []);
+    echo secure_asset('foo/bar.zip');
 
 <a name="method-route"></a>
 #### `route()` {#collection-method}
@@ -959,7 +959,7 @@ Laravel 包含各种各样的全局「辅助」PHP 函数，这些方法中的�
 <a name="method-logger"></a>
 #### `logger()` {#collection-method}
 
-`logger` 函数可以将一个 `debug` 级别的消息写入到乳汁中：
+`logger` 函数可以将一个 `debug` 级别的消息写入到日志中：
 
     logger('Debug message');
 
@@ -1090,10 +1090,11 @@ Laravel 包含各种各样的全局「辅助」PHP 函数，这些方法中的�
 | [Seven Du](https://github.com/medz) | <img class="avatar-66 rm-style" src="https://avatars3.githubusercontent.com/u/5564821?s=300"> | 翻译 | 基于 Laravel 的社交开源系统 [ThinkSNS+](https://github.com/slimkit/thinksns-plus) 欢迎 Star。  |
 
 
+
 --- 
 
 > {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
 > 
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org] 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
+> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
 > 
-> 文档永久地址： http://d.laravel-china.org
+> 文档永久地址： https://d.laravel-china.org

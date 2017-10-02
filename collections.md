@@ -1,4 +1,4 @@
-# 集合
+# Laravel 的集合 Collection
 
 - [简介](#introduction)
     - [创建集合](#creating-collections)
@@ -199,7 +199,7 @@
 <a name="method-collapse"></a>
 #### `collapse()` {#collection-method}
 
-`collapse` 方法将多个数组合并成一个：
+`collapse` 方法将多个数组的集合合并成一个数组的集合：
 
     $collection = collect([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
 
@@ -1443,7 +1443,7 @@
 <a name="method-union"></a>
 #### `union()` {#collection-method}
 
-`unique` 方法将给定的数组添加到集合中。如果给定的数组中含有与原集合一样的键，则原集合的值不会被改变：
+`union` 方法将给定的数组添加到集合中。如果给定的数组中含有与原集合一样的键，则原集合的值不会被改变：
 
     $collection = collect([1 => ['a'], 2 => ['b']]);
 
@@ -1666,3 +1666,18 @@
     $users = User::where('group', 'Development')->get();
 
     return $users->sum->votes;
+
+## 译者署名
+
+| 用户名 | 头像 | 职能 | 签名 |
+|---|---|---|---|
+| [@逸侨](http://yiqiao.me)  | <img class="avatar-66 rm-style" src="https://avatars0.githubusercontent.com/u/6688591">  |  翻译  | 学的慢，但一直再走~。QQ 群：[319347221](//shang.qq.com/wpa/qunwpa?idkey=ee3bb560b41ebdb59188263f353926494f1248c7137d3338dda180fa1ce25354) 欢迎大家加入，个人Blog：[yiqiao](http://yiqiao.me) |
+| [@JokerLinly](https://laravel-china.org/users/5350)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg">  |  Review  | Stay Hungry. Stay Foolish. |
+
+---
+
+> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
+>
+> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
+>
+> 文档永久地址： https://d.laravel-china.org

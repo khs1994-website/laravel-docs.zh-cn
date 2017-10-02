@@ -1,4 +1,4 @@
-# Artisan 控制台
+# Laravel 的 Artisan 命令行工具
 
 - [简介](#introduction)
 - [编写命令](#writing-commands)
@@ -43,7 +43,7 @@ Artisan 是 Laravel 自带的命令行接口，它提供了许多实用的命令
 <a name="generating-commands"></a>
 ### 生成命令
 
-要创建一个新的命令，可以使用 Artisan 命令 `make:command`。这个命令会在 `app/Console/Commands` 目录中创建一个新的命令类。 不必担心应用中不存在这个目录，因为它会在你第一次运行 Artisan 命令 `ake:command` 时创建。生成的命令会包括所有命令中默认存在的属性和方法：
+要创建一个新的命令，可以使用 Artisan 命令 `make:command`。这个命令会在 `app/Console/Commands` 目录中创建一个新的命令类。 不必担心应用中不存在这个目录，因为它会在你第一次运行 Artisan 命令 `make:command` 时创建。生成的命令会包括所有命令中默认存在的属性和方法：
 
     php artisan make:command SendEmails
 
@@ -457,3 +457,12 @@ Artisan 是 Laravel 自带的命令行接口，它提供了许多实用的命令
 | 用户名 | 头像 | 职能 | 签名 |
 | --- | --- | --- | --- |
 | [@laravelleon](https://laravel-china.org/users/18113) | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/18113_1503316311.png?imageView2/1/w/100/h/100"> | 翻译 | You may delay , but the time will not . [@Leonzai](https://github.com/leonzai/) at Github |
+
+
+---
+
+> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
+>
+> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
+>
+> 文档永久地址： https://d.laravel-china.org

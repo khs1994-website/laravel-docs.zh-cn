@@ -66,6 +66,7 @@ Laravel 支持 SQL Server 数据库; 无论以何种方式, 您都需要将数�
         'write' => [
             'host' => '196.168.1.2'
         ],
+        'sticky'    => true,
         'driver'    => 'mysql',
         'database'  => 'database',
         'username'  => 'root',
@@ -78,6 +79,10 @@ Laravel 支持 SQL Server 数据库; 无论以何种方式, 您都需要将数�
 注意，在上面的示例中，配置数组中添加了两个键 : `read` 和 `write` 。这两个键都包含了一个数组，键的值为: `host` 。`read` 和 `write` 连接的其余配置都在 `mysql` 这个主数组里面。
 
 你只需要把项目放在 `read` 和 `write` 数组中，除非你想要覆盖主数组的值。所以，在这种情况下，`192.168.1.1` 将用作「读」连接的主机，而 `192.168.1.2` 将用于「写」连接。这两个连接会共享在 `mysql` 主数组中的配置。如：数据库的凭证，前缀，字符集，以及其他的选项。
+
+**`sticky` 选项**
+
+`sticky` 是一个可选的选项，它的具体作用是：若在当前的请求周期内，数据库曾经被写入过一些数据，`sticky` 选项会立即将这些数据读出来。如果 `sticky` 选项是 `true`,而且在当前的请求周期内对数据看执行过 ”写入“ 操作，那么任何 "读取" 的操作都会使用「写」连接。这使得任何在同一请求周期写入的数据都会被立刻读取。这个取决于这个选项的作用是否符合你的程序的期望。
 
 <a name="using-multiple-database-connections"></a>
 
@@ -244,3 +249,11 @@ Laravel 支持 SQL Server 数据库; 无论以何种方式, 您都需要将数�
 | 用户名 | 头像 | 职能 | 签名 |
 |---|---|---|---|
 | [@孤雪飘寒](https://laravel-china.org/users/15752)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/15752_1493141445.jpeg">  |  翻译  | 全桟工程师，[Github](https://github.com/piaohan)，[CSDN](http://blog.csdn.net/msmile_my)|
+
+--- 
+
+> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
+> 
+> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
+> 
+> 文档永久地址： https://d.laravel-china.org

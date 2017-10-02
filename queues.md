@@ -138,8 +138,8 @@ Laravel 队列为不同的后台队列服务提供统一的 API，例如 Beansta
         public function handle(AudioProcessor $processor)
         {
             // Process uploaded podcast...
-        
-}    }
+        }
+    }
 
 注意，在这个例子中，我们在任务类的构造器中直接传递了一个 [Eloquent 模型](/docs/{{version}}/eloquent)。因为我们在任务类里引用了 `SerializesModels` 这个 trait，使得 Eloquent 模型在处理任务时可以被优雅地序列化和反序列化。如果你的队列任务类在构造器中接收了一个 Eloquent 模型，那么只有可识别出该模型的属性会被序列化到队列里。当任务被实际运行时，队列系统便会自动从数据库中重新取回完整的模型。这整个过程对你的应用程序来说是完全透明的，这样可以避免在序列化完整的 Eloquent 模式实例时所带来的一些问题。
 
@@ -212,7 +212,7 @@ Laravel 队列为不同的后台队列服务提供统一的 API，例如 Beansta
 <a name="job-chaining"></a>
 ### 工作链
 
-工作连允许你指定应该按顺序运行的队列列表。如果一个任务失败了，则其余任务将不会运行。你可以在分发任务的时候使用 `withChain` 方法来执行具有工作链的队列任务。
+工作链允许你指定应该按顺序运行的队列列表。如果一个任务失败了，则其余任务将不会运行。你可以在分发任务的时候使用 `withChain` 方法来执行具有工作链的队列任务。
 
     ProcessPodcast::withChain([
         new OptimizePodcast,
@@ -642,3 +642,12 @@ Supervisor 的配置文件一般是放在 `/etc/supervisor/conf.d` 目录下。�
             DB::rollBack();
         }
     });
+
+
+--- 
+
+> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
+> 
+> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
+> 
+> 文档永久地址： https://d.laravel-china.org
