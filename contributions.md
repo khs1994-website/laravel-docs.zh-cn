@@ -19,7 +19,6 @@
 
 Laravel 源代码托管在 GitHub 上面，并且每个 Laravel 的项目都有自己的代码仓库：
 
-<div class="content-list" markdown="1">
 - [Laravel 应用](https://github.com/laravel/laravel)
 - [Laravel Art](https://github.com/laravel/art)
 - [Laravel 文档](https://github.com/laravel/docs)
@@ -33,9 +32,7 @@ Laravel 源代码托管在 GitHub 上面，并且每个 Laravel 的项目都有�
 - [Laravel 搜索系统](https://github.com/laravel/scout)
 - [Laravel Socialite](https://github.com/laravel/socialite)
 - [Laravel 网站](https://github.com/laravel/laravel.com)
-  </div>
 
-<a name="core-development-discussion"></a>
 ## 核心开发讨论
 
 如果你想提出现有的 Laravel 的功能建议或者改进，请到 Laravel Internals 的 [反馈栏](https://github.com/laravel/internals/issues) 讨论。如果你提出新功能，如果愿意，我们希望能请你至少实现一些完成该功能所需的代码。
