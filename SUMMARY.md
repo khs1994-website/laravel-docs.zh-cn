@@ -8,8 +8,8 @@
     - [安装](installation.md)
     - [配置信息](configuration.md)
     - [文件夹结构](structure.md)
-    - [Homestead](homestead.md)
-    - [Valet](valet.md)
+    - Homestead
+    - Valet
 * 核心架构
     - [请求周期](lifecycle.md)
     - [服务容器](container.md)

@@ -19,16 +19,13 @@ Laravel 框架对系统有一些要求。所有这些要求 Laravel Homestead �
 
 但如果你不使用 Homestead，则需要确保你的服务器符合以下要求：
 
-<div class="content-list" markdown="1">
 - PHP >= 7.0.0
 - PHP OpenSSL 扩展
 - PHP PDO 扩展
 - PHP Mbstring 扩展
 - PHP Tokenizer 扩展
 - PHP XML 扩展
-  </div>
 
-<a name="installing-laravel"></a>
 ### 安装 Laravel
 
 Laravel 利用 [Composer](https://getcomposer.org) 来管理依赖。所以，在使用 Laravel 之前，请确保你的机器上安装了 Composer。
@@ -84,16 +81,12 @@ Laravel 框架的所有配置文件都放在 `config` 目录中。每个选项�
 
 你还可能想要配置 Laravel 的其他几个组件，例如：
 
-<div class="content-list" markdown="1">
-- [缓存](/docs/{{version}}/cache#configuration)
-- [数据库](/docs/{{version}}/database#configuration)
-- [会话](/docs/{{version}}/session#configuration)
-  </div>
+- [缓存](cache#configuration)
+- [数据库](database#configuration)
+- [会话](session#configuration)
 
-<a name="web-server-configuration"></a>
 ## Web 服务器配置
 
-<a name="pretty-urls"></a>
 ### 优雅链接
 
 #### Apache

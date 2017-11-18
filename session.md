@@ -18,14 +18,12 @@
 
 由于 HTTP 驱动的应用程序是无状态的，Session 提供了一种在多个请求之间存储有关用户的信息的方法。Laravel 通过同一个可读性强的 API 处理各种自带的 Session 后台驱动程序。支持诸如比较热门的 [Memcached](https://memcached.org)、[Redis](http://redis.io) 和开箱即用的数据库等常见的后台驱动程序。
 
-<a name="configuration"></a>
 ### 配置
 
 Session 的配置文件存储在 `config/session.php`。请务必查看此文件中对于你可用的选项。默认情况下，Laravel 配置了适用于大多数应用程序的 `file` Session 驱动。在生产环境下，你可以考虑使用 `memcached` 或 `redis` 驱动来实现更出色的 Session 性能。
 
 Session `driver` 的配置选项定义了每个请求存储 Session 数据的位置。Laravel 自带了几个不错且可开箱即用的驱动：
 
-<div class="content-list" markdown="1">
 - `file` - 将 Session 保存在 `storage/framework/sessions` 中。
 
 - `cookie` - Session 保存在安全加密的 Cookie 中。
@@ -36,11 +34,8 @@ Session `driver` 的配置选项定义了每个请求存储 Session 数据的位
 
 - `array` - Sessions 保存在 PHP 数组中，不会被持久化。
 
-  </div>
-
 > {tip} 数组驱动一般用于 [测试](/docs/{{version}}/testing)，并防止存储在 Session 中的数据被持久化。
 
-<a name="driver-prerequisites"></a>
 ### 驱动之前
 
 #### 数据库
@@ -223,7 +218,6 @@ Laravel 中处理 Session 数据有两种主要方法：全局辅助函数 `sess
 
 接口中的这些方法不太容易容易理解。让我们来快速了解每个方法的作用：
 
-<div class="content-list" markdown="1">
 - `open` 方法通常用于基于文件的 Session 存储系统。因为 Larvel 已经附带了一个 `file` 的驱动，所以你不需要在该方法中放置任何代码。PHP 要求必需要有这个方法的实现（这只是一个糟糕的接口设计），你只需要把这个方法置空。
 - `close` 方法跟 `open` 方法很相似，通常也可以被忽略。对大多数的驱动而言，此方法不是必须的。
 - `read` 方法应当返回与给定的 `$sessionId` 相匹配的 Session 数据的字符串格式。在你的自定义的驱动中获取或存储 Session 数据时，不需要进行任何序列化或其它编码，因为 Laravel 会执行序列化。
@@ -232,7 +226,6 @@ Laravel 中处理 Session 数据有两种主要方法：全局辅助函数 `sess
 - `gc` 方法能销毁给定的 `$lifetime` （UNIX 的时间戳）之前的所有数据。对本身拥有过期机制的系统如 Memcached 和 Redis 而言，该方法可以置空。
   </div>
 
-<a name="registering-the-driver"></a>
 #### 注册驱动
 
 你的 Session 驱动实现之后，你还需要在框架中注册该驱动，即将该扩展驱动添加到 Laravel Session 后台。然后在 [服务提供者](/docs/{{version}}/providers) 的 `boot` 方法内调用 `Session` Facade 的 `extend` 方法。之后你就可以从现有的 `AppServiceProvider` 或者新创建的提供器中执行此操作。

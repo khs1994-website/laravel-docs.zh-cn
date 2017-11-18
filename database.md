@@ -14,19 +14,14 @@
 
 Laravel 通过使用原始 SQL 与数据库的各种数据库进行交互, 非常简单。尤其流畅的使用 [查询语句构造器](/docs/{{version}}/queries)，和 [Eloquent ORM](/docs/{{version}}/eloquent)。当前，Laravel 支持四种类型的数据库:
 
-<div class="content-list" markdown="1">
-
 - MySQL
 - Postgres
 - SQLite
 - SQL Server
-</div>
-
-<a name="configuration"></a>
 
 ### 配置信息
 
-Laravel 应用程序的数据库配置文件放置在 `config/database.php` 文件中。在这个文件中，您可以定义所有的数据库连接，并指定默认使用哪个连接. 在此文件内提供了大多数支持的数据库系统示例。 
+Laravel 应用程序的数据库配置文件放置在 `config/database.php` 文件中。在这个文件中，您可以定义所有的数据库连接，并指定默认使用哪个连接. 在此文件内提供了大多数支持的数据库系统示例。
 
 默认情况下，Laravel 的[环境配置](/docs/{{version}}/configuration#environment-configuration) 示例会使用 [Laravel Homestead](/docs/{{version}}/homestead)，这是一种方便的虚拟机，用于在本地机器上进行 Laravel 的开发。当然，您可以根据本地数据库的需要随意修改这个配置。
 
@@ -250,10 +245,10 @@ Laravel 支持 SQL Server 数据库; 无论以何种方式, 您都需要将数�
 |---|---|---|---|
 | [@孤雪飘寒](https://laravel-china.org/users/15752)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/15752_1493141445.jpeg">  |  翻译  | 全桟工程师，[Github](https://github.com/piaohan)，[CSDN](http://blog.csdn.net/msmile_my)|
 
---- 
+---
 
 > {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
-> 
+>
 > 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
-> 
+>
 > 文档永久地址： https://d.laravel-china.org
