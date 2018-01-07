@@ -139,7 +139,7 @@ class User extends Resource
 
 如果你的应用程序与 Redis 进行交互，那你就可以根据时间或并发来调整排队的任务。当你队列的任务与限制速率的 API 进行交互时，这个功能就派上用场了。例如，你可以限制给定类型的任务只能每 60 秒运行 10 次：
 
-````Php
+````php
 Redis::throttle('key')->allow(10)->every(60)->then(function () {
     // 任务逻辑...
 }, function () {
@@ -153,7 +153,7 @@ Redis::throttle('key')->allow(10)->every(60)->then(function () {
 
 或者，你也可以指定同时处理给定任务的最大工作进程数。当队列的任务正在修改一次只能由一个任务修改的资源时，我们可以将给定类型的任务限制为一次只能由一个工作进程处理：
 
-````Php
+````php
 Redis::funnel('key')->limit(1)->then(function () {
     // 任务逻辑...
 }, function () {
@@ -167,7 +167,7 @@ Redis::funnel('key')->limit(1)->then(function () {
 
 作为在任务失败之前定义任务可能尝试多少次的替代方法，现在你可以定义任务的超时时间。这允许在给定时间范围内尝试次数的任务。将 `retryUntil` 方法添加到任务类中来定义任务的超时时间：
 
-````Php
+````php
 /**
  * 确定任务的超时时间。
  *
