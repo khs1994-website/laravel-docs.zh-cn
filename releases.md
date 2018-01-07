@@ -30,7 +30,7 @@ Laravel 的版本控制方案继续以下约定： `主版本号.次版本号.�
 <a name="laravel-5.5"></a>
 ## Laravel 5.5
 
-Laravel 5.5 对 Laravel 5.4 种的包进行了改进，其中添加了：包自动发现、API 资源／转换、控制台命令自动注册、队列任务链、队列任务速率限制、基于时间任务的尝试、可渲染的邮件、自定义异常报告、异常处理规范化、数据库测试改进、更简单自定义验证规则、前端预配置、`Route::view` 和 `Route::redirect` 方法、Memcached 和 Redis 缓存驱动程序的「锁定」、按需通知功能、Dusk 支持 Chrome 的 headless 模式 、方便的 Blade 快捷键、改进可信代理支持等。
+Laravel 5.5 对 Laravel 5.4 中的包进行了改进，其中添加了：包自动发现、API 资源／转换、控制台命令自动注册、队列任务链、队列任务速率限制、基于时间任务的尝试、可渲染的邮件、自定义异常报告、异常处理规范化、数据库测试改进、更简单自定义验证规则、前端预配置、`Route::view` 和 `Route::redirect` 方法、Memcached 和 Redis 缓存驱动程序的「锁定」、按需通知功能、Dusk 支持 Chrome 的 headless 模式 、方便的 Blade 快捷键、改进可信代理支持等。
 
 此外， Laravel 5.5 同时发布了 [Laravel Horizon](http://horizon.laravel.com)，一个用来管理你的 Redis 队列的漂亮的队列仪表板和配置系统。
 
@@ -235,7 +235,7 @@ public function retryUntil()
 
 为了解决这个问题，很多 Laravel 用户安装了Chris Fidao 的包 [Trusted Proxies](https://github.com/fideloper/TrustedProxy) 。因为这是一个常见情况，Chris 的包现在已经默认集成在 Laravel 5.5 中了。
 
-默认情况下，Lravel 5.5 中包含了一个新的中间件 `App\Http\Middleware\TrustProxies`。这个中间件允许你快速自定义受信任的代理：
+默认情况下，Laravel 5.5 中包含了一个新的中间件 `App\Http\Middleware\TrustProxies`。这个中间件允许你快速自定义受信任的代理：
 
     <?php
 
