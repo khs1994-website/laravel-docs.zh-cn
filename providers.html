@@ -1,0 +1,1505 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>服务提供者 · Laravel 5.5 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="laravel-china.org">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="facades.html" />
+    
+    
+    <link rel="prev" href="container.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="//www.khs1994.com/more" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="releases.html">
+            
+                <a href="releases.html">
+            
+                    
+                    发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="upgrade.html">
+            
+                <a href="upgrade.html">
+            
+                    
+                    升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="contributions.html">
+            
+                <a href="contributions.html">
+            
+                    
+                    贡献导引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="api/{{version}}.md">
+            
+                <span>
+            
+                    
+                    API 文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    入门指南
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Homestead
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    Valet
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    核心架构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    请求周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="container.html">
+            
+                <a href="container.html">
+            
+                    
+                    服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="providers.html">
+            
+                <a href="providers.html">
+            
+                    
+                    服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="facades.html">
+            
+                <a href="facades.html">
+            
+                    
+                    Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="contracts.html">
+            
+                <a href="contracts.html">
+            
+                    
+                    Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    基础功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="middleware.html">
+            
+                <a href="middleware.html">
+            
+                    
+                    中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="csrf.html">
+            
+                <a href="csrf.html">
+            
+                    
+                    CSRF 保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="controllers.html">
+            
+                <a href="controllers.html">
+            
+                    
+                    控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="views.html">
+            
+                <a href="views.html">
+            
+                    
+                    视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    前端开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="blade.html">
+            
+                <a href="blade.html">
+            
+                    
+                    Blade 模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="localization.html">
+            
+                <a href="localization.html">
+            
+                    
+                    本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="frontend.html">
+            
+                <a href="frontend.html">
+            
+                    
+                    前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    编辑资源 Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    安全相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    API 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="encryption.html">
+            
+                <a href="encryption.html">
+            
+                    
+                    加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="hashing.html">
+            
+                <a href="hashing.html">
+            
+                    
+                    哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="passwords.html">
+            
+                <a href="passwords.html">
+            
+                    
+                    重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    综合话题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="artisan.html">
+            
+                <a href="artisan.html">
+            
+                    
+                    Artisan 命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="broadcasting.html">
+            
+                <a href="broadcasting.html">
+            
+                    
+                    广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="helpers.html">
+            
+                <a href="helpers.html">
+            
+                    
+                    辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="mail.html">
+            
+                <a href="mail.html">
+            
+                    
+                    邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="scheduling.html">
+            
+                <a href="scheduling.html">
+            
+                    
+                    任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="queries.html">
+            
+                <a href="queries.html">
+            
+                    
+                    查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="migrations.html">
+            
+                <a href="migrations.html">
+            
+                    
+                    数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="seeding.html">
+            
+                <a href="seeding.html">
+            
+                    
+                    数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Eloquent ORM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="eloquent.html">
+            
+                <a href="eloquent.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="eloquent-relationships.html">
+            
+                <a href="eloquent-relationships.html">
+            
+                    
+                    模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="eloquent-collections.html">
+            
+                <a href="eloquent-collections.html">
+            
+                    
+                    Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="eloquent-mutators.html">
+            
+                <a href="eloquent-mutators.html">
+            
+                    
+                    修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="eloquent-serialization.html">
+            
+                <a href="eloquent-serialization.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    测试相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="http-tests.html">
+            
+                <a href="http-tests.html">
+            
+                    
+                    HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="database-testing.html">
+            
+                <a href="database-testing.html">
+            
+                    
+                    数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="mocking.html">
+            
+                <a href="mocking.html">
+            
+                    
+                    测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    官方扩展包
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="billing.html">
+            
+                <a href="billing.html">
+            
+                    
+                    Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="envoy.html">
+            
+                <a href="envoy.html">
+            
+                    
+                    Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="horizon.html">
+            
+                <a href="horizon.html">
+            
+                    
+                    Horizon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="scout.html">
+            
+                <a href="scout.html">
+            
+                    
+                    Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="socialite.html">
+            
+                <a href="socialite.html">
+            
+                    
+                    Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >服务提供者</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;">Laravel &#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a></li>
+<li><a href="#writing-service-providers">&#x7F16;&#x5199;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;</a><ul>
+<li><a href="#the-register-method">&#x6CE8;&#x518C;&#x65B9;&#x6CD5;</a></li>
+<li><a href="#the-boot-method">&#x5F15;&#x5BFC;&#x65B9;&#x6CD5;</a></li>
+</ul>
+</li>
+<li><a href="#registering-providers">&#x6CE8;&#x518C;&#x63D0;&#x4F9B;&#x5668;</a></li>
+<li><a href="#deferred-providers">&#x5EF6;&#x8FDF;&#x63D0;&#x4F9B;&#x5668;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x662F;&#x6240;&#x6709; Laravel &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F15;&#x5BFC;&#x4E2D;&#x5FC3;&#x3002;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4EE5;&#x53CA; Laravel &#x7684;&#x6240;&#x6709;&#x6838;&#x5FC3;&#x670D;&#x52A1;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x8FDB;&#x884C;&#x5F15;&#x5BFC;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x8BF4;&#x7684;&#x300C;&#x5F15;&#x5BFC;&#x300D;&#x5176;&#x5B9E;&#x662F;&#x6307;<strong>&#x6CE8;&#x518C;</strong>&#xFF0C;&#x6BD4;&#x5982;&#x6CE8;&#x518C;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x7ED1;&#x5B9A;&#x3001;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#x3001;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x8DEF;&#x7531;&#x7684;&#x6CE8;&#x518C;&#x3002;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x662F;&#x914D;&#x7F6E;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E2D;&#x5FC3;&#x3002;</p>
+<p>Laravel &#x7684; <code>config/app.php</code> &#x6587;&#x4EF6;&#x4E2D;&#x6709;&#x4E00;&#x4E2A; <code>providers</code> &#x6570;&#x7EC4;&#x3002;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6240;&#x6709;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x7C7B;&#x3002;&#x8FD9;&#x5176;&#x4E2D;&#x6709;&#x8BB8;&#x591A;&#x63D0;&#x4F9B;&#x5668;&#x5E76;&#x4E0D;&#x4F1A;&#x5728;&#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x65F6;&#x90FD;&#x88AB;&#x52A0;&#x8F7D;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x5B83;&#x4EEC;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x5B9E;&#x9645;&#x9700;&#x8981;&#x65F6;&#x624D;&#x4F1A;&#x52A0;&#x8F7D;&#x3002;&#x8FD9;&#x79CD;&#x6211;&#x4EEC;&#x79F0;&#x4E4B;&#x4E3A;&#x300C;&#x5EF6;&#x8FDF;&#x300D;&#x63D0;&#x4F9B;&#x5668;&#x3002;</p>
+<p>&#x672C;&#x7BC7;&#x5C06;&#x5E26;&#x4F60;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x81EA;&#x5DF1;&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x6CE8;&#x518C;&#x5230; Laravel &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x3002;</p>
+<p><a name="writing-service-providers"></a></p>
+<h2 id="&#x7F16;&#x5199;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;">&#x7F16;&#x5199;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;</h2>
+<p>&#x6240;&#x6709;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x90FD;&#x4F1A;&#x7EE7;&#x627F; <code>Illuminate\Support\ServiceProvider</code> &#x7C7B;&#x3002;&#x5927;&#x591A;&#x6570;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x90FD;&#x5305;&#x542B; <code>register</code> &#x548C; <code>boot</code> &#x65B9;&#x6CD5;&#x3002;&#x5728; <code>register</code> &#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x4F60;<strong>&#x53EA;&#x9700;&#x8981;&#x7ED1;&#x5B9A;&#x7C7B;&#x5230; <a href="docs/container">&#x670D;&#x52A1;&#x5BB9;&#x5668;</a></strong>&#x4E2D;&#x3002;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x5C1D;&#x8BD5;&#x5728; <code>register</code> &#x65B9;&#x6CD5;&#x4E2D;&#x6CE8;&#x518C;&#x4EFB;&#x4F55;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#x3001;&#x8DEF;&#x7531;&#x6216;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x4F7F;&#x7528; Artisan &#x547D;&#x4EE4;&#x884C;&#x754C;&#x9762;&#xFF0C;&#x901A;&#x8FC7; <code>make:provider</code> &#x547D;&#x4EE4;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x63D0;&#x4F9B;&#x5668;&#xFF1A;</p>
+<pre class="language-"><code>php artisan make:provider RiakServiceProvider
+</code></pre><p><a name="the-register-method"></a></p>
+<h3 id="&#x6CE8;&#x518C;&#x65B9;&#x6CD5;">&#x6CE8;&#x518C;&#x65B9;&#x6CD5;</h3>
+<p>&#x5728; <code>register</code> &#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x7C7B;&#x7ED1;&#x5B9A;&#x5230; <a href="docs/container">&#x670D;&#x52A1;&#x5BB9;&#x5668;</a> &#x4E2D;&#x3002;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x5C1D;&#x8BD5;&#x5728; <code>register</code> &#x65B9;&#x6CD5;&#x4E2D;&#x6CE8;&#x518C;&#x4EFB;&#x4F55;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x5668;&#x3001;&#x8DEF;&#x7531;&#x6216;&#x8005;&#x4EFB;&#x4F55;&#x5176;&#x4ED6;&#x529F;&#x80FD;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x610F;&#x5916;&#x4F7F;&#x7528;&#x5230;&#x5C1A;&#x672A;&#x52A0;&#x8F7D;&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x3002;&#x5728;&#x4F60;&#x7684;&#x4EFB;&#x4F55;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>$app</code> &#x5C5E;&#x6027;&#x6765;&#x8BBF;&#x95EE;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Providers;
+
+use Riak\Connection;
+use Illuminate\Support\ServiceProvider;
+
+class RiakServiceProvider extends ServiceProvider
+{
+    /**
+     * &#x5728;&#x5BB9;&#x5668;&#x4E2D;&#x6CE8;&#x518C;&#x7ED1;&#x5B9A;&#x3002;
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this-&gt;app-&gt;singleton(Connection::class, function ($app) {
+            return new Connection(config(&apos;riak&apos;));
+        });
+    }
+}
+</code></pre><p>&#x8FD9;&#x4E2A;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x53EA;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A; <code>register</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#x5728;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A; <code>Riak\Connection</code> &#x5B9E;&#x73B0;&#x3002; &#x5982;&#x679C;&#x4F60;&#x4E0D;&#x4E86;&#x89E3;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF0C;&#x8BF7;&#x67E5;&#x770B;&#x5176; <a href="docs/container">&#x6587;&#x6863;</a>.</p>
+<p><a name="the-boot-method"></a></p>
+<h3 id="&#x5F15;&#x5BFC;&#x65B9;&#x6CD5;">&#x5F15;&#x5BFC;&#x65B9;&#x6CD5;</h3>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x4E2D;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x89C6;&#x56FE;&#x7EC4;&#x4EF6;&#x5462;&#xFF1F;&#x8FD9;&#x5E94;&#x8BE5;&#x5728; <code>boot</code> &#x65B9;&#x6CD5;&#x4E2D;&#x5B8C;&#x6210;&#x3002;<strong>&#x6B64;&#x65B9;&#x6CD5;&#x5728;&#x6240;&#x6709;&#x5176;&#x4ED6;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x90FD;&#x6CE8;&#x518C;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x8C03;&#x7528;</strong>&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x4F60;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5DF2;&#x7ECF;&#x88AB;&#x6846;&#x67B6;&#x6CE8;&#x518C;&#x7684;&#x6240;&#x6709;&#x670D;&#x52A1;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+class ComposerServiceProvider extends ServiceProvider
+{
+    /**
+     * &#x5F15;&#x5BFC;&#x4EFB;&#x4F55;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x670D;&#x52A1;&#x3002;
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        view()-&gt;composer(&apos;view&apos;, function () {
+            //
+        });
+    }
+}
+</code></pre><h4 id="&#x5F15;&#x5BFC;&#x65B9;&#x6CD5;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;">&#x5F15;&#x5BFC;&#x65B9;&#x6CD5;&#x4F9D;&#x8D56;&#x6CE8;&#x5165;</h4>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4E3A;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x7684; <code>boot</code> &#x65B9;&#x6CD5;&#x8BBE;&#x7F6E;&#x7C7B;&#x578B;&#x63D0;&#x793A;&#x3002;<a href="docs/container">&#x670D;&#x52A1;&#x5BB9;&#x5668;</a> &#x4F1A;&#x81EA;&#x52A8;&#x6CE8;&#x5165;&#x4F60;&#x9700;&#x8981;&#x7684;&#x4EFB;&#x4F55;&#x4F9D;&#x8D56;&#x9879;&#xFF1A;</p>
+<pre class="language-"><code>use Illuminate\Contracts\Routing\ResponseFactory;
+
+public function boot(ResponseFactory $response)
+{
+    $response-&gt;macro(&apos;caps&apos;, function ($value) {
+        //
+    });
+}
+</code></pre><p><a name="registering-providers"></a></p>
+<h2 id="&#x6CE8;&#x518C;&#x63D0;&#x4F9B;&#x5668;">&#x6CE8;&#x518C;&#x63D0;&#x4F9B;&#x5668;</h2>
+<p>&#x6240;&#x6709;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x90FD;&#x5728; <code>config/app.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6CE8;&#x518C;&#x3002;&#x8BE5;&#x6587;&#x4EF6;&#x4E2D;&#x6709;&#x4E00;&#x4E2A; <code>providers</code> &#x6570;&#x7EC4;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x653E;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x7684;&#x7C7B;&#x540D; &#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x7CFB;&#x5217; Laravel &#x6838;&#x5FC3;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x3002;&#x8FD9;&#x4E9B;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x5F15;&#x5BFC; Laravel &#x6838;&#x5FC3;&#x7EC4;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;&#x90AE;&#x4EF6;&#x3001;&#x961F;&#x5217;&#x3001;&#x7F13;&#x5B58;&#x7B49;&#x3002;</p>
+<p>&#x8981;&#x6CE8;&#x518C;&#x63D0;&#x4F9B;&#x5668;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre class="language-"><code>&apos;providers&apos; =&gt; [
+    // &#x5176;&#x4ED6;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;
+
+    App\Providers\ComposerServiceProvider::class,
+],
+</code></pre><p><a name="deferred-providers"></a></p>
+<h2 id="&#x5EF6;&#x8FDF;&#x63D0;&#x4F9B;&#x5668;">&#x5EF6;&#x8FDF;&#x63D0;&#x4F9B;&#x5668;</h2>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x63D0;&#x4F9B;&#x5668;<strong>&#x4EC5;</strong>&#x5728; <a href="docs/container">&#x670D;&#x52A1;&#x5BB9;&#x5668;</a> &#x4E2D;&#x6CE8;&#x518C;&#x7ED1;&#x5B9A;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x63A8;&#x8FDF;&#x5176;&#x6CE8;&#x518C;&#xFF0C;&#x76F4;&#x5230;&#x5F53;&#x5B83;&#x771F;&#x6B63;&#x9700;&#x8981;&#x6CE8;&#x518C;&#x7ED1;&#x5B9A;&#x3002;&#x63A8;&#x8FDF;&#x52A0;&#x8F7D;&#x8FD9;&#x79CD;&#x63D0;&#x4F9B;&#x5668;&#x4F1A;&#x63D0;&#x9AD8;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4E0D;&#x4F1A;&#x5728;&#x6BCF;&#x6B21;&#x8BF7;&#x6C42;&#x65F6;&#x90FD;&#x4ECE;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E2D;&#x52A0;&#x8F7D;&#x3002;</p>
+<p>Laravel &#x7F16;&#x8BD1;&#x5E76;&#x4FDD;&#x5B58;&#x5EF6;&#x8FDF;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x6240;&#x6709;&#x670D;&#x52A1;&#x7684;&#x5217;&#x8868;&#xFF0C;&#x4EE5;&#x53CA;&#x5176;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x7C7B;&#x7684;&#x540D;&#x79F0;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x4F60;&#x5728;&#x5C1D;&#x8BD5;&#x89E3;&#x6790;&#x5176;&#x4E2D;&#x4E00;&#x9879;&#x670D;&#x52A1;&#x65F6;&#xFF0C;Laravel &#x624D;&#x4F1A;&#x52A0;&#x8F7D;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x3002;</p>
+<p>&#x8981;&#x5EF6;&#x8FDF;&#x63D0;&#x4F9B;&#x5668;&#x7684;&#x52A0;&#x8F7D;&#xFF0C;&#x8BF7;&#x5C06; <code>defer</code> &#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A; <code>true</code> &#xFF0C;&#x5E76;&#x5B9A;&#x4E49; <code>provides</code> &#x65B9;&#x6CD5;&#x3002;<code>provides</code> &#x65B9;&#x6CD5;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x7531;&#x63D0;&#x4F9B;&#x5668;&#x6CE8;&#x518C;&#x7684;&#x670D;&#x52A1;&#x5BB9;&#x5668;&#x7ED1;&#x5B9A;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App\Providers;
+
+use Riak\Connection;
+use Illuminate\Support\ServiceProvider;
+
+class RiakServiceProvider extends ServiceProvider
+{
+    /**
+     * &#x662F;&#x5426;&#x5EF6;&#x65F6;&#x52A0;&#x8F7D;&#x63D0;&#x4F9B;&#x5668;&#x3002;
+     *
+     * @var bool
+     */
+    protected $defer = true;
+
+    /**
+     * &#x6CE8;&#x518C;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x3002;
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this-&gt;app-&gt;singleton(Connection::class, function ($app) {
+            return new Connection($app[&apos;config&apos;][&apos;riak&apos;]);
+        });
+    }
+
+    /**
+     * &#x83B7;&#x53D6;&#x63D0;&#x4F9B;&#x5668;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x3002;
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [Connection::class];
+    }
+
+}
+</code></pre><h2 id="&#x8BD1;&#x8005;&#x7F72;&#x540D;">&#x8BD1;&#x8005;&#x7F72;&#x540D;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7528;&#x6237;&#x540D;</th>
+<th>&#x5934;&#x50CF;</th>
+<th>&#x804C;&#x80FD;</th>
+<th>&#x7B7E;&#x540D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/devindwan" target="_blank">@devindwan</a></td>
+<td><img class="avatar-66 rm-style" src="https://avatars2.githubusercontent.com/u/10205466?v=4&amp;s=100"></td>
+<td>&#x7FFB;&#x8BD1;</td>
+<td>There are only two kinds of languages: the ones people complain about and the ones nobody uses.</td>
+</tr>
+<tr>
+<td><a href="https://laravel-china.org/users/5350" target="_blank">@JokerLinly</a></td>
+<td><img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg"></td>
+<td>Review</td>
+<td>Stay Hungry. Stay Foolish.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>{note} &#x6B22;&#x8FCE;&#x4EFB;&#x4F55;&#x5F62;&#x5F0F;&#x7684;&#x8F6C;&#x8F7D;&#xFF0C;&#x4F46;&#x8BF7;&#x52A1;&#x5FC5;&#x6CE8;&#x660E;&#x51FA;&#x5904;&#xFF0C;&#x5C0A;&#x91CD;&#x4ED6;&#x4EBA;&#x52B3;&#x52A8;&#x5171;&#x521B;&#x5F00;&#x6E90;&#x793E;&#x533A;&#x3002;</p>
+<p>&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#xFF1A;&#x672C;&#x6587;&#x6863;&#x7531; Laravel China &#x793E;&#x533A; <a href="https://laravel-china.org" target="_blank">laravel-china.org</a> &#x7EC4;&#x7EC7;&#x7FFB;&#x8BD1;&#xFF0C;&#x8BE6;&#x89C1; <a href="https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation" target="_blank">&#x7FFB;&#x8BD1;&#x53EC;&#x96C6;&#x5E16;</a>&#x3002;</p>
+<p>&#x6587;&#x6863;&#x6C38;&#x4E45;&#x5730;&#x5740;&#xFF1A; <a href="https://d.laravel-china.org" target="_blank">https://d.laravel-china.org</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="container.html" class="navigation navigation-prev " aria-label="Previous page: 服务容器">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="facades.html" class="navigation navigation-next " aria-label="Next page: Facades">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"服务提供者","level":"1.4.3","depth":2,"next":{"title":"Facades","level":"1.4.4","depth":2,"path":"facades.md","ref":"facades.md","articles":[]},"previous":{"title":"服务容器","level":"1.4.2","depth":2,"path":"container.md","ref":"container.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"laravel-china.org","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Laravel 5.5 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"//www.khs1994.com/more"}},"gitbook":"*","description":"Laravel 5.5 中文文档"},"file":{"path":"providers.md","mtime":"2018-05-18T06:35:48.122Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-18T06:39:05.075Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

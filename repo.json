@@ -1,0 +1,11 @@
+{
+    "type": "fork",
+    "repo": {
+        "github": "git@github.com:khs1994-gitbook/laravel-docs.git",
+        "aliyun": "git@code.aliyun.com:khs1994-gitbook/laravel-docs.git"
+    },
+    "source": "git@github.com:laravel-china/laravel-docs.git",
+    "branch": "5.5",
+    "deploy-branch": "gh-pages",
+    "description": "laravel 5.5 中文文档"
+}

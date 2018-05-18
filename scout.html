@@ -1,0 +1,1607 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Scout 全文搜索 · Laravel 5.5 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="laravel-china.org">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="socialite.html" />
+    
+    
+    <link rel="prev" href="passport.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="//www.khs1994.com/more" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="releases.html">
+            
+                <a href="releases.html">
+            
+                    
+                    发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="upgrade.html">
+            
+                <a href="upgrade.html">
+            
+                    
+                    升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="contributions.html">
+            
+                <a href="contributions.html">
+            
+                    
+                    贡献导引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="api/{{version}}.md">
+            
+                <span>
+            
+                    
+                    API 文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    入门指南
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Homestead
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    Valet
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    核心架构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    请求周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="container.html">
+            
+                <a href="container.html">
+            
+                    
+                    服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="providers.html">
+            
+                <a href="providers.html">
+            
+                    
+                    服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="facades.html">
+            
+                <a href="facades.html">
+            
+                    
+                    Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="contracts.html">
+            
+                <a href="contracts.html">
+            
+                    
+                    Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    基础功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="middleware.html">
+            
+                <a href="middleware.html">
+            
+                    
+                    中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="csrf.html">
+            
+                <a href="csrf.html">
+            
+                    
+                    CSRF 保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="controllers.html">
+            
+                <a href="controllers.html">
+            
+                    
+                    控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="views.html">
+            
+                <a href="views.html">
+            
+                    
+                    视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    前端开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="blade.html">
+            
+                <a href="blade.html">
+            
+                    
+                    Blade 模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="localization.html">
+            
+                <a href="localization.html">
+            
+                    
+                    本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="frontend.html">
+            
+                <a href="frontend.html">
+            
+                    
+                    前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    编辑资源 Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    安全相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    API 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="encryption.html">
+            
+                <a href="encryption.html">
+            
+                    
+                    加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="hashing.html">
+            
+                <a href="hashing.html">
+            
+                    
+                    哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="passwords.html">
+            
+                <a href="passwords.html">
+            
+                    
+                    重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    综合话题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="artisan.html">
+            
+                <a href="artisan.html">
+            
+                    
+                    Artisan 命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="broadcasting.html">
+            
+                <a href="broadcasting.html">
+            
+                    
+                    广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="helpers.html">
+            
+                <a href="helpers.html">
+            
+                    
+                    辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="mail.html">
+            
+                <a href="mail.html">
+            
+                    
+                    邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="scheduling.html">
+            
+                <a href="scheduling.html">
+            
+                    
+                    任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="queries.html">
+            
+                <a href="queries.html">
+            
+                    
+                    查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="migrations.html">
+            
+                <a href="migrations.html">
+            
+                    
+                    数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="seeding.html">
+            
+                <a href="seeding.html">
+            
+                    
+                    数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Eloquent ORM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="eloquent.html">
+            
+                <a href="eloquent.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="eloquent-relationships.html">
+            
+                <a href="eloquent-relationships.html">
+            
+                    
+                    模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="eloquent-collections.html">
+            
+                <a href="eloquent-collections.html">
+            
+                    
+                    Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="eloquent-mutators.html">
+            
+                <a href="eloquent-mutators.html">
+            
+                    
+                    修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="eloquent-serialization.html">
+            
+                <a href="eloquent-serialization.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    测试相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="http-tests.html">
+            
+                <a href="http-tests.html">
+            
+                    
+                    HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="database-testing.html">
+            
+                <a href="database-testing.html">
+            
+                    
+                    数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="mocking.html">
+            
+                <a href="mocking.html">
+            
+                    
+                    测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    官方扩展包
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="billing.html">
+            
+                <a href="billing.html">
+            
+                    
+                    Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="envoy.html">
+            
+                <a href="envoy.html">
+            
+                    
+                    Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="horizon.html">
+            
+                <a href="horizon.html">
+            
+                    
+                    Horizon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12.5" data-path="scout.html">
+            
+                <a href="scout.html">
+            
+                    
+                    Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="socialite.html">
+            
+                <a href="socialite.html">
+            
+                    
+                    Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Scout 全文搜索</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;&#x641C;&#x7D22;&#x7CFB;&#x7EDF;-scout">Laravel &#x7684;&#x641C;&#x7D22;&#x7CFB;&#x7EDF; Scout</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a></li>
+<li><a href="#installation">&#x5B89;&#x88C5;</a><ul>
+<li><a href="#queueing">&#x961F;&#x5217;</a></li>
+<li><a href="#driver-prerequisites">&#x9A71;&#x52A8;&#x4E4B;&#x524D;</a></li>
+</ul>
+</li>
+<li><a href="#configuration">&#x914D;&#x7F6E;</a><ul>
+<li><a href="#configuring-model-indexes">&#x914D;&#x7F6E;&#x6A21;&#x578B;&#x7D22;&#x5F15;</a></li>
+<li><a href="#configuring-searchable-data">&#x914D;&#x7F6E;&#x53EF;&#x641C;&#x7D22;&#x7684;&#x6570;&#x636E;</a></li>
+</ul>
+</li>
+<li><a href="#indexing">&#x7D22;&#x5F15;</a><ul>
+<li><a href="#batch-import">&#x6279;&#x91CF;&#x5BFC;&#x5165;</a></li>
+<li><a href="#adding-records">&#x6DFB;&#x52A0;&#x8BB0;&#x5F55;</a></li>
+<li><a href="#updating-records">&#x66F4;&#x65B0;&#x8BB0;&#x5F55;</a></li>
+<li><a href="#removing-records">&#x5220;&#x9664;&#x8BB0;&#x5F55;</a></li>
+<li><a href="#pausing-indexing">&#x6682;&#x505C;&#x7D22;&#x5F15;</a></li>
+</ul>
+</li>
+<li><a href="#searching">&#x641C;&#x7D22;</a><ul>
+<li><a href="#where-clauses">Where &#x8BED;&#x53E5;</a></li>
+<li><a href="#pagination">&#x5206;&#x9875;</a></li>
+</ul>
+</li>
+<li><a href="#custom-engines">&#x81EA;&#x5B9A;&#x4E49;&#x5F15;&#x64CE;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>Laravel Scout &#x4E3A; <a href="docs/eloquent">Eloquent &#x6A21;&#x578B;</a> &#x7684;&#x5168;&#x6587;&#x641C;&#x7D22;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x3001;&#x57FA;&#x4E8E;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x4F7F;&#x7528;&#x6A21;&#x578B;&#x89C2;&#x5BDF;&#x5458;&#xFF0C;Scout &#x4F1A;&#x81EA;&#x52A8;&#x540C;&#x6B65;&#x4F60;&#x7684;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x548C; Eloquent &#x8BB0;&#x5F55;&#x3002;</p>
+<p>&#x76EE;&#x524D;&#xFF0C;Scout &#x81EA;&#x5E26;&#x4E86;&#x4E00;&#x4E2A; <a href="https://www.algolia.com/" target="_blank">Algolia</a> &#x9A71;&#x52A8;&#xFF1B;&#x800C;&#x7F16;&#x5199;&#x81EA;&#x5B9A;&#x4E49;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5730;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x641C;&#x7D22;&#x5B9E;&#x73B0;&#x6765;&#x6269;&#x5C55; Scout&#x3002;</p>
+<p><a name="installation"></a></p>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x4F7F;&#x7528; composer &#x5305;&#x7BA1;&#x7406;&#x5668;&#x6765;&#x5B89;&#x88C5; Scout&#xFF1A;</p>
+<pre class="language-"><code>composer require laravel/scout
+</code></pre><p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5C06; <code>ScoutServiceProvider</code> &#x6DFB;&#x52A0;&#x5230;&#x4F60;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6; <code>config/app.php</code> &#x7684; <code>providers</code> &#x6570;&#x7EC4;&#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code>Laravel\Scout\ScoutServiceProvider::class,
+</code></pre><p>&#x6CE8;&#x518C;&#x597D; Scout &#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x4E4B;&#x540E;&#xFF0C;&#x4F60;&#x8FD8;&#x9700;&#x4F7F;&#x7528;Artisan &#x547D;&#x4EE4; <code>vendor:publish</code> &#x751F;&#x6210; Scout &#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F1A;&#x5728;&#x4F60;&#x7684; <code>config</code> &#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210; <code>scout.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code>php artisan vendor:publish --provider=&quot;Laravel\Scout\ScoutServiceProvider&quot;
+</code></pre><p>&#x6700;&#x540E;&#xFF0C;&#x5C06; <code>Laravel\Scout\Searchable</code> trait &#x52A0;&#x5230;&#x4F60;&#x60F3;&#x8981;&#x641C;&#x7D22;&#x7684;&#x6A21;&#x578B;&#x4E2D;&#x3002;&#x8FD9;&#x4E2A; trait &#x4F1A;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x89C2;&#x5BDF;&#x8005;&#x6765;&#x4FDD;&#x6301;&#x641C;&#x7D22;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x4E0E;&#x6A21;&#x578B;&#x7684;&#x540C;&#x6B65;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use Searchable;
+}
+</code></pre><p><a name="queueing"></a></p>
+<h3 id="&#x961F;&#x5217;">&#x961F;&#x5217;</h3>
+<p>&#x867D;&#x7136;&#x4E0D;&#x662F;&#x4E25;&#x683C;&#x8981;&#x6C42;&#x4F7F;&#x7528; Scout&#xFF0C;&#x4F46;&#x5728;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5E93;&#x4E4B;&#x524D;&#xFF0C;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x4F60;&#x914D;&#x7F6E;&#x4E00;&#x4E2A; <a href="docs/queues">&#x961F;&#x5217;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</a>&#x3002;&#x4F7F;&#x7528;&#x961F;&#x5217;&#x6765;&#x5BF9;&#x5904;&#x7406; Scout &#x5C06;&#x6240;&#x6709;&#x6A21;&#x578B;&#x4FE1;&#x606F;&#x540C;&#x6B65;&#x5230;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F1A;&#x6781;&#x5927;&#x7684;&#x51CF;&#x5C11; Web &#x9875;&#x9762;&#x7684;&#x54CD;&#x5E94;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x914D;&#x7F6E;&#x4E86;&#x961F;&#x5217;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C31;&#x8981;&#x5728; <code>config/scout.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x8BBE;&#x7F6E; <code>queue</code> &#x7684;&#x503C;&#x4E3A; <code>true</code>&#xFF1A;</p>
+<pre class="language-"><code>&apos;queue&apos; =&gt; true,
+</code></pre><p><a name="driver-prerequisites"></a></p>
+<h3 id="&#x9A71;&#x52A8;&#x4E4B;&#x524D;">&#x9A71;&#x52A8;&#x4E4B;&#x524D;</h3>
+<h4 id="algolia">Algolia</h4>
+<p>&#x4F7F;&#x7528; Algolia &#x9A71;&#x52A8;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5728; <code>config/scout.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x914D;&#x7F6E;&#x4F60;&#x7684; Algolia <code>id</code> &#x548C; <code>secret</code> &#x51ED;&#x8BC1;&#x3002;&#x914D;&#x7F6E;&#x597D;&#x51ED;&#x8BC1;&#x4E4B;&#x540E;&#xFF0C; &#x8FD8;&#x9700;&#x8981;&#x4F7F;&#x7528; Composer &#x5305;&#x7BA1;&#x7406;&#x5668;&#x5B89;&#x88C5; Algolia PHP SDK &#xFF1A;</p>
+<pre class="language-"><code>composer require algolia/algoliasearch-client-php
+</code></pre><p><a name="configuration"></a></p>
+<h2 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h2>
+<p><a name="configuring-model-indexes"></a></p>
+<h3 id="&#x914D;&#x7F6E;&#x6A21;&#x578B;&#x7D22;&#x5F15;">&#x914D;&#x7F6E;&#x6A21;&#x578B;&#x7D22;&#x5F15;</h3>
+<p>&#x6BCF;&#x4E2A; Eloquent &#x6A21;&#x578B;&#x4E0E;&#x7ED9;&#x5B9A;&#x7684;&#x641C;&#x7D22;&#x300C;&#x7D22;&#x5F15;&#x300D;&#x540C;&#x6B65;&#xFF0C;&#x8FD9;&#x4E2A;&#x300C;&#x7D22;&#x5F15;&#x300D;&#x5305;&#x542B;&#x8BE5;&#x6A21;&#x578B;&#x7684;&#x6240;&#x6709;&#x53EF;&#x641C;&#x7D22;&#x8BB0;&#x5F55;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x628A;&#x6BCF;&#x4E00;&#x4E2A;&#x300C;&#x7D22;&#x5F15;&#x300D;&#x8BBE;&#x60F3;&#x4E3A;&#x4E00;&#x5F20; MySQL &#x6570;&#x636E;&#x8868;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E2A;&#x6A21;&#x578B;&#x90FD;&#x4F1A;&#x88AB;&#x6301;&#x4E45;&#x5316;&#x5230;&#x4E0E;&#x6A21;&#x578B;&#x7684;&#x300C;&#x8868;&#x300D;&#x540D;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x6A21;&#x578B;&#x540D;&#x79F0;&#x7684;&#x590D;&#x6570;&#x5F62;&#x5F0F;&#xFF09;&#x76F8;&#x5339;&#x914D;&#x7684;&#x7D22;&#x5F15;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8986;&#x76D6;&#x6A21;&#x578B;&#x4E0A;&#x7684; <code>searchableAs</code> &#x65B9;&#x6CD5;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x578B;&#x7684;&#x7D22;&#x5F15;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use Searchable;
+
+    /**
+     * Get the index name for the model.
+     *
+     * @return string
+     */
+    public function searchableAs()
+    {
+        return &apos;posts_index&apos;;
+    }
+}
+</code></pre><p><a name="configuring-searchable-data"></a></p>
+<h3 id="&#x914D;&#x7F6E;&#x53EF;&#x641C;&#x7D22;&#x7684;&#x6570;&#x636E;">&#x914D;&#x7F6E;&#x53EF;&#x641C;&#x7D22;&#x7684;&#x6570;&#x636E;</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x300C;&#x7D22;&#x5F15;&#x300D;&#x4F1A;&#x4ECE;&#x6A21;&#x578B;&#x7684; <code>toArray</code> &#x65B9;&#x6CD5;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x6765;&#x505A;&#x6301;&#x4E45;&#x5316;&#x3002;&#x5982;&#x679C;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x540C;&#x6B65;&#x5230;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x53EF;&#x4EE5;&#x8986;&#x76D6;&#x6A21;&#x578B;&#x4E0A;&#x7684; <code>toSearchableArray</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    use Searchable;
+
+    /**
+     * Get the indexable data array for the model.
+     *
+     * @return array
+     */
+    public function toSearchableArray()
+    {
+        $array = $this-&gt;toArray();
+
+        // Customize array...
+
+        return $array;
+    }
+}
+</code></pre><p><a name="indexing"></a></p>
+<h2 id="&#x7D22;&#x5F15;">&#x7D22;&#x5F15;</h2>
+<p><a name="batch-import"></a></p>
+<h3 id="&#x6279;&#x91CF;&#x5BFC;&#x5165;">&#x6279;&#x91CF;&#x5BFC;&#x5165;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5C06; Scout &#x5B89;&#x88C5;&#x5230;&#x73B0;&#x6709;&#x7684;&#x9879;&#x76EE;&#x4E2D;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x60F3;&#x8981;&#x5BFC;&#x5165;&#x641C;&#x7D22;&#x9A71;&#x52A8;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8BB0;&#x5F55;&#x3002;&#x4F7F;&#x7528; Scout &#x63D0;&#x4F9B;&#x7684;Artisan &#x547D;&#x4EE4; <code>import</code> &#x628A;&#x6240;&#x6709;&#x73B0;&#x6709;&#x8BB0;&#x5F55;&#x5BFC;&#x5165;&#x5230;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x91CC;&#xFF1A;</p>
+<pre class="language-"><code>php artisan scout:import &quot;App\Post&quot;
+</code></pre><p><a name="adding-records"></a></p>
+<h3 id="&#x6DFB;&#x52A0;&#x8BB0;&#x5F55;">&#x6DFB;&#x52A0;&#x8BB0;&#x5F55;</h3>
+<p>&#x5F53;&#x4F60;&#x5C06; <code>Laravel\Scout\Searchable</code>  trait &#x6DFB;&#x52A0;&#x5230;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x505A;&#x7684;&#x662F; <code>save</code> &#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x5B9E;&#x4F8B;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x5230;&#x4F60;&#x7684;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x3002;&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x5C06; Scout &#x914D;&#x7F6E;&#x4E3A; <a href="#queueing">&#x4F7F;&#x7528;&#x961F;&#x5217;</a>&#xFF0C;&#x90A3;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x4F1A;&#x5728;&#x540E;&#x53F0;&#x7531;&#x4F60;&#x7684;&#x961F;&#x5217;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6765;&#x6267;&#x884C;&#xFF1A;</p>
+<pre class="language-"><code>$order = new App\Order;
+
+// ...
+
+$order-&gt;save();
+</code></pre><h4 id="&#x4F7F;&#x7528;&#x961F;&#x5217;&#x6DFB;&#x52A0;">&#x4F7F;&#x7528;&#x961F;&#x5217;&#x6DFB;&#x52A0;</h4>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x901A;&#x8FC7; Eloquent &#x67E5;&#x8BE2;&#x6784;&#x9020;&#x5668;&#x5C06;&#x6A21;&#x578B;&#x96C6;&#x5408;&#x6DFB;&#x52A0;&#x5230;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x4E2D;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; Eloquent &#x67E5;&#x8BE2;&#x6784;&#x9020;&#x5668;&#x4E0A;&#x94FE;&#x5F0F;&#x8C03;&#x7528; <code>searchable</code> &#x65B9;&#x6CD5;&#x3002;<code>searchable</code> &#x4F1A;&#x628A;&#x6784;&#x9020;&#x5668;&#x7684;&#x67E5;&#x8BE2; <a href="docs/eloquent#chunking-results">&#x7ED3;&#x679C;&#x5206;&#x5757;</a> &#x5E76;&#x4E14;&#x5C06;&#x8BB0;&#x5F55;&#x6DFB;&#x52A0;&#x5230;&#x4F60;&#x7684;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x91CC;&#x3002;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E; Scout &#x4E3A;&#x4F7F;&#x7528;&#x961F;&#x5217;&#xFF0C;&#x5219;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x5757;&#x5C06;&#x5728;&#x540E;&#x53F0;&#x7531;&#x4F60;&#x7684;&#x961F;&#x5217;&#x5DE5;&#x4F5C;&#x8FDB;&#x7A0B;&#x6DFB;&#x52A0;&#xFF1A;</p>
+<pre class="language-"><code>// &#x4F7F;&#x7528; Eloquent &#x67E5;&#x8BE2;&#x6784;&#x9020;&#x5668;&#x589E;&#x52A0;...
+App\Order::where(&apos;price&apos;, &apos;&gt;&apos;, 100)-&gt;searchable();
+
+// &#x4F7F;&#x7528;&#x6A21;&#x578B;&#x5173;&#x7CFB;&#x589E;&#x52A0;&#x8BB0;&#x5F55;...
+$user-&gt;orders()-&gt;searchable();
+
+// &#x4F7F;&#x7528;&#x96C6;&#x5408;&#x589E;&#x52A0;&#x8BB0;&#x5F55;...
+$orders-&gt;searchable();
+</code></pre><p><code>searchable</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x88AB;&#x770B;&#x505A;&#x662F;&#x300C;&#x66F4;&#x65B0;&#x63D2;&#x5165;&#x300D;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x6A21;&#x578B;&#x8BB0;&#x5F55;&#x5DF2;&#x7ECF;&#x5728;&#x4F60;&#x7684;&#x7D22;&#x5F15;&#x91CC;&#x4E86;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x88AB;&#x66F4;&#x65B0;&#x3002;&#x5982;&#x679C;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x5230;&#x7D22;&#x5F15;&#x4E2D;&#x3002;</p>
+<p><a name="updating-records"></a></p>
+<h3 id="&#x66F4;&#x65B0;&#x8BB0;&#x5F55;">&#x66F4;&#x65B0;&#x8BB0;&#x5F55;</h3>
+<p>&#x8981;&#x66F4;&#x65B0;&#x53EF;&#x641C;&#x7D22;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x6A21;&#x578B;&#x5B9E;&#x4F8B;&#x7684;&#x5C5E;&#x6027;&#x5E76;&#x5C06;&#x6A21;&#x578B; <code>save</code> &#x5230;&#x6570;&#x636E;&#x5E93;&#x3002;Scout &#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x66F4;&#x65B0;&#x540C;&#x6B65;&#x5230;&#x4F60;&#x7684;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code>$order = App\Order::find(1);
+
+// &#x66F4;&#x65B0; order...
+
+$order-&gt;save();
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728; Eloquent &#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E0A;&#x4F7F;&#x7528; <code>searchable</code> &#x65B9;&#x6CD5;&#x6765;&#x66F4;&#x65B0;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x7684;&#x96C6;&#x5408;&#x3002;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x6A21;&#x578B;&#x4E0D;&#x5B58;&#x5728;&#x4F60;&#x68C0;&#x7D22;&#x7684;&#x7D22;&#x5F15;&#x91CC;&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;&#x521B;&#x5EFA;&#xFF1A;</p>
+<pre class="language-"><code>// &#x4F7F;&#x7528; Eloquent &#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x66F4;&#x65B0;...
+App\Order::where(&apos;price&apos;, &apos;&gt;&apos;, 100)-&gt;searchable();
+
+// &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6A21;&#x578B;&#x5173;&#x7CFB;&#x66F4;&#x65B0;...
+$user-&gt;orders()-&gt;searchable();
+
+// &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x96C6;&#x5408;&#x66F4;&#x65B0;...
+$orders-&gt;searchable();
+</code></pre><p><a name="removing-records"></a></p>
+<h3 id="&#x5220;&#x9664;&#x8BB0;&#x5F55;">&#x5220;&#x9664;&#x8BB0;&#x5F55;</h3>
+<p>&#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528; <code>delete</code> &#x4ECE;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5220;&#x9664;&#x8BE5;&#x6A21;&#x578B;&#x5C31;&#x53EF;&#x4EE5;&#x79FB;&#x9664;&#x7D22;&#x5F15;&#x91CC;&#x7684;&#x8BB0;&#x5F55;&#x3002;&#x8FD9;&#x79CD;&#x5220;&#x9664;&#x5F62;&#x5F0F;&#x751A;&#x81F3;&#x4E0E; <a href="docs/eloquent#soft-deleting">&#x8F6F;&#x5220;&#x9664;</a> &#x7684;&#x6A21;&#x578B;&#x517C;&#x5BB9;:</p>
+<pre class="language-"><code>$order = App\Order::find(1);
+
+$order-&gt;delete();
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x60F3;&#x5728;&#x5220;&#x9664;&#x8BB0;&#x5F55;&#x4E4B;&#x524D;&#x68C0;&#x7D22;&#x6A21;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; Eloquent &#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;&#x6216;&#x96C6;&#x5408;&#x4E0A;&#x4F7F;&#x7528; <code>unsearchable</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>// &#x901A;&#x8FC7; Eloquent &#x67E5;&#x8BE2;&#x5220;&#x9664;...
+App\Order::where(&apos;price&apos;, &apos;&gt;&apos;, 100)-&gt;unsearchable();
+
+// &#x901A;&#x8FC7;&#x6A21;&#x578B;&#x5173;&#x7CFB;&#x5220;&#x9664;...
+$user-&gt;orders()-&gt;unsearchable();
+
+// &#x901A;&#x8FC7;&#x96C6;&#x5408;&#x5220;&#x9664;...
+$orders-&gt;unsearchable();
+</code></pre><p><a name="pausing-indexing"></a></p>
+<h3 id="&#x6682;&#x505C;&#x7D22;&#x5F15;">&#x6682;&#x505C;&#x7D22;&#x5F15;</h3>
+<p>&#x4F60;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5728;&#x6267;&#x884C;&#x4E00;&#x6279; Eloquent &#x64CD;&#x4F5C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x540C;&#x6B65;&#x6A21;&#x578B;&#x6570;&#x636E;&#x5230;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x3002;&#x6B64;&#x65F6;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>withoutSyncingToSearch</code> &#x65B9;&#x6CD5;&#x6765;&#x6267;&#x884C;&#x6B64;&#x64CD;&#x4F5C;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x7684;&#x56DE;&#x8C03;&#x3002;&#x8BE5;&#x56DE;&#x8C03;&#x4E2D;&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x4E0D;&#x4F1A;&#x540C;&#x6B65;&#x5230;&#x6A21;&#x578B;&#x7684;&#x7D22;&#x5F15;&#xFF1A;</p>
+<pre class="language-"><code>App\Order::withoutSyncingToSearch(function () {
+    // &#x6267;&#x884C;&#x6A21;&#x578B;&#x52A8;&#x4F5C;...
+});
+</code></pre><p><a name="searching"></a></p>
+<h2 id="&#x641C;&#x7D22;">&#x641C;&#x7D22;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>search</code> &#x65B9;&#x6CD5;&#x6765;&#x641C;&#x7D22;&#x6A21;&#x578B;&#x3002;<code>search</code> &#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x641C;&#x7D22;&#x6A21;&#x578B;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x4F60;&#x8FD8;&#x9700;&#x5728;&#x641C;&#x7D22;&#x67E5;&#x8BE2;&#x4E0A;&#x94FE;&#x5F0F;&#x8C03;&#x7528; <code>get</code> &#x65B9;&#x6CD5;&#xFF0C;&#x624D;&#x80FD;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x641C;&#x7D22;&#x8BED;&#x53E5;&#x67E5;&#x8BE2;&#x4E0E;&#x4E4B;&#x5339;&#x914D;&#x7684; Eloquent &#x6A21;&#x578B;&#xFF1A;</p>
+<pre class="language-"><code>$orders = App\Order::search(&apos;Star Trek&apos;)-&gt;get();
+</code></pre><p>Scout &#x641C;&#x7D22;&#x8FD4;&#x56DE; Eloquent &#x6A21;&#x578B;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE;&#x8DEF;&#x7531;&#x6216;&#x63A7;&#x5236;&#x5668;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;&#x5B83;&#x4EEC;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x8F6C;&#x6362;&#x6210; JSON &#x683C;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code>use Illuminate\Http\Request;
+
+Route::get(&apos;/search&apos;, function (Request $request) {
+    return App\Order::search($request-&gt;search)-&gt;get();
+});
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x5B83;&#x4EEC;&#x8FD4;&#x56DE; Eloquent &#x6A21;&#x578B;&#x524D;&#x5F97;&#x5230;&#x539F;&#x7ED3;&#x679C;&#xFF0C;&#x4F60;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;<code>raw</code> &#x65B9;&#x6CD5;:</p>
+<pre class="language-"><code>$orders = App\Order::search(&apos;Star Trek&apos;)-&gt;raw();
+</code></pre><p>&#x641C;&#x7D22;&#x67E5;&#x8BE2;&#x901A;&#x5E38;&#x4F1A;&#x5728;&#x6A21;&#x578B;&#x7684; <a href="#configuring-model-indexes"><code>searchableAs</code></a> &#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x7684;&#x7D22;&#x5F15;&#x4E0A;&#x6267;&#x884C;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>within</code> &#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x5E94;&#x8BE5;&#x641C;&#x7D22;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x7D22;&#x5F15;:</p>
+<pre class="language-"><code>$orders = App\Order::search(&apos;Star Trek&apos;)
+    -&gt;within(&apos;tv_shows_popularity_desc&apos;)
+    -&gt;get();
+</code></pre><p><a name="where-clauses"></a></p>
+<h3 id="where-&#x8BED;&#x53E5;">Where &#x8BED;&#x53E5;</h3>
+<p>Scout &#x5141;&#x8BB8;&#x4F60;&#x5728;&#x641C;&#x7D22;&#x67E5;&#x8BE2;&#x4E2D;&#x589E;&#x52A0;&#x7B80;&#x5355;&#x7684;&#x300C;where&#x300D;&#x8BED;&#x53E5;&#x3002;&#x76EE;&#x524D;&#xFF0C;&#x8FD9;&#x4E9B;&#x8BED;&#x53E5;&#x53EA;&#x652F;&#x6301;&#x57FA;&#x672C;&#x7684;&#x6570;&#x503C;&#x7B49;&#x5F0F;&#x68C0;&#x67E5;&#xFF0C;&#x5E76;&#x4E14;&#x4E3B;&#x8981;&#x662F;&#x7528;&#x4E8E;&#x6839;&#x636E;&#x62E5;&#x6709;&#x8005;&#x7684; ID &#x8FDB;&#x884C;&#x7684;&#x8303;&#x56F4;&#x641C;&#x7D22;&#x67E5;&#x8BE2;&#x3002;&#x7531;&#x4E8E;&#x641C;&#x7D22;&#x7D22;&#x5F15;&#x4E0D;&#x662F;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x56E0;&#x6B64;&#x5F53;&#x524D;&#x4E0D;&#x652F;&#x6301;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x300C;where&#x300D;&#x8BED;&#x53E5;&#xFF1A;</p>
+<pre class="language-"><code>$orders = App\Order::search(&apos;Star Trek&apos;)-&gt;where(&apos;user_id&apos;, 1)-&gt;get();
+</code></pre><p><a name="pagination"></a></p>
+<h3 id="&#x5206;&#x9875;">&#x5206;&#x9875;</h3>
+<p>&#x9664;&#x4E86;&#x68C0;&#x7D22;&#x6A21;&#x578B;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>paginate</code> &#x65B9;&#x6CD5;&#x5BF9;&#x641C;&#x7D22;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x5206;&#x9875;&#x3002;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5C31;&#x50CF; <a href="docs/pagination">&#x4F20;&#x7EDF;&#x7684; Eloquent &#x67E5;&#x8BE2;&#x5206;&#x9875;</a> &#x4E00;&#x6837;&#x7684; <code>Paginator</code>  &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>$orders = App\Order::search(&apos;Star Trek&apos;)-&gt;paginate();
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;&#x6570;&#x91CF;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9; <code>paginate</code> &#x65B9;&#x6CD5;&#x6765;&#x6307;&#x5B9A;&#x6BCF;&#x9875;&#x68C0;&#x7D22;&#x591A;&#x5C11;&#x4E2A;&#x6A21;&#x578B;&#xFF1A;</p>
+<pre class="language-"><code>$orders = App\Order::search(&apos;Star Trek&apos;)-&gt;paginate(15);
+</code></pre><p>&#x83B7;&#x53D6;&#x5230;&#x68C0;&#x7D22;&#x7ED3;&#x679C;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <a href="docs/blade">Blade</a> &#x6765;&#x6E32;&#x67D3;&#x5206;&#x9875;&#x94FE;&#x63A5;&#x4ECE;&#x800C;&#x663E;&#x793A;&#x7ED3;&#x679C;&#xFF0C;&#x5C31;&#x50CF;&#x4F20;&#x7EDF;&#x7684; Eloquent &#x67E5;&#x8BE2;&#x5206;&#x9875;&#x4E00;&#x6837;&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    @foreach ($orders as $order)
+        {{ $order-&gt;price }}
+    @endforeach
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+\{\{ $orders-&gt;links() \}\}
+</code></pre><p><a name="custom-engines"></a></p>
+<h2 id="&#x81EA;&#x5B9A;&#x4E49;&#x5F15;&#x64CE;">&#x81EA;&#x5B9A;&#x4E49;&#x5F15;&#x64CE;</h2>
+<h4 id="&#x5199;&#x5F15;&#x64CE;">&#x5199;&#x5F15;&#x64CE;</h4>
+<p>&#x5982;&#x679C;&#x5185;&#x7F6E;&#x7684; Scout &#x641C;&#x7D22;&#x5F15;&#x64CE;&#x4E0D;&#x80FD;&#x6EE1;&#x8DB3;&#x4F60;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5199;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5F15;&#x64CE;&#x5E76;&#x4E14;&#x5C06;&#x5B83;&#x6CE8;&#x518C;&#x5230; Scout&#x3002;&#x4F60;&#x7684;&#x5F15;&#x64CE;&#x9700;&#x8981;&#x7EE7;&#x627F; <code>Laravel\Scout\Engines\Engine</code> &#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#x5305;&#x542B;&#x4E86;&#x4F60;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5F15;&#x64CE;&#x5FC5;&#x987B;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x4E94;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>use Laravel\Scout\Builder;
+
+abstract public function update($models);
+abstract public function delete($models);
+abstract public function search(Builder $builder);
+abstract public function paginate(Builder $builder, $perPage, $page);
+abstract public function map($results, $model);
+</code></pre><p>&#x5728; <code>Laravel\Scout\Engines\AlgoliaEngine</code> &#x7C7B;&#x91CC;&#x67E5;&#x770B;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x4F1A;&#x5BF9;&#x4F60;&#x6709;&#x8F83;&#x5927;&#x7684;&#x5E2E;&#x52A9;&#x3002;&#x8FD9;&#x4E2A;&#x7C7B;&#x4F1A;&#x4E3A;&#x4F60;&#x5728;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x5728;&#x81EA;&#x5B9A;&#x4E49;&#x5F15;&#x64CE;&#x4E2D;&#x5B9E;&#x73B0;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x8D77;&#x70B9;&#x3002;</p>
+<h4 id="&#x6CE8;&#x518C;&#x5F15;&#x64CE;">&#x6CE8;&#x518C;&#x5F15;&#x64CE;</h4>
+<p>&#x4E00;&#x65E6;&#x4F60;&#x5199;&#x597D;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#x5F15;&#x64CE;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7528; Scout &#x5F15;&#x64CE;&#x7BA1;&#x7406;&#x7684; <code>extend</code> &#x65B9;&#x6CD5;&#x5C06;&#x5B83;&#x6CE8;&#x518C;&#x5230; Scout&#x3002;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x4ECE; <code>AppServiceProvider</code> &#x4E0B;&#x7684; <code>boot</code> &#x65B9;&#x6CD5;&#x6216;&#x8005;&#x5E94;&#x7528;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5668;&#x8C03;&#x7528; <code>extend</code> &#x65B9;&#x6CD5;&#x3002;&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x5199;&#x597D;&#x4E86;&#x4E00;&#x4E2A; <code>MySqlSearchEngine</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x50CF;&#x8FD9;&#x6837;&#x53BB;&#x6CE8;&#x518C;&#x5B83;&#xFF1A;</p>
+<pre class="language-"><code>use Laravel\Scout\EngineManager;
+
+/**
+ * &#x5F15;&#x5BFC;&#x4EFB;&#x4F55;&#x5E94;&#x7528;&#x670D;&#x52A1;&#x3002;
+ *
+ * @return void
+ */
+public function boot()
+{
+    resolve(EngineManager::class)-&gt;extend(&apos;mysql&apos;, function () {
+        return new MySqlSearchEngine;
+    });
+}
+</code></pre><p>&#x5F15;&#x64CE;&#x6CE8;&#x518C;&#x540E;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728; <code>config/scout.php</code> &#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x6307;&#x5B9A;&#x5B83;&#x4E3A;&#x9ED8;&#x8BA4;&#x7684; Scout <code>driver</code>&#xFF1A;</p>
+<pre class="language-"><code>&apos;driver&apos; =&gt; &apos;mysql&apos;,
+</code></pre><h2 id="&#x8BD1;&#x8005;&#x7F72;&#x540D;">&#x8BD1;&#x8005;&#x7F72;&#x540D;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7528;&#x6237;&#x540D;</th>
+<th>&#x5934;&#x50CF;</th>
+<th>&#x804C;&#x80FD;</th>
+<th>&#x7B7E;&#x540D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://phphub.org/users/3853" target="_blank">@Insua</a></td>
+<td><img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/3853_1457586148.jpeg?imageView2/1/w/100/h/100"></td>
+<td>&#x7FFB;&#x8BD1;</td>
+<td>happay coding with laravel+vue</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>{note} &#x6B22;&#x8FCE;&#x4EFB;&#x4F55;&#x5F62;&#x5F0F;&#x7684;&#x8F6C;&#x8F7D;&#xFF0C;&#x4F46;&#x8BF7;&#x52A1;&#x5FC5;&#x6CE8;&#x660E;&#x51FA;&#x5904;&#xFF0C;&#x5C0A;&#x91CD;&#x4ED6;&#x4EBA;&#x52B3;&#x52A8;&#x5171;&#x521B;&#x5F00;&#x6E90;&#x793E;&#x533A;&#x3002;</p>
+<p>&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#xFF1A;&#x672C;&#x6587;&#x6863;&#x7531; Laravel China &#x793E;&#x533A; <a href="https://laravel-china.org" target="_blank">laravel-china.org</a> &#x7EC4;&#x7EC7;&#x7FFB;&#x8BD1;&#xFF0C;&#x8BE6;&#x89C1; <a href="https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation" target="_blank">&#x7FFB;&#x8BD1;&#x53EC;&#x96C6;&#x5E16;</a>&#x3002;</p>
+<p>&#x6587;&#x6863;&#x6C38;&#x4E45;&#x5730;&#x5740;&#xFF1A; <a href="https://d.laravel-china.org" target="_blank">https://d.laravel-china.org</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="passport.html" class="navigation navigation-prev " aria-label="Previous page: Passport OAuth 认证">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="socialite.html" class="navigation navigation-next " aria-label="Next page: Socialite 社会化登录">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Scout 全文搜索","level":"1.12.5","depth":2,"next":{"title":"Socialite 社会化登录","level":"1.12.6","depth":2,"path":"socialite.md","ref":"socialite.md","articles":[]},"previous":{"title":"Passport OAuth 认证","level":"1.12.4","depth":2,"path":"passport.md","ref":"passport.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"laravel-china.org","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Laravel 5.5 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"//www.khs1994.com/more"}},"gitbook":"*","description":"Laravel 5.5 中文文档"},"file":{"path":"scout.md","mtime":"2018-05-18T06:35:48.180Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-18T06:39:05.075Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,2155 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>模型关联 · Laravel 5.5 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="laravel-china.org">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="eloquent-collections.html" />
+    
+    
+    <link rel="prev" href="eloquent.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="//www.khs1994.com/more" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="releases.html">
+            
+                <a href="releases.html">
+            
+                    
+                    发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="upgrade.html">
+            
+                <a href="upgrade.html">
+            
+                    
+                    升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="contributions.html">
+            
+                <a href="contributions.html">
+            
+                    
+                    贡献导引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="api/{{version}}.md">
+            
+                <span>
+            
+                    
+                    API 文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    入门指南
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Homestead
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    Valet
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    核心架构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    请求周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="container.html">
+            
+                <a href="container.html">
+            
+                    
+                    服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="providers.html">
+            
+                <a href="providers.html">
+            
+                    
+                    服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="facades.html">
+            
+                <a href="facades.html">
+            
+                    
+                    Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="contracts.html">
+            
+                <a href="contracts.html">
+            
+                    
+                    Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    基础功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="middleware.html">
+            
+                <a href="middleware.html">
+            
+                    
+                    中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="csrf.html">
+            
+                <a href="csrf.html">
+            
+                    
+                    CSRF 保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="controllers.html">
+            
+                <a href="controllers.html">
+            
+                    
+                    控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="views.html">
+            
+                <a href="views.html">
+            
+                    
+                    视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    前端开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="blade.html">
+            
+                <a href="blade.html">
+            
+                    
+                    Blade 模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="localization.html">
+            
+                <a href="localization.html">
+            
+                    
+                    本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="frontend.html">
+            
+                <a href="frontend.html">
+            
+                    
+                    前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    编辑资源 Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    安全相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    API 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="encryption.html">
+            
+                <a href="encryption.html">
+            
+                    
+                    加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="hashing.html">
+            
+                <a href="hashing.html">
+            
+                    
+                    哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="passwords.html">
+            
+                <a href="passwords.html">
+            
+                    
+                    重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    综合话题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="artisan.html">
+            
+                <a href="artisan.html">
+            
+                    
+                    Artisan 命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="broadcasting.html">
+            
+                <a href="broadcasting.html">
+            
+                    
+                    广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="helpers.html">
+            
+                <a href="helpers.html">
+            
+                    
+                    辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="mail.html">
+            
+                <a href="mail.html">
+            
+                    
+                    邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="scheduling.html">
+            
+                <a href="scheduling.html">
+            
+                    
+                    任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="queries.html">
+            
+                <a href="queries.html">
+            
+                    
+                    查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="migrations.html">
+            
+                <a href="migrations.html">
+            
+                    
+                    数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="seeding.html">
+            
+                <a href="seeding.html">
+            
+                    
+                    数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Eloquent ORM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="eloquent.html">
+            
+                <a href="eloquent.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.2" data-path="eloquent-relationships.html">
+            
+                <a href="eloquent-relationships.html">
+            
+                    
+                    模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="eloquent-collections.html">
+            
+                <a href="eloquent-collections.html">
+            
+                    
+                    Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="eloquent-mutators.html">
+            
+                <a href="eloquent-mutators.html">
+            
+                    
+                    修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="eloquent-serialization.html">
+            
+                <a href="eloquent-serialization.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    测试相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="http-tests.html">
+            
+                <a href="http-tests.html">
+            
+                    
+                    HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="database-testing.html">
+            
+                <a href="database-testing.html">
+            
+                    
+                    数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="mocking.html">
+            
+                <a href="mocking.html">
+            
+                    
+                    测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    官方扩展包
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="billing.html">
+            
+                <a href="billing.html">
+            
+                    
+                    Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="envoy.html">
+            
+                <a href="envoy.html">
+            
+                    
+                    Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="horizon.html">
+            
+                <a href="horizon.html">
+            
+                    
+                    Horizon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="scout.html">
+            
+                <a href="scout.html">
+            
+                    
+                    Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="socialite.html">
+            
+                <a href="socialite.html">
+            
+                    
+                    Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >模型关联</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="eloquent&#xFF1A;&#x5173;&#x8054;">Eloquent&#xFF1A;&#x5173;&#x8054;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a></li>
+<li><a href="#defining-relationships">&#x5B9A;&#x4E49;&#x5173;&#x8054;</a><ul>
+<li><a href="#one-to-one">&#x4E00;&#x5BF9;&#x4E00;</a></li>
+<li><a href="#one-to-many">&#x4E00;&#x5BF9;&#x591A;</a></li>
+<li><a href="#one-to-many-inverse">&#x4E00;&#x5BF9;&#x591A;&#xFF08;&#x53CD;&#x5411;&#xFF09;</a></li>
+<li><a href="#many-to-many">&#x591A;&#x5BF9;&#x591A;</a></li>
+<li><a href="#has-many-through">&#x8FDC;&#x5C42;&#x4E00;&#x5BF9;&#x591A;</a></li>
+<li><a href="#polymorphic-relations">&#x591A;&#x6001;&#x5173;&#x8054;</a></li>
+<li><a href="#many-to-many-polymorphic-relations">&#x591A;&#x5BF9;&#x591A;&#x591A;&#x6001;&#x5173;&#x8054;</a></li>
+</ul>
+</li>
+<li><a href="#querying-relations">&#x67E5;&#x8BE2;&#x5173;&#x8054;</a><ul>
+<li><a href="#relationship-methods-vs-dynamic-properties">&#x5173;&#x8054;&#x65B9;&#x6CD5; Vs. &#x52A8;&#x6001;&#x5C5E;&#x6027;</a></li>
+<li><a href="#querying-relationship-existence">&#x57FA;&#x4E8E;&#x5B58;&#x5728;&#x7684;&#x5173;&#x8054;&#x67E5;&#x8BE2;</a></li>
+<li><a href="#querying-relationship-absence">&#x57FA;&#x4E8E;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5173;&#x8054;&#x67E5;&#x8BE2;</a></li>
+<li><a href="#counting-related-models">&#x5173;&#x8054;&#x6570;&#x636E;&#x8BA1;&#x6570;</a></li>
+</ul>
+</li>
+<li><a href="#eager-loading">&#x9884;&#x52A0;&#x8F7D;</a><ul>
+<li><a href="#constraining-eager-loads">&#x4E3A;&#x9884;&#x52A0;&#x8F7D;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;&#x6761;&#x4EF6;</a></li>
+<li><a href="#lazy-eager-loading">&#x5EF6;&#x8FDF;&#x9884;&#x52A0;&#x8F7D;</a></li>
+</ul>
+</li>
+<li><a href="#inserting-and-updating-related-models">&#x63D2;&#x5165; &amp; &#x66F4;&#x65B0;&#x5173;&#x8054;&#x6A21;&#x578B;</a><ul>
+<li><a href="#the-save-method"><code>save</code> &#x65B9;&#x6CD5;</a></li>
+<li><a href="#the-create-method"><code>create</code> &#x65B9;&#x6CD5;</a></li>
+<li><a href="#updating-belongs-to-relationships">&#x66F4;&#x65B0; <code>belongsTo</code> &#x5173;&#x8054;</a></li>
+<li><a href="#updating-many-to-many-relationships">&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;</a></li>
+</ul>
+</li>
+<li><a href="#touching-parent-timestamps">&#x66F4;&#x65B0;&#x7236;&#x7EA7;&#x65F6;&#x95F4;&#x6233;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>&#x6570;&#x636E;&#x5E93;&#x8868;&#x901A;&#x5E38;&#x76F8;&#x4E92;&#x5173;&#x8054;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x4E00;&#x7BC7;&#x535A;&#x5BA2;&#x6587;&#x7AE0;&#x53EF;&#x80FD;&#x6709;&#x8BB8;&#x591A;&#x8BC4;&#x8BBA;&#xFF0C;&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x8BA2;&#x5355;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x4E0B;&#x5355;&#x7528;&#x6237;&#x3002;Eloquent &#x8BA9;&#x8FD9;&#x4E9B;&#x5173;&#x8054;&#x7684;&#x7BA1;&#x7406;&#x548C;&#x4F7F;&#x7528;&#x53D8;&#x5F97;&#x7B80;&#x5355;&#xFF0C;&#x5E76;&#x652F;&#x6301;&#x591A;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5173;&#x8054;&#xFF1A;</p>
+<ul>
+<li><a href="#one-to-one">&#x4E00;&#x5BF9;&#x4E00;</a></li>
+<li><a href="#one-to-many">&#x4E00;&#x5BF9;&#x591A;</a></li>
+<li><a href="#many-to-many">&#x591A;&#x5BF9;&#x591A;</a></li>
+<li><a href="#has-many-through">&#x8FDC;&#x5C42;&#x4E00;&#x5BF9;&#x591A;</a></li>
+<li><a href="#polymorphic-relations">&#x591A;&#x6001;&#x5173;&#x8054;</a></li>
+<li><a href="#many-to-many-polymorphic-relations">&#x591A;&#x5BF9;&#x591A;&#x591A;&#x6001;&#x5173;&#x8054;</a></li>
+</ul>
+<p><a name="defining-relationships"></a></p>
+<h2 id="&#x5B9A;&#x4E49;&#x5173;&#x8054;">&#x5B9A;&#x4E49;&#x5173;&#x8054;</h2>
+<p>Eloquent &#x5173;&#x8054;&#x5728; Eloquent &#x6A21;&#x578B;&#x7C7B;&#x4E2D;&#x4EE5;&#x65B9;&#x6CD5;&#x7684;&#x5F62;&#x5F0F;&#x5448;&#x73B0;&#x3002;&#x5982;&#x540C; Eloquent &#x6A21;&#x578B;&#x672C;&#x8EAB;&#xFF0C;&#x5173;&#x8054;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x5F3A;&#x5927;&#x7684; <a href="docs/queries">&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x6784;&#x9020;&#x5668;</a> &#x4F7F;&#x7528;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x5F3A;&#x5927;&#x7684;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x548C;&#x67E5;&#x8BE2;&#x529F;&#x80FD;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728; <code>posts</code> &#x5173;&#x8054;&#x7684;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x4E2D;&#x9644;&#x52A0;&#x4E00;&#x4E2A;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code>$user-&gt;posts()-&gt;where(&apos;active&apos;, 1)-&gt;get();
+</code></pre><p>&#x4E0D;&#x8FC7;&#xFF0C;&#x5728;&#x6DF1;&#x5165;&#x4F7F;&#x7528;&#x5173;&#x8054;&#x4E4B;&#x524D;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5148;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x5B9A;&#x4E49;&#x6BCF;&#x79CD;&#x5173;&#x8054;&#x7C7B;&#x578B;&#x3002;</p>
+<p><a name="one-to-one"></a></p>
+<h3 id="&#x4E00;&#x5BF9;&#x4E00;">&#x4E00;&#x5BF9;&#x4E00;</h3>
+<p>&#x4E00;&#x5BF9;&#x4E00;&#x5173;&#x8054;&#x662F;&#x6700;&#x57FA;&#x672C;&#x7684;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E00;&#x4E2A; <code>User</code> &#x6A21;&#x578B;&#x53EF;&#x80FD;&#x5173;&#x8054;&#x4E00;&#x4E2A; <code>Phone</code> &#x6A21;&#x578B;&#x3002;&#x4E3A;&#x4E86;&#x5B9A;&#x4E49;&#x8FD9;&#x4E2A;&#x5173;&#x8054;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5728; <code>User</code> &#x6A21;&#x578B;&#x4E2D;&#x5199;&#x4E00;&#x4E2A; <code>phone</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5728;<code>phone</code> &#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x8C03;&#x7528; <code>hasOne</code> &#x65B9;&#x6CD5;&#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x4E0E;&#x7528;&#x6237;&#x5173;&#x8054;&#x7684;&#x7535;&#x8BDD;&#x8BB0;&#x5F55;&#x3002;
+     */
+    public function phone()
+    {
+        return $this-&gt;hasOne(&apos;App\Phone&apos;);
+    }
+}
+</code></pre><p><code>hasOne</code> &#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5173;&#x8054;&#x6A21;&#x578B;&#x7684;&#x7C7B;&#x540D;&#x3002;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x5B9A;&#x4E49;&#x597D;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Eloquent &#x52A8;&#x6001;&#x5C5E;&#x6027;&#x83B7;&#x5F97;&#x76F8;&#x5173;&#x7684;&#x8BB0;&#x5F55;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x50CF;&#x5728;&#x8BBF;&#x95EE;&#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#x4E00;&#x6837;&#xFF0C;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre class="language-"><code>$phone = User::find(1)-&gt;phone;
+</code></pre><p>Eloquent &#x4F1A;&#x57FA;&#x4E8E;&#x6A21;&#x578B;&#x540D;&#x51B3;&#x5B9A;&#x5916;&#x952E;&#x540D;&#x79F0;&#x3002;&#x5728;&#x5F53;&#x524D;&#x573A;&#x666F;&#x4E2D;&#xFF0C;Eloquent &#x5047;&#x8BBE; <code>Phone</code> &#x6A21;&#x578B;&#x6709;&#x4E00;&#x4E2A; <code>user_id</code> &#x5916;&#x952E;&#xFF0C;&#x5982;&#x679C;&#x5916;&#x952E;&#x540D;&#x4E0D;&#x662F;&#x8FD9;&#x4E2A;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9; <code>hasOne</code> &#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8986;&#x76D6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x5916;&#x952E;&#x540D;&#xFF1A; </p>
+<pre class="language-"><code>return $this-&gt;hasOne(&apos;App\Phone&apos;, &apos;foreign_key&apos;);
+</code></pre><p>&#x6B64;&#x5916;&#xFF0C;Eloquent &#x5047;&#x5B9A;&#x5916;&#x952E;&#x503C;&#x662F;&#x4E0E;&#x7236;&#x7EA7; <code>id</code>&#xFF08;&#x6216;&#x81EA;&#x5B9A;&#x4E49; <code>$primaryKey</code>&#xFF09;&#x5217;&#x7684;&#x503C;&#x76F8;&#x5339;&#x914D;&#x7684;&#x3002; &#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;Eloquent &#x5C06;&#x5728; <code>Phone</code> &#x8BB0;&#x5F55;&#x7684; <code>user_id</code> &#x5217;&#x4E2D;&#x67E5;&#x627E;&#x4E0E;&#x7528;&#x6237;&#x8868;&#x7684; <code>id</code> &#x5217;&#x76F8;&#x5339;&#x914D;&#x7684;&#x503C;&#x3002; &#x5982;&#x679C;&#x60A8;&#x5E0C;&#x671B;&#x8BE5;&#x5173;&#x8054;&#x4F7F;&#x7528; <code>id</code>&#x4EE5;&#x5916;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x952E;&#x540D;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x7ED9; <code>hasOne</code> &#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code>return $this-&gt;hasOne(&apos;App\Phone&apos;, &apos;foreign_key&apos;, &apos;local_key&apos;);
+</code></pre><h4 id="&#x5B9A;&#x4E49;&#x53CD;&#x5411;&#x5173;&#x8054;">&#x5B9A;&#x4E49;&#x53CD;&#x5411;&#x5173;&#x8054;</h4>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x80FD;&#x4ECE; <code>User</code> &#x6A21;&#x578B;&#x8BBF;&#x95EE;&#x5230; <code>Phone</code> &#x6A21;&#x578B;&#x4E86;&#x3002;&#x73B0;&#x5728;&#xFF0C;&#x518D;&#x5728; <code>Phone</code> &#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5173;&#x8054;&#xFF0C;&#x6B64;&#x5173;&#x8054;&#x80FD;&#x8BA9;&#x6211;&#x4EEC;&#x8BBF;&#x95EE;&#x5230;&#x62E5;&#x6709;&#x6B64;&#x7535;&#x8BDD;&#x7684; <code>User</code> &#x6A21;&#x578B;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x4E0E; <code>hasOne</code> &#x65B9;&#x6CD5;&#x5BF9;&#x5E94;&#x7684; <code>belongsTo</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Phone extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x62E5;&#x6709;&#x6B64;&#x7535;&#x8BDD;&#x7684;&#x7528;&#x6237;&#x3002;
+     */
+    public function user()
+    {
+        return $this-&gt;belongsTo(&apos;App\User&apos;);
+    }
+}
+</code></pre><p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;Eloquent &#x4F1A;&#x5C1D;&#x8BD5;&#x5339;&#x914D; <code>Phone</code> &#x6A21;&#x578B;&#x4E0A;&#x7684; <code>user_id</code> &#x81F3; <code>User</code> &#x6A21;&#x578B;&#x4E0A;&#x7684; <code>id</code>&#x3002; &#x5B83;&#x662F;&#x901A;&#x8FC7;&#x68C0;&#x67E5;&#x5173;&#x7CFB;&#x65B9;&#x6CD5;&#x7684;&#x540D;&#x79F0;&#x5E76;&#x4F7F;&#x7528; <code>_id</code>  &#x4F5C;&#x4E3A;&#x540E;&#x7F00;&#x540D;&#x6765;&#x786E;&#x5B9A;&#x9ED8;&#x8BA4;&#x5916;&#x952E;&#x540D;&#x79F0;&#x7684;&#x3002; &#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;<code>Phone</code>&#x6A21;&#x578B;&#x7684;&#x5916;&#x952E;&#x4E0D;&#x662F;<code>user_id</code>&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x952E;&#x540D;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;<code>belongsTo</code>&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>/**
+ * &#x83B7;&#x5F97;&#x62E5;&#x6709;&#x6B64;&#x7535;&#x8BDD;&#x7684;&#x7528;&#x6237;&#x3002;
+ */
+public function user()
+{
+    return $this-&gt;belongsTo(&apos;App\User&apos;, &apos;foreign_key&apos;);
+}
+</code></pre><p>&#x5982;&#x679C;&#x7236;&#x7EA7;&#x6A21;&#x578B;&#x6CA1;&#x6709;&#x4F7F;&#x7528; <code>id</code> &#x4F5C;&#x4E3A;&#x4E3B;&#x952E;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5E0C;&#x671B;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x5B57;&#x6BB5;&#x6765;&#x8FDE;&#x63A5;&#x5B50;&#x7EA7;&#x6A21;&#x578B;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9; <code>belongsTo</code> &#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x6307;&#x5B9A;&#x7236;&#x7EA7;&#x6570;&#x636E;&#x8868;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x952E;&#xFF1A;</p>
+<pre class="language-"><code>/**
+ * &#x83B7;&#x5F97;&#x62E5;&#x6709;&#x6B64;&#x7535;&#x8BDD;&#x7684;&#x7528;&#x6237;&#x3002;
+ */
+public function user()
+{
+    return $this-&gt;belongsTo(&apos;App\User&apos;, &apos;foreign_key&apos;, &apos;other_key&apos;);
+}
+</code></pre><p><a name="default-models"></a></p>
+<h4 id="&#x9ED8;&#x8BA4;&#x6A21;&#x578B;">&#x9ED8;&#x8BA4;&#x6A21;&#x578B;</h4>
+<p><code>belongsTo</code> &#x5173;&#x8054;&#x5141;&#x8BB8;&#x5B9A;&#x4E49;&#x9ED8;&#x8BA4;&#x6A21;&#x578B;&#xFF0C;&#x8FD9;&#x9002;&#x5E94;&#x4E8E;&#x5F53;&#x5173;&#x8054;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7684;&#x662F; <code>null</code> &#x7684;&#x60C5;&#x51B5;&#x3002;&#x8FD9;&#x79CD;&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x901A;&#x5E38;&#x79F0;&#x4E3A; <a href="https://en.wikipedia.org/wiki/Null_Object_pattern" target="_blank">&#x7A7A;&#x5BF9;&#x8C61;&#x6A21;&#x5F0F;</a>&#xFF0C;&#x4E3A;&#x60A8;&#x514D;&#x53BB;&#x4E86;&#x989D;&#x5916;&#x7684;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#x4EE3;&#x7801;&#x3002;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>user</code> &#x5173;&#x8054;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6587;&#x7AE0;&#x7684;&#x4F5C;&#x8005;&#xFF0C;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7A7A;&#x7684; <code>App\User</code> &#x6A21;&#x578B;&#x3002;</p>
+<pre class="language-"><code>/**
+ * &#x83B7;&#x5F97;&#x6B64;&#x6587;&#x7AE0;&#x7684;&#x4F5C;&#x8005;&#x3002;
+ */
+public function user()
+{
+    return $this-&gt;belongsTo(&apos;App\User&apos;)-&gt;withDefault();
+}
+</code></pre><p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x95ED;&#x5305;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x586B;&#x5145;&#x9ED8;&#x8BA4;&#x6A21;&#x578B;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre class="language-"><code>/**
+ * &#x83B7;&#x5F97;&#x6B64;&#x6587;&#x7AE0;&#x7684;&#x4F5C;&#x8005;&#x3002;
+ */
+public function user()
+{
+    return $this-&gt;belongsTo(&apos;App\User&apos;)-&gt;withDefault([
+        &apos;name&apos; =&gt; &apos;&#x6E38;&#x5BA2;&apos;,
+    ]);
+}
+
+/**
+ * &#x83B7;&#x5F97;&#x6B64;&#x6587;&#x7AE0;&#x7684;&#x4F5C;&#x8005;&#x3002;
+ */
+public function user()
+{
+    return $this-&gt;belongsTo(&apos;App\User&apos;)-&gt;withDefault(function ($user) {
+        $user-&gt;name = &apos;&#x6E38;&#x5BA2;&apos;;
+    });
+}
+</code></pre><p><a name="one-to-many"></a></p>
+<h3 id="&#x4E00;&#x5BF9;&#x591A;">&#x4E00;&#x5BF9;&#x591A;</h3>
+<p>&#x300C;&#x4E00;&#x5BF9;&#x591A;&#x300D;&#x5173;&#x8054;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x5355;&#x4E2A;&#x6A21;&#x578B;&#x62E5;&#x6709;&#x4EFB;&#x610F;&#x6570;&#x91CF;&#x7684;&#x5176;&#x5B83;&#x5173;&#x8054;&#x6A21;&#x578B;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E00;&#x7BC7;&#x535A;&#x5BA2;&#x6587;&#x7AE0;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x65E0;&#x9650;&#x591A;&#x6761;&#x8BC4;&#x8BBA;&#x3002;&#x5C31;&#x50CF;&#x5176;&#x5B83;&#x7684; Eloquent &#x5173;&#x8054;&#x4E00;&#x6837;&#xFF0C;&#x4E00;&#x5BF9;&#x591A;&#x5173;&#x8054;&#x7684;&#x5B9A;&#x4E49;&#x4E5F;&#x662F;&#x5728; Eloquent &#x6A21;&#x578B;&#x4E2D;&#x5199;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x535A;&#x5BA2;&#x6587;&#x7AE0;&#x7684;&#x8BC4;&#x8BBA;&#x3002;
+     */
+    public function comments()
+    {
+        return $this-&gt;hasMany(&apos;App\Comment&apos;);
+    }
+}
+</code></pre><p>&#x8BB0;&#x4F4F;&#xFF0C;Eloquent &#x4F1A;&#x81EA;&#x52A8;&#x786E;&#x5B9A; <code>Comment</code> &#x6A21;&#x578B;&#x4E0A;&#x6B63;&#x786E;&#x7684;&#x5916;&#x952E;&#x5B57;&#x6BB5;&#x3002;&#x6309;&#x7167;&#x7EA6;&#x5B9A;&#xFF0C;Eloquent &#x4F7F;&#x7528;&#x7236;&#x7EA7;&#x6A21;&#x578B;&#x540D;&#x7684;&#x300C;snake case&#x300D;&#x5F62;&#x5F0F;&#x3001;&#x52A0;&#x4E0A; <code>_id</code> &#x540E;&#x7F00;&#x540D;&#x4F5C;&#x4E3A;&#x5916;&#x952E;&#x5B57;&#x6BB5;&#x3002;&#x5BF9;&#x5E94;&#x5230;&#x4E0A;&#x9762;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x5C31;&#x662F; Eloquent &#x5047;&#x5B9A; <code>Comment</code> &#x6A21;&#x578B;&#x5BF9;&#x5E94;&#x5230; <code>Post</code> &#x6A21;&#x578B;&#x4E0A;&#x7684;&#x90A3;&#x4E2A;&#x5916;&#x952E;&#x5B57;&#x6BB5;&#x662F; <code>post_id</code>&#x3002;</p>
+<p>&#x5173;&#x8054;&#x5173;&#x7CFB;&#x5B9A;&#x4E49;&#x597D;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBF;&#x95EE; <code>comments</code> &#x5C5E;&#x6027;&#x83B7;&#x5F97;&#x8BC4;&#x8BBA;&#x96C6;&#x5408;&#x3002;&#x8BB0;&#x4F4F;&#xFF0C;&#x56E0;&#x4E3A; Eloquent &#x63D0;&#x4F9B;&#x4E86;&#x300C;&#x52A8;&#x6001;&#x5C5E;&#x6027;&#x300D;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x50CF;&#x5728;&#x8BBF;&#x95EE;&#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5C5E;&#x6027;&#x4E00;&#x6837;&#xFF0C;&#x8BBF;&#x95EE;&#x5173;&#x8054;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>$comments = App\Post::find(1)-&gt;comments;
+
+foreach ($comments as $comment) {
+    //
+}
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x7531;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x5173;&#x8054;&#x8FD8;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x6784;&#x9020;&#x5668;&#x4F7F;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x3001;&#x5728; <code>comments</code> &#x65B9;&#x6CD5;&#x4E0A;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7684;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code>$comments = App\Post::find(1)-&gt;comments()-&gt;where(&apos;title&apos;, &apos;foo&apos;)-&gt;first();
+</code></pre><p>&#x5F62;&#x5982; <code>hasOne</code> &#x65B9;&#x6CD5;&#xFF0C;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x4F7F;&#x7528; <code>hasMany</code> &#x65B9;&#x6CD5;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x989D;&#x5916;&#x53C2;&#x6570;&#x6765;&#x8986;&#x76D6;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x5916;&#x952E;&#x4E0E;&#x672C;&#x5730;&#x952E;&#x3002;</p>
+<pre class="language-"><code>return $this-&gt;hasMany(&apos;App\Comment&apos;, &apos;foreign_key&apos;);
+
+return $this-&gt;hasMany(&apos;App\Comment&apos;, &apos;foreign_key&apos;, &apos;local_key&apos;);
+</code></pre><p><a name="one-to-many-inverse"></a></p>
+<h3 id="&#x4E00;&#x5BF9;&#x591A;&#xFF08;&#x53CD;&#x5411;&#xFF09;">&#x4E00;&#x5BF9;&#x591A;&#xFF08;&#x53CD;&#x5411;&#xFF09;</h3>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x80FD;&#x83B7;&#x5F97;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x6240;&#x6709;&#x8BC4;&#x8BBA;&#xFF0C;&#x63A5;&#x7740;&#x518D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x901A;&#x8FC7;&#x8BC4;&#x8BBA;&#x83B7;&#x5F97;&#x6240;&#x5C5E;&#x6587;&#x7AE0;&#x7684;&#x5173;&#x8054;&#x3002;&#x8FD9;&#x4E2A;&#x5173;&#x8054;&#x662F; <code>hasMany</code> &#x5173;&#x8054;&#x7684;&#x53CD;&#x5411;&#x5173;&#x8054;&#xFF0C;&#x5728;&#x5B50;&#x7EA7;&#x6A21;&#x578B;&#x4E2D;&#x4F7F;&#x7528; <code>belongsTo</code> &#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x5B83;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Comment extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x8BC4;&#x8BBA;&#x6240;&#x5C5E;&#x7684;&#x6587;&#x7AE0;&#x3002;
+     */
+    public function post()
+    {
+        return $this-&gt;belongsTo(&apos;App\Post&apos;);
+    }
+}
+</code></pre><p>&#x5173;&#x8054;&#x5173;&#x7CFB;&#x5B9A;&#x4E49;&#x597D;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728; <code>Comment</code> &#x6A21;&#x578B;&#x4E0A;&#x4F7F;&#x7528; <code>post</code> &#x300C;&#x52A8;&#x6001;&#x5C5E;&#x6027;&#x300D;&#x83B7;&#x5F97; <code>Post</code> &#x6A21;&#x578B;&#x4E86;&#x3002;</p>
+<pre class="language-"><code>$comment = App\Comment::find(1);
+
+echo $comment-&gt;post-&gt;title;
+</code></pre><p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;Eloquent &#x4F1A;&#x5C1D;&#x8BD5;&#x7528; <code>Comment</code> &#x6A21;&#x578B;&#x7684; <code>post_id</code> &#x4E0E; <code>Post</code> &#x6A21;&#x578B;&#x7684; <code>id</code> &#x8FDB;&#x884C;&#x5339;&#x914D;&#x3002;&#x9ED8;&#x8BA4;&#x5916;&#x952E;&#x540D;&#x662F; Eloquent &#x4F9D;&#x636E;&#x5173;&#x8054;&#x540D;&#x3001;&#x5E76;&#x5728;&#x5173;&#x8054;&#x540D;&#x540E;&#x52A0;&#x4E0A; <code>_id</code> &#x540E;&#x7F00;&#x786E;&#x5B9A;&#x7684;&#x3002;&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x679C; <code>Comment</code> &#x6A21;&#x578B;&#x7684;&#x5916;&#x952E;&#x4E0D;&#x662F; <code>post_id</code>&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5C06;&#x81EA;&#x5B9A;&#x4E49;&#x952E;&#x540D;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;<code>belongsTo</code>&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>/**
+ * &#x83B7;&#x5F97;&#x6B64;&#x8BC4;&#x8BBA;&#x6240;&#x5C5E;&#x7684;&#x6587;&#x7AE0;&#x3002;
+ */
+public function post()
+{
+    return $this-&gt;belongsTo(&apos;App\Post&apos;, &apos;foreign_key&apos;);
+}
+</code></pre><p>&#x5982;&#x679C;&#x7236;&#x7EA7;&#x6A21;&#x578B;&#x6CA1;&#x6709;&#x4F7F;&#x7528; <code>id</code> &#x4F5C;&#x4E3A;&#x4E3B;&#x952E;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5E0C;&#x671B;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x5B57;&#x6BB5;&#x6765;&#x8FDE;&#x63A5;&#x5B50;&#x7EA7;&#x6A21;&#x578B;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9; <code>belongsTo</code>&#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x6307;&#x5B9A;&#x7236;&#x7EA7;&#x6570;&#x636E;&#x8868;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x952E;&#xFF1A;</p>
+<pre class="language-"><code>/**
+ * &#x83B7;&#x5F97;&#x6B64;&#x8BC4;&#x8BBA;&#x6240;&#x5C5E;&#x7684;&#x6587;&#x7AE0;&#x3002;
+ */
+public function post()
+{
+    return $this-&gt;belongsTo(&apos;App\Post&apos;, &apos;foreign_key&apos;, &apos;other_key&apos;);
+}
+</code></pre><p><a name="many-to-many"></a></p>
+<h3 id="&#x591A;&#x5BF9;&#x591A;">&#x591A;&#x5BF9;&#x591A;</h3>
+<p>&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;&#x6BD4; <code>hasOne</code> &#x548C; <code>hasMany</code> &#x5173;&#x8054;&#x7A0D;&#x5FAE;&#x590D;&#x6742;&#x4E9B;&#x3002;&#x8FD9;&#x79CD;&#x5173;&#x8054;&#x7684;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x5C31;&#x662F;&#x5177;&#x6709;&#x8BB8;&#x591A;&#x89D2;&#x8272;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x800C;&#x89D2;&#x8272;&#x4E5F;&#x88AB;&#x5176;&#x4ED6;&#x7528;&#x6237;&#x5171;&#x4EAB;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BB8;&#x591A;&#x7528;&#x6237;&#x90FD;&#x53EF;&#x4EE5;&#x6709;&#x300C;&#x7BA1;&#x7406;&#x5458;&#x300D;&#x89D2;&#x8272;&#x3002;&#x8981;&#x5B9A;&#x4E49;&#x8FD9;&#x79CD;&#x5173;&#x8054;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x4E09;&#x4E2A;&#x6570;&#x636E;&#x5E93;&#x8868;&#xFF1A;<code>users</code>&#x3001;<code>roles</code> &#x548C; <code>role_user</code>&#x3002;<code>role_user</code> &#x8868;&#x662F;&#x4EE5;&#x76F8;&#x5173;&#x8054;&#x7684;&#x4E24;&#x4E2A;&#x6A21;&#x578B;&#x6570;&#x636E;&#x8868;&#x3001;&#x4F9D;&#x7167;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x6392;&#x5217;&#x547D;&#x540D;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x5305;&#x542B; <code>user_id</code> &#x548C; <code>role_id</code> &#x5B57;&#x6BB5;&#x3002;</p>
+<p>&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;&#x662F;&#x901A;&#x8FC7;&#x5199;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x7684;&#xFF0C;&#x5728;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x8C03;&#x7528; <code>belongsToMany</code> &#x65B9;&#x6CD5;&#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x7ED3;&#x679C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x5728; <code>User</code> &#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>roles</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x7528;&#x6237;&#x7684;&#x89D2;&#x8272;&#x3002;
+     */
+    public function roles()
+    {
+        return $this-&gt;belongsToMany(&apos;App\Role&apos;);
+    }
+}
+</code></pre><p>&#x5173;&#x8054;&#x5173;&#x7CFB;&#x5B9A;&#x4E49;&#x597D;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>roles</code> &#x52A8;&#x6001;&#x5C5E;&#x6027;&#x83B7;&#x5F97;&#x7528;&#x6237;&#x7684;&#x89D2;&#x8272;&#x4E86;&#xFF1A;</p>
+<pre class="language-"><code>$user = App\User::find(1);
+
+foreach ($user-&gt;roles as $role) {
+    //
+}
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x5982;&#x540C;&#x6240;&#x6709;&#x5176;&#x5B83;&#x7684;&#x5173;&#x8054;&#x7C7B;&#x578B;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x8C03;&#x7528; <code>roles</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5229;&#x7528;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x5BF9;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code>$roles = App\User::find(1)-&gt;roles()-&gt;orderBy(&apos;name&apos;)-&gt;get();
+</code></pre><p>&#x5982;&#x524D;&#x6240;&#x8FF0;&#xFF0C;&#x4E3A;&#x4E86;&#x786E;&#x5B9A;&#x8FDE;&#x63A5;&#x8868;&#x8868;&#x540D;&#xFF0C;Eloquent &#x4F1A;&#x6309;&#x7167;&#x5B57;&#x6BCD;&#x987A;&#x5E8F;&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x5173;&#x8054;&#x6A21;&#x578B;&#x7684;&#x540D;&#x79F0;&#x3002; &#x5F53;&#x7136;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5730;&#x8986;&#x76D6;&#x8FD9;&#x4E2A;&#x7EA6;&#x5B9A;&#xFF0C;&#x901A;&#x8FC7;&#x7ED9; <code>belongsToMany</code> &#x65B9;&#x6CD5;&#x6307;&#x5B9A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre class="language-"><code>return $this-&gt;belongsToMany(&apos;App\Role&apos;, &apos;role_user&apos;);
+</code></pre><p>&#x9664;&#x4E86;&#x81EA;&#x5B9A;&#x4E49;&#x8FDE;&#x63A5;&#x8868;&#x8868;&#x540D;&#xFF0C;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9; <code>belongsToMany</code> &#x65B9;&#x6CD5;&#x518D;&#x6B21;&#x4F20;&#x9012;&#x989D;&#x5916;&#x53C2;&#x6570;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x8FDE;&#x63A5;&#x8868;&#x91CC;&#x7684;&#x952E;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x3002;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x5B9A;&#x4E49;&#x6B64;&#x5173;&#x8054;&#x7684;&#x6A21;&#x578B;&#x5728;&#x8FDE;&#x63A5;&#x8868;&#x91CC;&#x7684;&#x952E;&#x540D;&#xFF0C;&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x53E6;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x5728;&#x8FDE;&#x63A5;&#x8868;&#x91CC;&#x7684;&#x952E;&#x540D;&#xFF1A;</p>
+<pre class="language-"><code>return $this-&gt;belongsToMany(&apos;App\Role&apos;, &apos;role_user&apos;, &apos;user_id&apos;, &apos;role_id&apos;);
+</code></pre><h4 id="&#x5B9A;&#x4E49;&#x53CD;&#x5411;&#x5173;&#x8054;">&#x5B9A;&#x4E49;&#x53CD;&#x5411;&#x5173;&#x8054;</h4>
+<p>&#x5B9A;&#x4E49;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;&#x7684;&#x53CD;&#x5411;&#x5173;&#x8054;&#xFF0C;&#x60A8;&#x53EA;&#x8981;&#x5728;&#x5BF9;&#x65B9;&#x6A21;&#x578B;&#x91CC;&#x518D;&#x6B21;&#x8C03;&#x7528; <code>belongsToMany</code> &#x65B9;&#x6CD5;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x63A5;&#x7740;&#x4EE5;&#x7528;&#x6237;&#x89D2;&#x8272;&#x4E3A;&#x4F8B;&#xFF0C;&#x5728; <code>Role</code> &#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>users</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Role extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x89D2;&#x8272;&#x4E0B;&#x7684;&#x7528;&#x6237;&#x3002;
+     */
+    public function users()
+    {
+        return $this-&gt;belongsToMany(&apos;App\User&apos;);
+    }
+}
+</code></pre><p>&#x5982;&#x4F60;&#x6240;&#x89C1;&#xFF0C;&#x9664;&#x4E86;&#x5F15;&#x5165;&#x7684;&#x6A21;&#x578B;&#x53D8;&#x4E3A; <code>App\User</code> &#x5916;&#xFF0C;&#x5176;&#x5B83;&#x4E0E;&#x5728; <code>User</code> &#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#x3002;&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x91CD;&#x7528;&#x4E86; <code>belongsToMany</code> &#x65B9;&#x6CD5;&#xFF0C;&#x81EA;&#x5B9A;&#x4E49;&#x8FDE;&#x63A5;&#x8868;&#x8868;&#x540D;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x8FDE;&#x63A5;&#x8868;&#x91CC;&#x7684;&#x952E;&#x7684;&#x5B57;&#x6BB5;&#x540D;&#x79F0;&#x5728;&#x8FD9;&#x91CC;&#x540C;&#x6837;&#x9002;&#x7528;&#x3002;</p>
+<h4 id="&#x83B7;&#x5F97;&#x4E2D;&#x95F4;&#x8868;&#x5B57;&#x6BB5;">&#x83B7;&#x5F97;&#x4E2D;&#x95F4;&#x8868;&#x5B57;&#x6BB5;</h4>
+<p>&#x60A8;&#x5DF2;&#x7ECF;&#x5B66;&#x5230;&#xFF0C;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x4E2D;&#x95F4;&#x8868;&#x652F;&#x6301;&#xFF0C;Eloquent &#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x6709;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x548C;&#x8FD9;&#x5F20;&#x8868;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x7684; <code>User</code> &#x5BF9;&#x8C61;&#x5173;&#x8054;&#x4E86;&#x8BB8;&#x591A;&#x7684; <code>Role</code> &#x5BF9;&#x8C61;&#x3002;&#x5728;&#x83B7;&#x5F97;&#x8FD9;&#x4E9B;&#x5173;&#x8054;&#x5BF9;&#x8C61;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6A21;&#x578B;&#x7684; <code>pivot</code> &#x5C5E;&#x6027;&#x8BBF;&#x95EE;&#x4E2D;&#x95F4;&#x8868;&#x6570;&#x636E;&#xFF1A;</p>
+<pre class="language-"><code>$user = App\User::find(1);
+
+foreach ($user-&gt;roles as $role) {
+    echo $role-&gt;pivot-&gt;created_at;
+}
+</code></pre><p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x53D6;&#x5F97;&#x7684;&#x6BCF;&#x4E2A; <code>Role</code> &#x6A21;&#x578B;&#x5BF9;&#x8C61;&#xFF0C;&#x90FD;&#x4F1A;&#x88AB;&#x81EA;&#x52A8;&#x8D4B;&#x4E88; <code>pivot</code> &#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x4EE3;&#x8868;&#x4E2D;&#x95F4;&#x8868;&#x7684;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x5BF9;&#x8C61;&#xFF0C;&#x80FD;&#x50CF;&#x5176;&#x5B83;&#x7684; Eloquent &#x6A21;&#x578B;&#x4E00;&#x6837;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>pivot</code> &#x5BF9;&#x8C61;&#x53EA;&#x5305;&#x542B;&#x4E24;&#x4E2A;&#x5173;&#x8054;&#x6A21;&#x578B;&#x7684;&#x952E;&#x3002;&#x5982;&#x679C;&#x4E2D;&#x95F4;&#x8868;&#x91CC;&#x8FD8;&#x6709;&#x989D;&#x5916;&#x5B57;&#x6BB5;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x5728;&#x5B9A;&#x4E49;&#x5173;&#x8054;&#x65F6;&#x660E;&#x786E;&#x6307;&#x51FA;&#xFF1A;</p>
+<pre class="language-"><code>return $this-&gt;belongsToMany(&apos;App\Role&apos;)-&gt;withPivot(&apos;column1&apos;, &apos;column2&apos;);
+</code></pre><p>&#x5982;&#x679C;&#x60A8;&#x60F3;&#x8BA9;&#x4E2D;&#x95F4;&#x8868;&#x81EA;&#x52A8;&#x7EF4;&#x62A4; <code>created_at</code> &#x548C; <code>updated_at</code> &#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x5B9A;&#x4E49;&#x5173;&#x8054;&#x65F6;&#x52A0;&#x4E0A; <code>withTimestamps</code> &#x65B9;&#x6CD5;&#x5373;&#x53EF;&#x3002;</p>
+<pre class="language-"><code>return $this-&gt;belongsToMany(&apos;App\Role&apos;)-&gt;withTimestamps();
+</code></pre><h4 id="&#x901A;&#x8FC7;&#x4E2D;&#x95F4;&#x8868;&#x8FC7;&#x6EE4;&#x5173;&#x8054;&#x6570;&#x636E;">&#x901A;&#x8FC7;&#x4E2D;&#x95F4;&#x8868;&#x8FC7;&#x6EE4;&#x5173;&#x8054;&#x6570;&#x636E;</h4>
+<p>&#x5728;&#x5B9A;&#x4E49;&#x5173;&#x8054;&#x65F6;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>wherePivot</code> &#x548C; <code>wherePivotIn</code> &#x65B9;&#x6CD5;&#x8FC7;&#x6EE4; <code>belongsToMany</code> &#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>return $this-&gt;belongsToMany(&apos;App\Role&apos;)-&gt;wherePivot(&apos;approved&apos;, 1);
+
+return $this-&gt;belongsToMany(&apos;App\Role&apos;)-&gt;wherePivotIn(&apos;priority&apos;, [1, 2]);
+</code></pre><h4 id="&#x5B9A;&#x4E49;&#x81EA;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x8868;&#x6A21;&#x578B;">&#x5B9A;&#x4E49;&#x81EA;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x8868;&#x6A21;&#x578B;</h4>
+<p>&#x5982;&#x679C;&#x60A8;&#x60F3;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x6A21;&#x578B;&#x6765;&#x8868;&#x793A;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x4E2D;&#x7684;&#x4E2D;&#x95F4;&#x8868;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5B9A;&#x4E49;&#x5173;&#x8054;&#x65F6;&#x8C03;&#x7528; <code>using</code> &#x65B9;&#x6CD5;&#x3002;&#x6240;&#x6709;&#x81EA;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x8868;&#x6A21;&#x578B;&#x90FD;&#x5FC5;&#x987B;&#x6269;&#x5C55;&#x81EA; <code>Illuminate\Database\Eloquent\Relations\Pivot</code> &#x7C7B;&#x3002;&#x4F8B;&#x5982;&#xFF0C;
+&#x6211;&#x4EEC;&#x5728;&#x5199; <code>Role</code> &#x6A21;&#x578B;&#x7684;&#x5173;&#x8054;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x4E2D;&#x95F4;&#x8868;&#x6A21;&#x578B; <code>UserRole</code>&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Role extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x89D2;&#x8272;&#x4E0B;&#x7684;&#x7528;&#x6237;&#x3002;
+     */
+    public function users()
+    {
+        return $this-&gt;belongsToMany(&apos;App\User&apos;)-&gt;using(&apos;App\UserRole&apos;);
+    }
+}
+</code></pre><p>&#x5F53;&#x5B9A;&#x4E49; <code>UserRole</code> &#x6A21;&#x578B;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x6269;&#x5C55;&#x81EA; <code>Pivot</code> &#x7C7B;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Relations\Pivot;
+
+class UserRole extends Pivot
+{
+    //
+}
+</code></pre><p><a name="has-many-through"></a></p>
+<h3 id="&#x8FDC;&#x5C42;&#x4E00;&#x5BF9;&#x591A;">&#x8FDC;&#x5C42;&#x4E00;&#x5BF9;&#x591A;</h3>
+<p>&#x300C;&#x8FDC;&#x5C42;&#x4E00;&#x5BF9;&#x591A;&#x300D;&#x5173;&#x8054;&#x63D0;&#x4F9B;&#x4E86;&#x65B9;&#x4FBF;&#x3001;&#x7B80;&#x77ED;&#x7684;&#x65B9;&#x5F0F;&#x901A;&#x8FC7;&#x4E2D;&#x95F4;&#x7684;&#x5173;&#x8054;&#x6765;&#x83B7;&#x5F97;&#x8FDC;&#x5C42;&#x7684;&#x5173;&#x8054;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E00;&#x4E2A; <code>Country</code> &#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E2D;&#x95F4;&#x7684; <code>User</code> &#x6A21;&#x578B;&#x83B7;&#x5F97;&#x591A;&#x4E2A; <code>Post</code> &#x6A21;&#x578B;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x8F7B;&#x6613;&#x5730;&#x6536;&#x96C6;&#x7ED9;&#x5B9A;&#x56FD;&#x5BB6;&#x7684;&#x6240;&#x6709;&#x535A;&#x5BA2;&#x6587;&#x7AE0;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x5B9A;&#x4E49;&#x8FD9;&#x79CD;&#x5173;&#x8054;&#x6240;&#x9700;&#x7684;&#x6570;&#x636E;&#x8868;&#xFF1A;</p>
+<pre class="language-"><code>countries
+    id - integer
+    name - string
+
+users
+    id - integer
+    country_id - integer
+    name - string
+
+posts
+    id - integer
+    user_id - integer
+    title - string
+</code></pre><p>&#x867D;&#x7136; <code>posts</code> &#x8868;&#x4E2D;&#x4E0D;&#x5305;&#x542B; <code>country_id</code> &#x5B57;&#x6BB5;&#xFF0C;&#x4F46; <code>hasManyThrough</code> &#x5173;&#x8054;&#x80FD;&#x8BA9;&#x6211;&#x4EEC;&#x901A;&#x8FC7; <code>$country-&gt;posts</code> &#x8BBF;&#x95EE;&#x5230;&#x4E00;&#x4E2A;&#x56FD;&#x5BB6;&#x4E0B;&#x6240;&#x6709;&#x7684;&#x7528;&#x6237;&#x6587;&#x7AE0;&#x3002;&#x4E3A;&#x4E86;&#x5B8C;&#x6210;&#x8FD9;&#x4E2A;&#x67E5;&#x8BE2;&#xFF0C;Eloquent &#x4F1A;&#x5148;&#x68C0;&#x67E5;&#x4E2D;&#x95F4;&#x8868; <code>users</code> &#x7684; <code>country_id</code> &#x5B57;&#x6BB5;&#xFF0C;&#x627E;&#x5230;&#x6240;&#x6709;&#x5339;&#x914D;&#x7684;&#x7528;&#x6237; ID &#x540E;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B; ID&#xFF0C;&#x5728; <code>posts</code> &#x8868;&#x4E2D;&#x5B8C;&#x6210;&#x67E5;&#x627E;&#x3002; </p>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x4E86;&#x5B9A;&#x4E49;&#x8FD9;&#x79CD;&#x5173;&#x8054;&#x6240;&#x9700;&#x7684;&#x6570;&#x636E;&#x8868;&#x7ED3;&#x6784;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x5728; <code>Country</code> &#x6A21;&#x578B;&#x4E2D;&#x5B9A;&#x4E49;&#x5B83;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Country extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x67D0;&#x4E2A;&#x56FD;&#x5BB6;&#x4E0B;&#x6240;&#x6709;&#x7684;&#x7528;&#x6237;&#x6587;&#x7AE0;&#x3002;
+     */
+    public function posts()
+    {
+        return $this-&gt;hasManyThrough(&apos;App\Post&apos;, &apos;App\User&apos;);
+    }
+}
+</code></pre><p><code>hasManyThrough</code> &#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x6211;&#x4EEC;&#x6700;&#x7EC8;&#x5E0C;&#x671B;&#x8BBF;&#x95EE;&#x7684;&#x6A21;&#x578B;&#x540D;&#x79F0;&#xFF0C;&#x800C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E2D;&#x95F4;&#x6A21;&#x578B;&#x7684;&#x540D;&#x79F0;&#x3002;</p>
+<p>&#x5F53;&#x6267;&#x884C;&#x5173;&#x8054;&#x67E5;&#x8BE2;&#x65F6;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x4F7F;&#x7528; Eloquent &#x7EA6;&#x5B9A;&#x7684;&#x5916;&#x952E;&#x540D;&#x3002;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x5173;&#x8054;&#x7684;&#x952E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9; <code>hasManyThrough</code> &#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x7B2C;&#x4E09;&#x4E2A;&#x548C;&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x5B9E;&#x73B0;&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x4E2D;&#x95F4;&#x6A21;&#x578B;&#x7684;&#x5916;&#x952E;&#x540D;&#xFF0C;&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x6700;&#x7EC8;&#x6A21;&#x578B;&#x7684;&#x5916;&#x952E;&#x540D;&#x3002;&#x7B2C;&#x4E94;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x672C;&#x5730;&#x952E;&#x540D;&#xFF0C;&#x800C;&#x7B2C;&#x516D;&#x4E2A;&#x53C2;&#x6570;&#x8868;&#x793A;&#x4E2D;&#x95F4;&#x6A21;&#x578B;&#x7684;&#x672C;&#x5730;&#x952E;&#x540D;&#xFF1A;</p>
+<pre class="language-"><code>class Country extends Model
+{
+    public function posts()
+    {
+        return $this-&gt;hasManyThrough(
+            &apos;App\Post&apos;,
+            &apos;App\User&apos;,
+            &apos;country_id&apos;, // &#x7528;&#x6237;&#x8868;&#x5916;&#x952E;...
+            &apos;user_id&apos;, // &#x6587;&#x7AE0;&#x8868;&#x5916;&#x952E;...
+            &apos;id&apos;, // &#x56FD;&#x5BB6;&#x8868;&#x672C;&#x5730;&#x952E;...
+            &apos;id&apos; // &#x7528;&#x6237;&#x8868;&#x672C;&#x5730;&#x952E;...
+        );
+    }
+}
+</code></pre><p><a name="polymorphic-relations"></a></p>
+<h3 id="&#x591A;&#x6001;&#x5173;&#x8054;">&#x591A;&#x6001;&#x5173;&#x8054;</h3>
+<h4 id="&#x6570;&#x636E;&#x8868;&#x7ED3;&#x6784;">&#x6570;&#x636E;&#x8868;&#x7ED3;&#x6784;</h4>
+<p>&#x591A;&#x6001;&#x5173;&#x8054;&#x5141;&#x8BB8;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x5728;&#x5355;&#x4E2A;&#x5173;&#x8054;&#x4E0A;&#x5C5E;&#x4E8E;&#x591A;&#x4E2A;&#x5176;&#x4ED6;&#x6A21;&#x578B;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x60F3;&#x8C61;&#x4E00;&#x4E0B;&#x4F7F;&#x7528;&#x60A8;&#x5E94;&#x7528;&#x7684;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x300C;&#x8BC4;&#x8BBA;&#x300D;&#x6587;&#x7AE0;&#x548C;&#x89C6;&#x9891;&#x3002;&#x4F7F;&#x7528;&#x591A;&#x6001;&#x5173;&#x8054;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A; <code>comments</code> &#x8868;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x8FD9;&#x4E24;&#x4E2A;&#x4F7F;&#x7528;&#x573A;&#x666F;&#x3002;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x6784;&#x5EFA;&#x8FD9;&#x79CD;&#x5173;&#x8054;&#x6240;&#x9700;&#x7684;&#x6570;&#x636E;&#x8868;&#x7ED3;&#x6784;&#xFF1A;</p>
+<pre class="language-"><code>posts
+    id - integer
+    title - string
+    body - text
+
+videos
+    id - integer
+    title - string
+    url - string
+
+comments
+    id - integer
+    body - text
+    commentable_id - integer
+    commentable_type - string
+</code></pre><p><code>comments</code> &#x8868;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x91CD;&#x8981;&#x5B57;&#x6BB5; <code>commentable_id</code> &#x548C; <code>commentable_type</code>&#x3002;<code>commentable_id</code> &#x7528;&#x6765;&#x4FDD;&#x5B58;&#x6587;&#x7AE0;&#x6216;&#x8005;&#x89C6;&#x9891;&#x7684; ID &#x503C;&#xFF0C;&#x800C; <code>commentable_type</code> &#x7528;&#x6765;&#x4FDD;&#x5B58;&#x6240;&#x5C5E;&#x6A21;&#x578B;&#x7684;&#x7C7B;&#x540D;&#x3002;<code>commentable_type</code> &#x662F;&#x5728;&#x6211;&#x4EEC;&#x8BBF;&#x95EE; <code>commentable</code> &#x5173;&#x8054;&#x65F6;&#xFF0C; &#x8BA9; ORM &#x786E;&#x5B9A;&#x6240;&#x5C5E;&#x7684;&#x6A21;&#x578B;&#x662F;&#x54EA;&#x4E2A;&#x300C;&#x7C7B;&#x578B;&#x300D;&#x3002;</p>
+<h4 id="&#x6A21;&#x578B;&#x7ED3;&#x6784;">&#x6A21;&#x578B;&#x7ED3;&#x6784;</h4>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x521B;&#x5EFA;&#x8FD9;&#x79CD;&#x5173;&#x8054;&#x6240;&#x9700;&#x7684;&#x6A21;&#x578B;&#x5B9A;&#x4E49;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Comment extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x62E5;&#x6709;&#x6B64;&#x8BC4;&#x8BBA;&#x7684;&#x6A21;&#x578B;&#x3002;
+     */
+    public function commentable()
+    {
+        return $this-&gt;morphTo();
+    }
+}
+
+class Post extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x6587;&#x7AE0;&#x7684;&#x6240;&#x6709;&#x8BC4;&#x8BBA;&#x3002;
+     */
+    public function comments()
+    {
+        return $this-&gt;morphMany(&apos;App\Comment&apos;, &apos;commentable&apos;);
+    }
+}
+
+class Video extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x89C6;&#x9891;&#x7684;&#x6240;&#x6709;&#x8BC4;&#x8BBA;&#x3002;
+     */
+    public function comments()
+    {
+        return $this-&gt;morphMany(&apos;App\Comment&apos;, &apos;commentable&apos;);
+    }
+}
+</code></pre><h4 id="&#x83B7;&#x53D6;&#x591A;&#x6001;&#x5173;&#x8054;">&#x83B7;&#x53D6;&#x591A;&#x6001;&#x5173;&#x8054;</h4>
+<p>&#x4E00;&#x65E6;&#x60A8;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8868;&#x51C6;&#x5907;&#x597D;&#x3001;&#x6A21;&#x578B;&#x5B9A;&#x4E49;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6A21;&#x578B;&#x6765;&#x8BBF;&#x95EE;&#x5173;&#x8054;&#x4E86;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528; <code>comments</code> &#x52A8;&#x6001;&#x5C5E;&#x6027;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x67D0;&#x7BC7;&#x6587;&#x7AE0;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x8BC4;&#x8BBA;&#xFF1A;</p>
+<pre class="language-"><code>$post = App\Post::find(1);
+
+foreach ($post-&gt;comments as $comment) {
+    //
+}
+</code></pre><p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x6001;&#x6A21;&#x578B;&#x4E0A;&#xFF0C;&#x901A;&#x8FC7;&#x8BBF;&#x95EE;&#x8C03;&#x7528;&#x4E86; <code>morphTo</code> &#x7684;&#x5173;&#x8054;&#x65B9;&#x6CD5;&#x83B7;&#x5F97;&#x591A;&#x6001;&#x5173;&#x8054;&#x7684;&#x62E5;&#x6709;&#x8005;&#x3002;&#x5728;&#x5F53;&#x524D;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x5C31;&#x662F; <code>Comment</code> &#x6A21;&#x578B;&#x7684; <code>commentable</code> &#x65B9;&#x6CD5;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x5C5E;&#x6027;&#x6765;&#x8BBF;&#x95EE;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>$comment = App\Comment::find(1);
+
+$commentable = $comment-&gt;commentable;
+</code></pre><p><code>Comment</code> &#x6A21;&#x578B;&#x7684; <code>commentable</code> &#x5173;&#x8054;&#x4F1A;&#x8FD4;&#x56DE; <code>Post</code> &#x6216;&#x8005; <code>Video</code> &#x5B9E;&#x4F8B;&#xFF0C;&#x8FD9;&#x53D6;&#x51B3;&#x4E8E;&#x8BC4;&#x8BBA;&#x6240;&#x5C5E;&#x7684;&#x6A21;&#x578B;&#x7C7B;&#x578B;&#x3002;</p>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x591A;&#x6001;&#x5173;&#x8054;&#x7684;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;">&#x81EA;&#x5B9A;&#x4E49;&#x591A;&#x6001;&#x5173;&#x8054;&#x7684;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;</h4>
+<p>&#x9ED8;&#x8BA4;&#xFF0C;Laravel &#x4F1A;&#x4F7F;&#x7528;&#x5B8C;&#x5168;&#x9650;&#x5B9A;&#x7C7B;&#x540D;&#x4F5C;&#x4E3A;&#x5173;&#x8054;&#x6A21;&#x578B;&#x4FDD;&#x5B58;&#x5728;&#x591A;&#x6001;&#x6A21;&#x578B;&#x4E0A;&#x7684;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x503C;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>Comment</code> &#x5C5E;&#x4E8E; <code>Post</code> &#x6216;&#x8005; <code>Video</code>&#xFF0C;&#x90A3;&#x4E48; <code>commentable_type</code>&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x5BF9;&#x5E94;&#x5730;&#x5C31;&#x662F; <code>App\Post</code> &#x548C; <code>App\Video</code>&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x5C06;&#x6570;&#x636E;&#x5E93;&#x4E0E;&#x7A0B;&#x5E8F;&#x5185;&#x90E8;&#x7ED3;&#x6784;&#x89E3;&#x8026;&#x3002;&#x90A3;&#x6837;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x300C;&#x591A;&#x6001;&#x6620;&#x5C04;&#x8868;&#x300D;&#x6765;&#x6307;&#x793A; Eloquent &#x4F7F;&#x7528;&#x6BCF;&#x4E2A;&#x6A21;&#x578B;&#x81EA;&#x5B9A;&#x4E49;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x540D;&#x800C;&#x4E0D;&#x662F;&#x7C7B;&#x540D;&#xFF1A;</p>
+<pre class="language-"><code>use Illuminate\Database\Eloquent\Relations\Relation;
+
+Relation::morphMap([
+    &apos;posts&apos; =&gt; &apos;App\Post&apos;,
+    &apos;videos&apos; =&gt; &apos;App\Video&apos;,
+]);
+</code></pre><p>&#x60A8;&#x53EF;&#x4EE5;&#x5728; <code>AppServiceProvider</code> &#x4E2D;&#x7684; <code>boot</code> &#x51FD;&#x6570;&#x4E2D;&#x4F7F;&#x7528; <code>Relation::morphMap</code> &#x65B9;&#x6CD5;&#x6CE8;&#x518C;&#x300C;&#x591A;&#x6001;&#x6620;&#x5C04;&#x8868;&#x300D;&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x8005;&#x6CE8;&#x518C;&#x3002;</p>
+<p><a name="many-to-many-polymorphic-relations"></a></p>
+<h3 id="&#x591A;&#x5BF9;&#x591A;&#x591A;&#x6001;&#x5173;&#x8054;">&#x591A;&#x5BF9;&#x591A;&#x591A;&#x6001;&#x5173;&#x8054;</h3>
+<h4 id="&#x6570;&#x636E;&#x8868;&#x7ED3;&#x6784;">&#x6570;&#x636E;&#x8868;&#x7ED3;&#x6784;</h4>
+<p>&#x9664;&#x4E86;&#x4F20;&#x7EDF;&#x7684;&#x591A;&#x6001;&#x5173;&#x8054;&#xFF0C;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x300C;&#x591A;&#x5BF9;&#x591A;&#x300D;&#x7684;&#x591A;&#x6001;&#x5173;&#x8054;&#x3002;&#x4F8B;&#x5982;&#xFF0C;<code>Post</code> &#x6A21;&#x578B;&#x548C; <code>Video</code> &#x6A21;&#x578B;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x4E00;&#x4E2A;&#x591A;&#x6001;&#x5173;&#x8054;&#x81F3; <code>Tag</code> &#x6A21;&#x578B;&#x3002; &#x4F7F;&#x7528;&#x591A;&#x5BF9;&#x591A;&#x591A;&#x6001;&#x5173;&#x8054;&#x53EF;&#x4EE5;&#x8BA9;&#x60A8;&#x5728;&#x6587;&#x7AE0;&#x548C;&#x89C6;&#x9891;&#x4E2D;&#x5171;&#x4EAB;&#x552F;&#x4E00;&#x7684;&#x6807;&#x7B7E;&#x5217;&#x8868;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x770B;&#x6570;&#x636E;&#x8868;&#x7ED3;&#x6784;&#xFF1A;</p>
+<pre class="language-"><code>posts
+    id - integer
+    name - string
+
+videos
+    id - integer
+    name - string
+
+tags
+    id - integer
+    name - string
+
+taggables
+    tag_id - integer
+    taggable_id - integer
+    taggable_type - string
+</code></pre><h4 id="&#x6A21;&#x578B;&#x7ED3;&#x6784;">&#x6A21;&#x578B;&#x7ED3;&#x6784;</h4>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x51C6;&#x5907;&#x5728;&#x6A21;&#x578B;&#x4E0A;&#x5B9A;&#x4E49;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x3002;<code>Post</code> &#x548C; <code>Video</code> &#x4E24;&#x4E2A;&#x6A21;&#x578B;&#x90FD;&#x6709;&#x4E00;&#x4E2A; <code>tags</code> &#x65B9;&#x6CD5;&#xFF0C;&#x65B9;&#x6CD5;&#x5185;&#x90E8;&#x90FD;&#x8C03;&#x7528;&#x4E86; Eloquent &#x7C7B;&#x81EA;&#x8EAB;&#x7684; <code>morphToMany</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Post extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x6587;&#x7AE0;&#x7684;&#x6240;&#x6709;&#x6807;&#x7B7E;&#x3002;
+     */
+    public function tags()
+    {
+        return $this-&gt;morphToMany(&apos;App\Tag&apos;, &apos;taggable&apos;);
+    }
+}
+</code></pre><h4 id="&#x5B9A;&#x4E49;&#x53CD;&#x5411;&#x5173;&#x8054;">&#x5B9A;&#x4E49;&#x53CD;&#x5411;&#x5173;&#x8054;</h4>
+<p>&#x63A5;&#x4E0B;&#x91CC;&#xFF0C;&#x5728; <code>Tag</code> &#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x4E3A;&#x6BCF;&#x4E2A;&#x5173;&#x8054;&#x6A21;&#x578B;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A; <code>posts</code> &#x65B9;&#x6CD5;&#x548C;&#x4E00;&#x4E2A; <code>videos</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Tag extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x6807;&#x7B7E;&#x4E0B;&#x6240;&#x6709;&#x7684;&#x6587;&#x7AE0;&#x3002;
+     */
+    public function posts()
+    {
+        return $this-&gt;morphedByMany(&apos;App\Post&apos;, &apos;taggable&apos;);
+    }
+
+    /**
+     *  &#x83B7;&#x5F97;&#x6B64;&#x6807;&#x7B7E;&#x4E0B;&#x6240;&#x6709;&#x7684;&#x89C6;&#x9891;&#x3002;
+     */
+    public function videos()
+    {
+        return $this-&gt;morphedByMany(&apos;App\Video&apos;, &apos;taggable&apos;);
+    }
+}
+</code></pre><h4 id="&#x83B7;&#x53D6;&#x5173;&#x8054;">&#x83B7;&#x53D6;&#x5173;&#x8054;</h4>
+<p>&#x4E00;&#x65E6;&#x60A8;&#x7684;&#x6570;&#x636E;&#x5E93;&#x8868;&#x51C6;&#x5907;&#x597D;&#x3001;&#x6A21;&#x578B;&#x5B9A;&#x4E49;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6A21;&#x578B;&#x6765;&#x8BBF;&#x95EE;&#x5173;&#x8054;&#x4E86;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x8981;&#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528; <code>tags</code> &#x52A8;&#x6001;&#x5C5E;&#x6027;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x67D0;&#x7BC7;&#x6587;&#x7AE0;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x6807;&#x7B7E;&#xFF1A;</p>
+<pre class="language-"><code>$post = App\Post::find(1);
+
+foreach ($post-&gt;tags as $tag) {
+    //
+}
+</code></pre><p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x591A;&#x6001;&#x6A21;&#x578B;&#x4E0A;&#xFF0C;&#x901A;&#x8FC7;&#x8BBF;&#x95EE;&#x8C03;&#x7528;&#x4E86; <code>morphedByMany</code> &#x7684;&#x5173;&#x8054;&#x65B9;&#x6CD5;&#x83B7;&#x5F97;&#x591A;&#x6001;&#x5173;&#x8054;&#x7684;&#x62E5;&#x6709;&#x8005;&#x3002;&#x5728;&#x5F53;&#x524D;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x5C31;&#x662F; <code>Tag</code> &#x6A21;&#x578B;&#x4E0A;&#x7684; <code>posts</code> &#x65B9;&#x6CD5;&#x548C; <code>videos</code> &#x65B9;&#x6CD5;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x5C5E;&#x6027;&#x6765;&#x8BBF;&#x95EE;&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>$tag = App\Tag::find(1);
+
+foreach ($tag-&gt;videos as $video) {
+    //
+}
+</code></pre><p><a name="querying-relations"></a></p>
+<h2 id="&#x67E5;&#x8BE2;&#x5173;&#x8054;">&#x67E5;&#x8BE2;&#x5173;&#x8054;</h2>
+<p>&#x7531;&#x4E8E;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x5173;&#x8054;&#x90FD;&#x901A;&#x8FC7;&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6;&#x5173;&#x8054;&#x5B9E;&#x4F8B;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x5B9E;&#x9645;&#x8FD0;&#x884C;&#x5173;&#x8054;&#x7684;&#x67E5;&#x8BE2;&#x3002;&#x6B64;&#x5916;&#xFF0C;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x5173;&#x8054;&#x90FD;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A; <a href="docs/queries">&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x6784;&#x9020;&#x5668;</a> &#x4F7F;&#x7528;&#xFF0C;&#x8BA9;&#x4F60;&#x5728;&#x5411;&#x6570;&#x636E;&#x5E93;&#x6267;&#x884C; SQL &#x8BED;&#x53E5;&#x524D;&#xFF0C;&#x4F7F;&#x7528;&#x94FE;&#x5F0F;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x5F0F;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;&#xFF0C;&#x5176;&#x4E2D; <code>User</code> &#x6A21;&#x578B;&#x6709;&#x8BB8;&#x591A;&#x5173;&#x8054;&#x7684; <code>Post</code> &#x6A21;&#x578B;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class User extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x7528;&#x6237;&#x6240;&#x6709;&#x7684;&#x6587;&#x7AE0;&#x3002;
+     */
+    public function posts()
+    {
+        return $this-&gt;hasMany(&apos;App\Post&apos;);
+    }
+}
+</code></pre><p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x50CF;&#x8FD9;&#x6837;&#x5728; <code>posts</code> &#x5173;&#x8054;&#x4E0A;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code>$user = App\User::find(1);
+
+$user-&gt;posts()-&gt;where(&apos;active&apos;, 1)-&gt;get();
+</code></pre><p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x5173;&#x8054;&#x4E0A;&#x4F7F;&#x7528;&#x4EFB;&#x4F55; <a href="docs/queries">&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x6784;&#x9020;&#x5668;</a> &#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6B22;&#x8FCE;&#x67E5;&#x9605;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x6784;&#x9020;&#x5668;&#x7684;&#x76F8;&#x5173;&#x6587;&#x6863;&#x4EE5;&#x4FBF;&#x4E86;&#x89E3;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x54EA;&#x4E9B;&#x65B9;&#x6CD5;&#x3002;</p>
+<p><a name="relationship-methods-vs-dynamic-properties"></a></p>
+<h3 id="&#x5173;&#x8054;&#x65B9;&#x6CD5;-vs-&#x52A8;&#x6001;&#x5C5E;&#x6027;">&#x5173;&#x8054;&#x65B9;&#x6CD5; Vs. &#x52A8;&#x6001;&#x5C5E;&#x6027;</h3>
+<p>&#x5982;&#x679C;&#x60A8;&#x4E0D;&#x9700;&#x8981;&#x7ED9; Eloquent &#x5173;&#x8054;&#x67E5;&#x8BE2;&#x6DFB;&#x52A0;&#x989D;&#x5916;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x7684;&#x50CF;&#x8BBF;&#x95EE;&#x5C5E;&#x6027;&#x4E00;&#x6837;&#x8BBF;&#x95EE;&#x5173;&#x8054;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6211;&#x4EEC;&#x521A;&#x521A;&#x7684; <code>User</code> &#x548C; <code>Post</code> &#x6A21;&#x578B;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BBF;&#x95EE;&#x6240;&#x6709;&#x7528;&#x6237;&#x7684;&#x6587;&#x7AE0;&#xFF1A;</p>
+<pre class="language-"><code>$user = App\User::find(1);
+
+foreach ($user-&gt;posts as $post) {
+    //
+}
+</code></pre><p>&#x52A8;&#x6001;&#x5C5E;&#x6027;&#x662F;&#x300C;&#x61D2;&#x52A0;&#x8F7D;&#x300D;&#x7684;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x5B83;&#x4EEC;&#x7684;&#x5173;&#x8054;&#x6570;&#x636E;&#x53EA;&#x5728;&#x5B9E;&#x9645;&#x88AB;&#x8BBF;&#x95EE;&#x65F6;&#x624D;&#x88AB;&#x52A0;&#x8F7D;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x7ECF;&#x5E38;&#x4F7F;&#x7528; <a href="#eager-loading">&#x9884;&#x52A0;&#x8F7D;</a> &#x63D0;&#x524D;&#x52A0;&#x8F7D;&#x4ED6;&#x4EEC;&#x4E4B;&#x540E;&#x4F1A;&#x7528;&#x5230;&#x7684;&#x5173;&#x8054;&#x6570;&#x636E;&#x3002;&#x9884;&#x52A0;&#x8F7D;&#x6709;&#x6548;&#x51CF;&#x5C11;&#x4E86; SQL &#x8BED;&#x53E5;&#x8BF7;&#x6C42;&#x6570;&#xFF0C;&#x907F;&#x514D;&#x4E86;&#x91CD;&#x590D;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x5173;&#x8054;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x3001;&#x53D1;&#x9001; SQL &#x8BF7;&#x6C42;&#x5E26;&#x6765;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;</p>
+<p><a name="querying-relationship-existence"></a></p>
+<h3 id="&#x57FA;&#x4E8E;&#x5B58;&#x5728;&#x7684;&#x5173;&#x8054;&#x67E5;&#x8BE2;">&#x57FA;&#x4E8E;&#x5B58;&#x5728;&#x7684;&#x5173;&#x8054;&#x67E5;&#x8BE2;</h3>
+<p>&#x5F53;&#x83B7;&#x53D6;&#x6A21;&#x578B;&#x8BB0;&#x5F55;&#x65F6;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x6839;&#x636E;&#x5B58;&#x5728;&#x7684;&#x5173;&#x8054;&#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x9650;&#x5236;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x60A8;&#x60F3;&#x83B7;&#x5F97;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x6761;&#x8BC4;&#x8BBA;&#x7684;&#x6240;&#x6709;&#x535A;&#x5BA2;&#x6587;&#x7AE0;&#x3002;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x7ED9; <code>has</code> &#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x5173;&#x8054;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre class="language-"><code>// &#x83B7;&#x5F97;&#x6240;&#x6709;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x6761;&#x8BC4;&#x8BBA;&#x7684;&#x6587;&#x7AE0;...
+$posts = App\Post::has(&apos;comments&apos;)-&gt;get();
+</code></pre><p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x8FD0;&#x7B97;&#x7B26;&#x548C;&#x6570;&#x76EE;&#xFF0C;&#x8FDB;&#x4E00;&#x6B65;&#x81EA;&#x5B9A;&#x4E49;&#x67E5;&#x8BE2;&#xFF1A;</p>
+<pre class="language-"><code>// &#x83B7;&#x5F97;&#x6240;&#x6709;&#x6709;&#x4E09;&#x6761;&#x6216;&#x4E09;&#x6761;&#x4EE5;&#x4E0A;&#x8BC4;&#x8BBA;&#x7684;&#x6587;&#x7AE0;...
+$posts = Post::has(&apos;comments&apos;, &apos;&gt;=&apos;, 3)-&gt;get();
+</code></pre><p>&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x7B26;&#x53F7;&#x6784;&#x9020;&#x5D4C;&#x5957;&#x7684;&#x7684; <code>has</code> &#x8BED;&#x53E5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x6761;&#x83B7;&#x8D5E;&#x8BC4;&#x8BBA;&#x7684;&#x6587;&#x7AE0;&#xFF1A;</p>
+<pre class="language-"><code>// &#x83B7;&#x5F97;&#x6240;&#x6709;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x6761;&#x83B7;&#x8D5E;&#x8BC4;&#x8BBA;&#x7684;&#x6587;&#x7AE0;...
+$posts = Post::has(&apos;comments.votes&apos;)-&gt;get();
+</code></pre><p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>whereHas</code>&#x548C; <code>orWhereHas</code> &#x65B9;&#x6CD5;&#x5728; <code>has</code> &#x67E5;&#x8BE2;&#x91CC;&#x8BBE;&#x7F6E;&#x300C;where&#x300D;&#x6761;&#x4EF6;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x589E;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x6761;&#x4EF6;&#x81F3;&#x5173;&#x8054;&#x7EA6;&#x675F;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#x5BF9;&#x8BC4;&#x8BBA;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x68C0;&#x67E5;&#xFF1A;</p>
+<pre class="language-"><code>// &#x83B7;&#x5F97;&#x6240;&#x6709;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x6761;&#x8BC4;&#x8BBA;&#x5185;&#x5BB9;&#x6EE1;&#x8DB3; foo% &#x6761;&#x4EF6;&#x7684;&#x6587;&#x7AE0;
+$posts = Post::whereHas(&apos;comments&apos;, function ($query) {
+    $query-&gt;where(&apos;content&apos;, &apos;like&apos;, &apos;foo%&apos;);
+})-&gt;get();
+</code></pre><p><a name="querying-relationship-absence"></a></p>
+<h3 id="&#x57FA;&#x4E8E;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5173;&#x8054;&#x67E5;&#x8BE2;">&#x57FA;&#x4E8E;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5173;&#x8054;&#x67E5;&#x8BE2;</h3>
+<p>&#x5F53;&#x83B7;&#x53D6;&#x6A21;&#x578B;&#x8BB0;&#x5F55;&#x65F6;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x6839;&#x636E;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5173;&#x8054;&#x5BF9;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x9650;&#x5236;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x60A8;&#x60F3;&#x83B7;&#x5F97; <strong>&#x6CA1;&#x6709;</strong> &#x4EFB;&#x4F55;&#x8BC4;&#x8BBA;&#x7684;&#x6240;&#x6709;&#x535A;&#x5BA2;&#x6587;&#x7AE0;&#x3002;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x7ED9; <code>doesntHave</code> &#x65B9;&#x6CD5;&#x4F20;&#x9012;&#x5173;&#x8054;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre class="language-"><code>$posts = App\Post::doesntHave(&apos;comments&apos;)-&gt;get();
+</code></pre><p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x7528;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>whereDoesntHave</code> &#x65B9;&#x6CD5;&#x5728; <code>doesntHave</code> &#x67E5;&#x8BE2;&#x91CC;&#x8BBE;&#x7F6E;&#x300C;where&#x300D;&#x6761;&#x4EF6;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x589E;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x6761;&#x4EF6;&#x81F3;&#x5173;&#x8054;&#x7EA6;&#x675F;&#x4E2D;&#xFF0C;&#x4F8B;&#x5982;&#x5BF9;&#x8BC4;&#x8BBA;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x68C0;&#x67E5;&#xFF1A;</p>
+<pre class="language-"><code>$posts = Post::whereDoesntHave(&apos;comments&apos;, function ($query) {
+    $query-&gt;where(&apos;content&apos;, &apos;like&apos;, &apos;foo%&apos;);
+})-&gt;get();
+</code></pre><p><a name="counting-related-models"></a></p>
+<h3 id="&#x5173;&#x8054;&#x6570;&#x636E;&#x8BA1;&#x6570;">&#x5173;&#x8054;&#x6570;&#x636E;&#x8BA1;&#x6570;</h3>
+<p>&#x5982;&#x679C;&#x60A8;&#x53EA;&#x60F3;&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x6570;&#x800C;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x8F7D;&#x5B9E;&#x9645;&#x6570;&#x636E;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>withCount</code> &#x65B9;&#x6CD5;&#xFF0C;&#x6B64;&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x60A8;&#x7684;&#x7ED3;&#x679C;&#x96C6;&#x6A21;&#x578B;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; <code>{&#x5173;&#x8054;&#x540D;}_count</code> &#x5B57;&#x6BB5;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>$posts = App\Post::withCount(&apos;comments&apos;)-&gt;get();
+
+foreach ($posts as $post) {
+    echo $post-&gt;comments_count;
+}
+</code></pre><p>&#x60A8;&#x53EF;&#x4EE5;&#x4E3A;&#x591A;&#x4E2A;&#x5173;&#x8054;&#x6570;&#x636E;&#x300C;&#x8BA1;&#x6570;&#x300D;&#xFF0C;&#x5E76;&#x4E3A;&#x5176;&#x67E5;&#x8BE2;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code>$posts = Post::withCount([&apos;votes&apos;, &apos;comments&apos; =&gt; function ($query) {
+    $query-&gt;where(&apos;content&apos;, &apos;like&apos;, &apos;foo%&apos;);
+}])-&gt;get();
+
+echo $posts[0]-&gt;votes_count;
+echo $posts[0]-&gt;comments_count;
+</code></pre><p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x4E3A;&#x5173;&#x8054;&#x6570;&#x636E;&#x8BA1;&#x6570;&#x7ED3;&#x679C;&#x8D77;&#x522B;&#x540D;&#xFF0C;&#x5141;&#x8BB8;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5173;&#x8054;&#x4E0A;&#x591A;&#x6B21;&#x8BA1;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code>$posts = Post::withCount([
+    &apos;comments&apos;,
+    &apos;comments as pending_comments_count&apos; =&gt; function ($query) {
+        $query-&gt;where(&apos;approved&apos;, false);
+    }
+])-&gt;get();
+
+echo $posts[0]-&gt;comments_count;
+
+echo $posts[0]-&gt;pending_comments_count;
+</code></pre><p><a name="eager-loading"></a></p>
+<h2 id="&#x9884;&#x52A0;&#x8F7D;">&#x9884;&#x52A0;&#x8F7D;</h2>
+<p>&#x5F53;&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x8BBF;&#x95EE; Eloquent &#x5173;&#x8054;&#x65F6;&#xFF0C;&#x5173;&#x8054;&#x6570;&#x636E;&#x662F;&#x300C;&#x61D2;&#x52A0;&#x8F7D;&#x300D;&#x7684;&#x3002;&#x610F;&#x5473;&#x7740;&#x5728;&#x4F60;&#x7B2C;&#x4E00;&#x6B21;&#x8BBF;&#x95EE;&#x8BE5;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x52A0;&#x8F7D;&#x5173;&#x8054;&#x6570;&#x636E;&#x3002;&#x4E0D;&#x8FC7;&#xFF0C;&#x662F;&#x5F53;&#x4F60;&#x67E5;&#x8BE2;&#x7236;&#x6A21;&#x578B;&#x65F6;&#xFF0C;Eloquent &#x53EF;&#x4EE5;&#x300C;&#x9884;&#x52A0;&#x8F7D;&#x300D;&#x5173;&#x8054;&#x6570;&#x636E;&#x3002;&#x9884;&#x52A0;&#x8F7D;&#x907F;&#x514D;&#x4E86; N + 1 &#x67E5;&#x8BE2;&#x95EE;&#x9898;&#x3002;&#x8981;&#x8BF4;&#x660E; N + 1 &#x67E5;&#x8BE2;&#x95EE;&#x9898;&#xFF0C;&#x8BD5;&#x60F3;&#x4E00;&#x4E2A; <code>Book</code> &#x6A21;&#x578B;&#x5173;&#x8054;&#x5230; <code>Author</code> &#x6A21;&#x578B;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Book extends Model
+{
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x4E66;&#x7684;&#x4F5C;&#x8005;&#x3002;
+     */
+    public function author()
+    {
+        return $this-&gt;belongsTo(&apos;App\Author&apos;);
+    }
+}
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x6765;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x4E66;&#x7C4D;&#x548C;&#x4F5C;&#x8005;&#x6570;&#x636E;&#xFF1A;</p>
+<pre class="language-"><code>$books = App\Book::all();
+
+foreach ($books as $book) {
+    echo $book-&gt;author-&gt;name;
+}
+</code></pre><p>&#x8FD9;&#x4E2A;&#x5FAA;&#x73AF;&#x4F1A;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#x67E5;&#x8BE2;&#x53D6;&#x56DE;&#x6240;&#x6709;&#x6570;&#x636E;&#x8868;&#x4E0A;&#x7684;&#x4E66;&#x7C4D;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x53C8;&#x8FD0;&#x884C;&#x4E00;&#x6B21;&#x67E5;&#x8BE2;&#x83B7;&#x5F97;&#x6BCF;&#x672C;&#x4E66;&#x7684;&#x4F5C;&#x8005;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x6709; 25 &#x672C;&#x4E66;&#xFF0C;&#x5219;&#x5FAA;&#x73AF;&#x5C31;&#x4F1A;&#x6267;&#x884C; 26 &#x6B21;&#x67E5;&#x8BE2;&#xFF1A;1 &#x6B21;&#x662F;&#x83B7;&#x5F97;&#x6240;&#x6709;&#x4E66;&#x7C4D;&#x6570;&#x636E;&#xFF0C;&#x53E6;&#x5916; 25 &#x6761;&#x67E5;&#x8BE2;&#x7528;&#x6765;&#x83B7;&#x5F97;&#x6BCF;&#x672C;&#x4E66;&#x7684;&#x4F5C;&#x8005;&#x6570;&#x636E;&#x3002;</p>
+<p>&#x8C22;&#x5929;&#x8C22;&#x5730;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x9884;&#x52A0;&#x8F7D;&#x8BA9;&#x6574;&#x4E2A;&#x67E5;&#x8BE2;&#x51CF;&#x5C11;&#x5230; 2 &#x6B21;&#x3002;&#x8FD9;&#x662F;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x5173;&#x8054;&#x7ED9; <code>with</code> &#x65B9;&#x6CD5;&#x529E;&#x5230;&#x7684;&#xFF1A;</p>
+<pre class="language-"><code>$books = App\Book::with(&apos;author&apos;)-&gt;get();
+
+foreach ($books as $book) {
+    echo $book-&gt;author-&gt;name;
+}
+</code></pre><p>&#x6574;&#x4E2A;&#x64CD;&#x4F5C;&#xFF0C;&#x53EA;&#x6267;&#x884C;&#x4E86;&#x4E24;&#x6761;&#x67E5;&#x8BE2;&#xFF1A;</p>
+<pre class="language-"><code>select * from books
+
+select * from authors where id in (1, 2, 3, 4, 5, ...)
+</code></pre><h4 id="&#x9884;&#x52A0;&#x8F7D;&#x591A;&#x4E2A;&#x5173;&#x8054;">&#x9884;&#x52A0;&#x8F7D;&#x591A;&#x4E2A;&#x5173;&#x8054;</h4>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5728;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;&#x4E2D;&#x9884;&#x52A0;&#x8F7D;&#x51E0;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x5173;&#x8054;&#x3002;&#x4E3A;&#x4E86;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x53EA;&#x9700;&#x5728; <code>with</code> &#x65B9;&#x6CD5;&#x4E0A;&#x4F20;&#x9012;&#x989D;&#x5916;&#x7684;&#x53C2;&#x6570;&#x5373;&#x53EF;&#xFF1A;        </p>
+<pre class="language-"><code>$books = App\Book::with([&apos;author&apos;, &apos;publisher&apos;])-&gt;get();
+</code></pre><h4 id="&#x5D4C;&#x5957;&#x9884;&#x52A0;&#x8F7D;">&#x5D4C;&#x5957;&#x9884;&#x52A0;&#x8F7D;</h4>
+<p>&#x9884;&#x52A0;&#x8F7D;&#x5D4C;&#x5957;&#x5173;&#x8054;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x8BED;&#x6CD5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5728;&#x4E00;&#x4E2A; Eloquent &#x8BED;&#x53E5;&#x4E2D;&#xFF0C;&#x9884;&#x52A0;&#x8F7D;&#x6240;&#x6709;&#x4E66;&#x7C4D;&#x4F5C;&#x8005;&#x548C;&#x8FD9;&#x4E9B;&#x4F5C;&#x8005;&#x7684;&#x8054;&#x7CFB;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre class="language-"><code>$books = App\Book::with(&apos;author.contacts&apos;)-&gt;get();
+</code></pre><p><a name="constraining-eager-loads"></a></p>
+<h3 id="&#x4E3A;&#x9884;&#x52A0;&#x8F7D;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;&#x6761;&#x4EF6;">&#x4E3A;&#x9884;&#x52A0;&#x8F7D;&#x6DFB;&#x52A0;&#x7EA6;&#x675F;&#x6761;&#x4EF6;</h3>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x5E0C;&#x671B;&#x5728;&#x9884;&#x52A0;&#x8F7D;&#x5173;&#x8054;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E3A;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x989D;&#x5916;&#x7684;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#x3002;&#x8FD9;&#x6709;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code>$users = App\User::with([&apos;posts&apos; =&gt; function ($query) {
+    $query-&gt;where(&apos;title&apos;, &apos;like&apos;, &apos;%first%&apos;);
+}])-&gt;get();
+</code></pre><p>&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;Eloquent &#x53EA;&#x4F1A;&#x9884;&#x52A0;&#x8F7D;&#x6807;&#x9898;&#x91CC;&#x5305;&#x542B; <code>first</code> &#x6587;&#x672C;&#x7684;&#x6587;&#x7AE0;&#x3002;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x5176;&#x5B83;&#x7684; <a href="docs/queries">&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x6784;&#x9020;&#x5668;</a> &#x8FDB;&#x4E00;&#x6B65;&#x81EA;&#x5B9A;&#x4E49;&#x9884;&#x52A0;&#x8F7D;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code>$users = App\User::with([&apos;posts&apos; =&gt; function ($query) {
+    $query-&gt;orderBy(&apos;created_at&apos;, &apos;desc&apos;);
+}])-&gt;get();
+</code></pre><p><a name="lazy-eager-loading"></a></p>
+<h3 id="&#x5EF6;&#x8FDF;&#x9884;&#x52A0;&#x8F7D;">&#x5EF6;&#x8FDF;&#x9884;&#x52A0;&#x8F7D;</h3>
+<p>&#x6709;&#x65F6;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5728;&#x83B7;&#x5F97;&#x7236;&#x7EA7;&#x6A21;&#x578B;&#x540E;&#x624D;&#x53BB;&#x9884;&#x52A0;&#x8F7D;&#x5173;&#x8054;&#x6570;&#x636E;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x4F60;&#x9700;&#x8981;&#x6765;&#x52A8;&#x6001;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x52A0;&#x8F7D;&#x5173;&#x8054;&#x6A21;&#x578B;&#x65F6;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x5F88;&#x6709;&#x5E2E;&#x52A9;&#xFF1A;</p>
+<pre class="language-"><code>$books = App\Book::all();
+
+if ($someCondition) {
+    $books-&gt;load(&apos;author&apos;, &apos;publisher&apos;);
+}
+</code></pre><p>&#x5982;&#x679C;&#x60A8;&#x60F3;&#x8BBE;&#x7F6E;&#x9884;&#x52A0;&#x8F7D;&#x67E5;&#x8BE2;&#x7684;&#x989D;&#x5916;&#x7EA6;&#x675F;&#x6761;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7ED9; <code>load</code> &#x6DFB;&#x52A0;&#x6570;&#x7EC4;&#x952E;&#x7684;&#x5F62;&#x5F0F;&#x8FBE;&#x5230;&#x76EE;&#x7684;&#xFF0C;&#x6570;&#x7EC4;&#x503C;&#x662F;&#x63A5;&#x6536;&#x67E5;&#x8BE2;&#x5B9E;&#x4F8B;&#x7684;&#x95ED;&#x5305;&#xFF1A;</p>
+<pre class="language-"><code>$books-&gt;load([&apos;author&apos; =&gt; function ($query) {
+    $query-&gt;orderBy(&apos;published_date&apos;, &apos;asc&apos;);
+}]);
+</code></pre><p><a name="inserting-and-updating-related-models"></a></p>
+<h2 id="&#x63D2;&#x5165;--&#x66F4;&#x65B0;&#x5173;&#x8054;&#x6A21;&#x578B;">&#x63D2;&#x5165; &amp; &#x66F4;&#x65B0;&#x5173;&#x8054;&#x6A21;&#x578B;</h2>
+<p><a name="the-save-method"></a></p>
+<h3 id="save-&#x65B9;&#x6CD5;"><code>save</code> &#x65B9;&#x6CD5;</h3>
+<p>Eloquent &#x63D0;&#x4F9B;&#x4E86;&#x4FBF;&#x6377;&#x7684;&#x65B9;&#x6CD5;&#x6765;&#x5C06;&#x65B0;&#x7684;&#x6A21;&#x578B;&#x589E;&#x52A0;&#x81F3;&#x5173;&#x8054;&#x4E2D;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4E5F;&#x8BB8;&#x4F60;&#x9700;&#x8981;&#x4E3A;&#x4E00;&#x4E2A; <code>Post</code> &#x6A21;&#x578B;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>Comment</code>&#x3002;&#x8FD9;&#x662F;&#x4F60;&#x65E0;&#x987B;&#x4E3A; <code>Comment</code> &#x624B;&#x52A8;&#x8BBE;&#x7F6E; <code>posts</code> &#x5C5E;&#x6027;&#xFF0C;&#x76F4;&#x63A5;&#x5728;&#x5173;&#x8054;&#x4E0A;&#x4F7F;&#x7528; <code>save</code> &#x65B9;&#x6CD5;&#x63D2;&#x5165; <code>Comment</code> &#x5373;&#x53EF;&#xFF1A;</p>
+<pre class="language-"><code>$comment = new App\Comment([&apos;message&apos; =&gt; &apos;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x8BC4;&#x8BBA;&#x3002;&apos;]);
+
+$post = App\Post::find(1);
+
+$post-&gt;comments()-&gt;save($comment);
+</code></pre><p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x52A8;&#x6001;&#x5C5E;&#x6027;&#x5F62;&#x5F0F;&#x8BBF;&#x95EE; <code>comments</code> &#x5173;&#x8054;&#x3002;&#x76F8;&#x53CD;&#xFF0C;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x4E86; <code>comments</code> &#x65B9;&#x6CD5;&#x83B7;&#x5F97;&#x5173;&#x8054;&#x5B9E;&#x4F8B;&#x3002;<code>save</code> &#x65B9;&#x6CD5;&#x4F1A;&#x81EA;&#x52A8;&#x5728;&#x65B0;&#x7684; <code>Comment</code> &#x6A21;&#x578B;&#x4E2D;&#x6DFB;&#x52A0;&#x6B63;&#x786E;&#x7684; <code>post_id</code>&#x503C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x4FDD;&#x5B58;&#x591A;&#x4E2A;&#x5173;&#x8054;&#x6A21;&#x578B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>saveMany</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>$post = App\Post::find(1);
+
+$post-&gt;comments()-&gt;saveMany([
+    new App\Comment([&apos;message&apos; =&gt; &apos;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x8BC4;&#x8BBA;&#x3002;&apos;]),
+    new App\Comment([&apos;message&apos; =&gt; &apos;&#x53E6;&#x4E00;&#x6761;&#x8BC4;&#x8BBA;&#x3002;&apos;]),
+]);
+</code></pre><p><a name="the-create-method"></a></p>
+<h3 id="create-&#x65B9;&#x6CD5;"><code>create</code> &#x65B9;&#x6CD5;</h3>
+<p>&#x9664;&#x4E86; <code>save</code> &#x548C; <code>saveMany</code> &#x65B9;&#x6CD5;&#xFF0C;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>create</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x63A5;&#x6536;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x6570;&#x7EC4;&#x3001;&#x521B;&#x5EFA;&#x6A21;&#x578B;&#x5E76;&#x63D2;&#x5165;&#x6570;&#x636E;&#x5E93;&#x3002;&#x8FD8;&#x6709;&#xFF0C;<code>save</code> &#x548C; <code>create</code> &#x7684;&#x4E0D;&#x540C;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#xFF0C;<code>save</code> &#x63A5;&#x6536;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; Eloquent &#x6A21;&#x578B;&#x5B9E;&#x4F8B;&#xFF0C;&#x800C; <code>create</code> &#x63A5;&#x6536;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7EAF; PHP &#x6570;&#x7EC4;&#xFF1A;</p>
+<pre class="language-"><code>$post = App\Post::find(1);
+
+$comment = $post-&gt;comments()-&gt;create([
+    &apos;message&apos; =&gt; &apos;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x8BC4;&#x8BBA;&#x3002;&apos;,
+]);
+</code></pre><blockquote>
+<p>{tip} &#x5728;&#x4F7F;&#x7528; <code>create</code> &#x65B9;&#x6CD5;&#x524D;&#xFF0C;&#x8BF7;&#x786E;&#x8BA4;&#x60A8;&#x5DF2;&#x7ECF;&#x6D4F;&#x89C8;&#x4E86;&#x672C;&#x6587;&#x6863;&#x7684; <a href="docs/eloquent#mass-assignment">&#x6279;&#x91CF;&#x8D4B;&#x503C;</a> &#x7AE0;&#x8282;&#x3002;</p>
+</blockquote>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>createMany</code> &#x65B9;&#x6CD5;&#x4FDD;&#x5B58;&#x591A;&#x4E2A;&#x5173;&#x8054;&#x6A21;&#x578B;&#xFF1A;</p>
+<pre class="language-"><code>$post = App\Post::find(1);
+
+$post-&gt;comments()-&gt;createMany([
+    [
+        &apos;message&apos; =&gt; &apos;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x8BC4;&#x8BBA;&#x3002;&apos;,
+    ],
+    [
+        &apos;message&apos; =&gt; &apos;&#x53E6;&#x4E00;&#x6761;&#x65B0;&#x7684;&#x8BC4;&#x8BBA;&#x3002;&apos;,
+    ],
+]);
+</code></pre><p><a name="updating-belongs-to-relationships"></a></p>
+<h3 id="&#x66F4;&#x65B0;-belongsto-&#x5173;&#x8054;">&#x66F4;&#x65B0; <code>belongsTo</code> &#x5173;&#x8054;</h3>
+<p>&#x5F53;&#x66F4;&#x65B0; <code>belongsTo</code> &#x5173;&#x8054;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>associate</code> &#x65B9;&#x6CD5;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x4F1A;&#x5728;&#x5B50;&#x6A21;&#x578B;&#x4E2D;&#x8BBE;&#x7F6E;&#x5916;&#x952E;&#xFF1A;</p>
+<pre class="language-"><code>$account = App\Account::find(10);
+
+$user-&gt;account()-&gt;associate($account);
+
+$user-&gt;save();
+</code></pre><p>&#x5F53;&#x5220;&#x9664; <code>belongsTo</code> &#x5173;&#x8054;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>dissociate</code>&#x65B9;&#x6CD5;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x4F1A;&#x8BBE;&#x7F6E;&#x5173;&#x8054;&#x5916;&#x952E;&#x4E3A; <code>null</code>&#xFF1A; </p>
+<pre class="language-"><code>$user-&gt;account()-&gt;dissociate();
+
+$user-&gt;save();
+</code></pre><p><a name="updating-many-to-many-relationships"></a></p>
+<h3 id="&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;">&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;</h3>
+<h4 id="&#x9644;&#x52A0;--&#x79FB;&#x9664;">&#x9644;&#x52A0; / &#x79FB;&#x9664;</h4>
+<p>Eloquent &#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x51E0;&#x4E2A;&#x989D;&#x5916;&#x7684;&#x8F85;&#x52A9;&#x65B9;&#x6CD5;&#xFF0C;&#x8BA9;&#x64CD;&#x4F5C;&#x5173;&#x8054;&#x6A21;&#x578B;&#x66F4;&#x52A0;&#x4FBF;&#x6377;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x4E00;&#x4E2A;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x62E5;&#x6709;&#x591A;&#x4E2A;&#x89D2;&#x8272;&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x4E2A;&#x89D2;&#x8272;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x591A;&#x4E2A;&#x7528;&#x6237;&#x5171;&#x4EAB;&#x3002;&#x7ED9;&#x67D0;&#x4E2A;&#x7528;&#x6237;&#x9644;&#x52A0;&#x4E00;&#x4E2A;&#x89D2;&#x8272;&#x662F;&#x901A;&#x8FC7;&#x5411;&#x4E2D;&#x95F4;&#x8868;&#x63D2;&#x5165;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x4F7F;&#x7528; <code>attach</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>$user = App\User::find(1);
+
+$user-&gt;roles()-&gt;attach($roleId);
+</code></pre><p>&#x4F7F;&#x7528; <code>attach</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x53C2;&#x6570;&#x5411;&#x4E2D;&#x95F4;&#x8868;&#x5199;&#x5165;&#x989D;&#x5916;&#x6570;&#x636E;&#xFF1A;</p>
+<pre class="language-"><code>$user-&gt;roles()-&gt;attach($roleId, [&apos;expires&apos; =&gt; $expires]);
+</code></pre><p>&#x5F53;&#x7136;&#xFF0C;&#x6709;&#x65F6;&#x4E5F;&#x9700;&#x8981;&#x79FB;&#x9664;&#x7528;&#x6237;&#x7684;&#x89D2;&#x8272;&#x3002;&#x5220;&#x9664;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;&#x8BB0;&#x5F55;&#xFF0C;&#x4F7F;&#x7528; <code>detach</code> &#x65B9;&#x6CD5;&#x3002;<code>detach</code> &#x65B9;&#x6CD5;&#x4F1A;&#x79FB;&#x9664;&#x6389;&#x6B63;&#x786E;&#x7684;&#x8BB0;&#x5F55;&#xFF1B;&#x5F53;&#x7136;&#xFF0C;&#x8FD9;&#x4E24;&#x4E2A;&#x6A21;&#x578B;&#x6570;&#x636E;&#x4F9D;&#x7136;&#x4FDD;&#x5B58;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code>// &#x79FB;&#x9664;&#x7528;&#x6237;&#x7684;&#x4E00;&#x4E2A;&#x89D2;&#x8272;...
+$user-&gt;roles()-&gt;detach($roleId);
+
+// &#x79FB;&#x9664;&#x7528;&#x6237;&#x7684;&#x6240;&#x6709;&#x89D2;&#x8272;...
+$user-&gt;roles()-&gt;detach();
+</code></pre><p>&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;<code>attach</code> &#x548C; <code>detach</code> &#x90FD;&#x5141;&#x8BB8;&#x4F20;&#x5165; ID &#x6570;&#x7EC4;&#xFF1A;</p>
+<pre class="language-"><code>$user = App\User::find(1);
+
+$user-&gt;roles()-&gt;detach([1, 2, 3]);
+
+$user-&gt;roles()-&gt;attach([
+    1 =&gt; [&apos;expires&apos; =&gt; $expires],
+    2 =&gt; [&apos;expires&apos; =&gt; $expires]
+]);
+</code></pre><h4 id="&#x540C;&#x6B65;&#x5173;&#x8054;">&#x540C;&#x6B65;&#x5173;&#x8054;</h4>
+<p>&#x60A8;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>sync</code> &#x65B9;&#x6CD5;&#x6765;&#x6784;&#x9020;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;&#x3002;<code>sync</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x63A5;&#x6536; ID &#x6570;&#x7EC4;&#xFF0C;&#x5411;&#x4E2D;&#x95F4;&#x8868;&#x63D2;&#x5165;&#x5BF9;&#x5E94;&#x5173;&#x8054;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x3002;&#x6240;&#x6709;&#x6CA1;&#x653E;&#x5728;&#x6570;&#x7EC4;&#x91CC;&#x7684; IDs &#x90FD;&#x4F1A;&#x4ECE;&#x4E2D;&#x95F4;&#x8868;&#x91CC;&#x79FB;&#x9664;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x8FD9;&#x6B65;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x6570;&#x7EC4;&#x91CC;&#x7684; IDs &#x4F1A;&#x88AB;&#x4FDD;&#x7559;&#x5728;&#x4E2D;&#x95F4;&#x8868;&#x4E2D;&#x3002;</p>
+<pre class="language-"><code>$user-&gt;roles()-&gt;sync([1, 2, 3]);
+</code></pre><p>&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; ID &#x4F20;&#x9012;&#x5176;&#x4ED6;&#x989D;&#x5916;&#x7684;&#x6570;&#x636E;&#x5230;&#x4E2D;&#x95F4;&#x8868;&#xFF1A;</p>
+<pre class="language-"><code>$user-&gt;roles()-&gt;sync([1 =&gt; [&apos;expires&apos; =&gt; true], 2, 3]);
+</code></pre><p>&#x5982;&#x679C;&#x60A8;&#x4E0D;&#x60F3;&#x79FB;&#x9664;&#x73B0;&#x6709;&#x7684; IDs&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>syncWithoutDetaching</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code>$user-&gt;roles()-&gt;syncWithoutDetaching([1, 2, 3]);
+</code></pre><h4 id="&#x5207;&#x6362;&#x5173;&#x8054;">&#x5207;&#x6362;&#x5173;&#x8054;</h4>
+<p>&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A; <code>toggle</code> &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x300C;&#x5207;&#x6362;&#x300D;&#x7ED9;&#x5B9A; IDs &#x7684;&#x9644;&#x52A0;&#x72B6;&#x6001;&#x3002;&#x5982;&#x679C;&#x7ED9;&#x5B9A; ID &#x5DF2;&#x9644;&#x52A0;&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;&#x79FB;&#x9664;&#x3002;&#x540C;&#x6837;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x7ED9;&#x5B9A; ID &#x5DF2;&#x79FB;&#x9664;&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;&#x9644;&#x52A0;&#xFF1A;</p>
+<pre class="language-"><code>$user-&gt;roles()-&gt;toggle([1, 2, 3]);
+</code></pre><h4 id="&#x5728;&#x4E2D;&#x95F4;&#x8868;&#x4E0A;&#x4FDD;&#x5B58;&#x989D;&#x5916;&#x6570;&#x636E;">&#x5728;&#x4E2D;&#x95F4;&#x8868;&#x4E0A;&#x4FDD;&#x5B58;&#x989D;&#x5916;&#x6570;&#x636E;</h4>
+<p>&#x5F53;&#x5904;&#x7406;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x8054;&#x65F6;&#xFF0C;<code>save</code> &#x65B9;&#x6CD5;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x6570;&#x7EC4;&#xFF0C;&#x5305;&#x542B;&#x63D2;&#x5165;&#x5230;&#x4E2D;&#x95F4;&#x8868;&#x7684;&#x989D;&#x5916;&#x5B57;&#x6BB5;&#x6570;&#x636E;&#x3002;</p>
+<pre class="language-"><code>App\User::find(1)-&gt;roles()-&gt;save($role, [&apos;expires&apos; =&gt; $expires]);
+</code></pre><h4 id="&#x66F4;&#x65B0;&#x4E2D;&#x95F4;&#x8868;&#x8BB0;&#x5F55;">&#x66F4;&#x65B0;&#x4E2D;&#x95F4;&#x8868;&#x8BB0;&#x5F55;</h4>
+<p>&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x66F4;&#x65B0;&#x4E2D;&#x95F4;&#x8868;&#x4E2D;&#x5DF2;&#x5B58;&#x5728;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>updateExistingPivot</code> &#x65B9;&#x6CD5;&#x3002;&#x6B64;&#x65B9;&#x6CD5;&#x63A5;&#x6536;&#x4E2D;&#x95F4;&#x8BB0;&#x5F55;&#x7684;&#x5916;&#x952E;&#x548C;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x66F4;&#x65B0;&#xFF1A;</p>
+<pre class="language-"><code>$user = App\User::find(1);
+
+$user-&gt;roles()-&gt;updateExistingPivot($roleId, $attributes);
+</code></pre><p><a name="touching-parent-timestamps"></a></p>
+<h2 id="&#x66F4;&#x65B0;&#x7236;&#x7EA7;&#x65F6;&#x95F4;&#x6233;">&#x66F4;&#x65B0;&#x7236;&#x7EA7;&#x65F6;&#x95F4;&#x6233;</h2>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x6A21;&#x578B; <code>belongsTo</code> &#x6216;&#x8005; <code>belongsToMany</code> &#x53E6;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#xFF0C;&#x6BD4;&#x5982;&#x4E00;&#x4E2A; <code>Comment</code> &#x5C5E;&#x4E8E;&#x4E00;&#x4E2A; <code>Post</code>&#xFF0C;&#x6709;&#x65F6;&#x66F4;&#x65B0;&#x5B50;&#x6A21;&#x578B;&#x5BFC;&#x81F4;&#x66F4;&#x65B0;&#x7236;&#x6A21;&#x578B;&#x65F6;&#x95F4;&#x6233;&#x975E;&#x5E38;&#x6709;&#x7528;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A; <code>Comment</code> &#x6A21;&#x578B;&#x66F4;&#x65B0;&#x65F6;&#xFF0C;&#x60A8;&#x8981;&#x81EA;&#x52A8;&#x300C;&#x89E6;&#x53D1;&#x300D;&#x7236;&#x7EA7; <code>Post</code> &#x6A21;&#x578B;&#x7684; <code>updated_at</code> &#x65F6;&#x95F4;&#x6233;&#x7684;&#x66F4;&#x65B0;&#xFF0C;Eloquent &#x8BA9;&#x5B83;&#x53D8;&#x5F97;&#x7B80;&#x5355;&#x3002;&#x53EA;&#x8981;&#x5728;&#x5B50;&#x6A21;&#x578B;&#x52A0;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x5173;&#x8054;&#x540D;&#x79F0;&#x7684; <code>touches</code> &#x5C5E;&#x6027;&#x5373;&#x53EF;&#xFF1A;</p>
+<pre class="language-"><code>&lt;?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Comment extends Model
+{
+    /**
+     * &#x6240;&#x6709;&#x4F1A;&#x88AB;&#x89E6;&#x53D1;&#x7684;&#x5173;&#x8054;&#x3002;
+     *
+     * @var array
+     */
+    protected $touches = [&apos;post&apos;];
+
+    /**
+     * &#x83B7;&#x5F97;&#x6B64;&#x8BC4;&#x8BBA;&#x6240;&#x5C5E;&#x7684;&#x6587;&#x7AE0;&#x3002;
+     */
+    public function post()
+    {
+        return $this-&gt;belongsTo(&apos;App\Post&apos;);
+    }
+}
+</code></pre><p>&#x73B0;&#x5728;&#xFF0C;&#x5F53;&#x4F60;&#x66F4;&#x65B0;&#x4E00;&#x4E2A; <code>Comment</code> &#x65F6;&#xFF0C;&#x5BF9;&#x5E94;&#x7236;&#x7EA7; <code>Post</code> &#x6A21;&#x578B;&#x7684; <code>updated_at</code> &#x5B57;&#x6BB5;&#x4E5F;&#x4F1A;&#x88AB;&#x540C;&#x65F6;&#x66F4;&#x65B0;&#xFF0C;&#x4F7F;&#x5176;&#x66F4;&#x65B9;&#x4FBF;&#x5F97;&#x77E5;&#x4F55;&#x65F6;&#x8BA9;&#x4E00;&#x4E2A; <code>Post</code> &#x6A21;&#x578B;&#x7684;&#x7F13;&#x5B58;&#x5931;&#x6548;&#xFF1A;</p>
+<pre class="language-"><code>$comment = App\Comment::find(1);
+
+$comment-&gt;text = &apos;&#x7F16;&#x8F91;&#x4E86;&#x8FD9;&#x6761;&#x8BC4;&#x8BBA;&#xFF01;&apos;;
+
+$comment-&gt;save();
+</code></pre><h2 id="&#x8BD1;&#x8005;&#x7F72;&#x540D;">&#x8BD1;&#x8005;&#x7F72;&#x540D;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7528;&#x6237;&#x540D;</th>
+<th>&#x5934;&#x50CF;</th>
+<th>&#x804C;&#x80FD;</th>
+<th>&#x7B7E;&#x540D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://laravel-china.org/users/17319" target="_blank">@baooab</a></td>
+<td><img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/images/201708/11/17319/KbHzLBdgHs.png?imageView2/1/w/100/h/100"></td>
+<td>&#x7FFB;&#x8BD1;</td>
+<td>&#x6211;&#x5728; <a href="https://github.com/baooab/" target="_blank">&#x8FD9;&#x513F;</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>{note} &#x6B22;&#x8FCE;&#x4EFB;&#x4F55;&#x5F62;&#x5F0F;&#x7684;&#x8F6C;&#x8F7D;&#xFF0C;&#x4F46;&#x8BF7;&#x52A1;&#x5FC5;&#x6CE8;&#x660E;&#x51FA;&#x5904;&#xFF0C;&#x5C0A;&#x91CD;&#x4ED6;&#x4EBA;&#x52B3;&#x52A8;&#x5171;&#x521B;&#x5F00;&#x6E90;&#x793E;&#x533A;&#x3002;</p>
+<p>&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#xFF1A;&#x672C;&#x6587;&#x6863;&#x7531; Laravel China &#x793E;&#x533A; <a href="https://laravel-china.org" target="_blank">laravel-china.org</a> &#x7EC4;&#x7EC7;&#x7FFB;&#x8BD1;&#xFF0C;&#x8BE6;&#x89C1; <a href="https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation" target="_blank">&#x7FFB;&#x8BD1;&#x53EC;&#x96C6;&#x5E16;</a>&#x3002;</p>
+<p>&#x6587;&#x6863;&#x6C38;&#x4E45;&#x5730;&#x5740;&#xFF1A; <a href="https://d.laravel-china.org" target="_blank">https://d.laravel-china.org</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="eloquent.html" class="navigation navigation-prev " aria-label="Previous page: 快速入门">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="eloquent-collections.html" class="navigation navigation-next " aria-label="Next page: Eloquent 集合">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"模型关联","level":"1.10.2","depth":2,"next":{"title":"Eloquent 集合","level":"1.10.3","depth":2,"path":"eloquent-collections.md","ref":"eloquent-collections.md","articles":[]},"previous":{"title":"快速入门","level":"1.10.1","depth":2,"path":"eloquent.md","ref":"eloquent.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"laravel-china.org","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Laravel 5.5 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"//www.khs1994.com/more"}},"gitbook":"*","description":"Laravel 5.5 中文文档"},"file":{"path":"eloquent-relationships.md","mtime":"2018-05-18T06:35:47.970Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-18T06:39:05.075Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

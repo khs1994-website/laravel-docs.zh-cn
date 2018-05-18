@@ -1,0 +1,2496 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>辅助函数 · Laravel 5.5 中文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="laravel-china.org">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mail.html" />
+    
+    
+    <link rel="prev" href="filesystem.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="//www.khs1994.com/more" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    前言
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="about.html">
+            
+                <a href="about.html">
+            
+                    
+                    翻译说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="releases.html">
+            
+                <a href="releases.html">
+            
+                    
+                    发行说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="upgrade.html">
+            
+                <a href="upgrade.html">
+            
+                    
+                    升级说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="contributions.html">
+            
+                <a href="contributions.html">
+            
+                    
+                    贡献导引
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="api/{{version}}.md">
+            
+                <span>
+            
+                    
+                    API 文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    入门指南
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    配置信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="structure.html">
+            
+                <a href="structure.html">
+            
+                    
+                    文件夹结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" >
+            
+                <span>
+            
+                    
+                    Homestead
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" >
+            
+                <span>
+            
+                    
+                    Valet
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    核心架构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="lifecycle.html">
+            
+                <a href="lifecycle.html">
+            
+                    
+                    请求周期
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="container.html">
+            
+                <a href="container.html">
+            
+                    
+                    服务容器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="providers.html">
+            
+                <a href="providers.html">
+            
+                    
+                    服务提供者
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="facades.html">
+            
+                <a href="facades.html">
+            
+                    
+                    Facades
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="contracts.html">
+            
+                <a href="contracts.html">
+            
+                    
+                    Contracts
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    基础功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="routing.html">
+            
+                <a href="routing.html">
+            
+                    
+                    路由
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="middleware.html">
+            
+                <a href="middleware.html">
+            
+                    
+                    中间件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="csrf.html">
+            
+                <a href="csrf.html">
+            
+                    
+                    CSRF 保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="controllers.html">
+            
+                <a href="controllers.html">
+            
+                    
+                    控制器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="requests.html">
+            
+                <a href="requests.html">
+            
+                    
+                    请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="responses.html">
+            
+                <a href="responses.html">
+            
+                    
+                    响应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="views.html">
+            
+                <a href="views.html">
+            
+                    
+                    视图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="session.html">
+            
+                <a href="session.html">
+            
+                    
+                    Session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="validation.html">
+            
+                <a href="validation.html">
+            
+                    
+                    表单验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    错误与日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    前端开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="blade.html">
+            
+                <a href="blade.html">
+            
+                    
+                    Blade 模板
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="localization.html">
+            
+                <a href="localization.html">
+            
+                    
+                    本地化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="frontend.html">
+            
+                <a href="frontend.html">
+            
+                    
+                    前端指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    编辑资源 Mix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    安全相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    用户认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    API 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="authorization.html">
+            
+                <a href="authorization.html">
+            
+                    
+                    用户授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="encryption.html">
+            
+                <a href="encryption.html">
+            
+                    
+                    加密解密
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="hashing.html">
+            
+                <a href="hashing.html">
+            
+                    
+                    哈希
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="passwords.html">
+            
+                <a href="passwords.html">
+            
+                    
+                    重置密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    综合话题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="artisan.html">
+            
+                <a href="artisan.html">
+            
+                    
+                    Artisan 命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="broadcasting.html">
+            
+                <a href="broadcasting.html">
+            
+                    
+                    广播系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="cache.html">
+            
+                <a href="cache.html">
+            
+                    
+                    缓存系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="collections.html">
+            
+                <a href="collections.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    事件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="filesystem.html">
+            
+                <a href="filesystem.html">
+            
+                    
+                    文件存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.7" data-path="helpers.html">
+            
+                <a href="helpers.html">
+            
+                    
+                    辅助函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="mail.html">
+            
+                <a href="mail.html">
+            
+                    
+                    邮件发送
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="notifications.html">
+            
+                <a href="notifications.html">
+            
+                    
+                    消息通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="packages.html">
+            
+                <a href="packages.html">
+            
+                    
+                    扩展包开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="queues.html">
+            
+                <a href="queues.html">
+            
+                    
+                    队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="scheduling.html">
+            
+                <a href="scheduling.html">
+            
+                    
+                    任务调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    数据库
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="queries.html">
+            
+                <a href="queries.html">
+            
+                    
+                    查询构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="pagination.html">
+            
+                <a href="pagination.html">
+            
+                    
+                    分页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="migrations.html">
+            
+                <a href="migrations.html">
+            
+                    
+                    数据库迁移
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="seeding.html">
+            
+                <a href="seeding.html">
+            
+                    
+                    数据填充
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Eloquent ORM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="eloquent.html">
+            
+                <a href="eloquent.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="eloquent-relationships.html">
+            
+                <a href="eloquent-relationships.html">
+            
+                    
+                    模型关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="eloquent-collections.html">
+            
+                <a href="eloquent-collections.html">
+            
+                    
+                    Eloquent 集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="eloquent-mutators.html">
+            
+                <a href="eloquent-mutators.html">
+            
+                    
+                    修改器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="eloquent-serialization.html">
+            
+                <a href="eloquent-serialization.html">
+            
+                    
+                    序列化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    测试相关
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="testing.html">
+            
+                <a href="testing.html">
+            
+                    
+                    快速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="http-tests.html">
+            
+                <a href="http-tests.html">
+            
+                    
+                    HTTP 测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="dusk.html">
+            
+                <a href="dusk.html">
+            
+                    
+                    浏览器测试 Dusk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="database-testing.html">
+            
+                <a href="database-testing.html">
+            
+                    
+                    数据库测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="mocking.html">
+            
+                <a href="mocking.html">
+            
+                    
+                    测试模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    官方扩展包
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="billing.html">
+            
+                <a href="billing.html">
+            
+                    
+                    Cashier 交易工具包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="envoy.html">
+            
+                <a href="envoy.html">
+            
+                    
+                    Envoy 部署工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="horizon.html">
+            
+                <a href="horizon.html">
+            
+                    
+                    Horizon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="passport.html">
+            
+                <a href="passport.html">
+            
+                    
+                    Passport OAuth 认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="scout.html">
+            
+                <a href="scout.html">
+            
+                    
+                    Scout 全文搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="socialite.html">
+            
+                <a href="socialite.html">
+            
+                    
+                    Socialite 社会化登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >辅助函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="laravel-&#x7684;&#x8F85;&#x52A9;&#x51FD;&#x6570;&#x5217;&#x8868;">Laravel &#x7684;&#x8F85;&#x52A9;&#x51FD;&#x6570;&#x5217;&#x8868;</h1>
+<ul>
+<li><a href="#introduction">&#x7B80;&#x4ECB;</a></li>
+<li><a href="#available-methods">&#x53EF;&#x7528;&#x65B9;&#x6CD5;</a></li>
+</ul>
+<p><a name="introduction"></a></p>
+<h2 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h2>
+<p>Laravel &#x5305;&#x542B;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x5168;&#x5C40;&#x300C;&#x8F85;&#x52A9;&#x300D;PHP &#x51FD;&#x6570;&#xFF0C;&#x6846;&#x67B6;&#x672C;&#x8EAB;&#x4E5F;&#x5927;&#x91CF;&#x5730;&#x4F7F;&#x7528;&#x4E86;&#x8FD9;&#x4E9B;&#x529F;&#x80FD;&#xFF1B;&#x5982;&#x679C;&#x4F60;&#x89C9;&#x5F97;&#x65B9;&#x4FBF;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4F60;&#x7684;&#x5E94;&#x7528;&#x4E2D;&#x81EA;&#x7531;&#x7684;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#x3002;</p>
+<p><a name="available-methods"></a></p>
+<h2 id="&#x53EF;&#x7528;&#x65B9;&#x6CD5;">&#x53EF;&#x7528;&#x65B9;&#x6CD5;</h2>
+<style>
+    .collection-method-list > p {
+        column-count: 3; -moz-column-count: 3; -webkit-column-count: 3;
+        column-gap: 2em; -moz-column-gap: 2em; -webkit-column-gap: 2em;
+    }
+
+    .collection-method-list a {
+        display: block;
+    }
+</style>
+
+<h3 id="&#x6570;&#x7EC4;--&#x5BF9;&#x8C61;">&#x6570;&#x7EC4; &amp; &#x5BF9;&#x8C61;</h3>
+<div class="collection-method-list" markdown="1">
+
+[array_add](#method-array-add)
+[array_collapse](#method-array-collapse)
+[array_divide](#method-array-divide)
+[array_dot](#method-array-dot)
+[array_except](#method-array-except)
+[array_first](#method-array-first)
+[array_flatten](#method-array-flatten)
+[array_forget](#method-array-forget)
+[array_get](#method-array-get)
+[array_has](#method-array-has)
+[array_last](#method-array-last)
+[array_only](#method-array-only)
+[array_pluck](#method-array-pluck)
+[array_prepend](#method-array-prepend)
+[array_pull](#method-array-pull)
+[array_random](#method-array-random)
+[array_set](#method-array-set)
+[array_sort](#method-array-sort)
+[array_sort_recursive](#method-array-sort-recursive)
+[array_where](#method-array-where)
+[array_wrap](#method-array-wrap)
+[data_fill](#method-data-fill)
+[data_get](#method-data-get)
+[data_set](#method-data-set)
+[head](#method-head)
+[last](#method-last)
+</div>
+
+<h3 id="&#x8DEF;&#x5F84;">&#x8DEF;&#x5F84;</h3>
+<div class="collection-method-list" markdown="1">
+
+[app_path](#method-app-path)
+[base_path](#method-base-path)
+[config_path](#method-config-path)
+[database_path](#method-database-path)
+[mix](#method-mix)
+[public_path](#method-public-path)
+[resource_path](#method-resource-path)
+[storage_path](#method-storage-path)
+
+</div>
+
+<h3 id="&#x5B57;&#x7B26;&#x4E32;">&#x5B57;&#x7B26;&#x4E32;</h3>
+<div class="collection-method-list" markdown="1">
+
+[\__](#method-__)
+[camel_case](#method-camel-case)
+[class_basename](#method-class-basename)
+[e](#method-e)
+[ends_with](#method-ends-with)
+[kebab_case](#method-kebab-case)
+[preg_replace_array](#method-preg-replace-array)
+[snake_case](#method-snake-case)
+[starts_with](#method-starts-with)
+[str_after](#method-str-after)
+[str_before](#method-str-before)
+[str_contains](#method-str-contains)
+[str_finish](#method-str-finish)
+[str_is](#method-str-is)
+[str_limit](#method-str-limit)
+[str_plural](#method-str-plural)
+[str_random](#method-str-random)
+[str_replace_array](#method-str-replace-array)
+[str_replace_first](#method-str-replace-first)
+[str_replace_last](#method-str-replace-last)
+[str_singular](#method-str-singular)
+[str_slug](#method-str-slug)
+[str_start](#method-str-start)
+[studly_case](#method-studly-case)
+[title_case](#method-title-case)
+[trans](#method-trans)
+[trans_choice](#method-trans-choice)
+
+</div>
+
+<h3 id="urls">URLs</h3>
+<div class="collection-method-list" markdown="1">
+
+[action](#method-action)
+[asset](#method-asset)
+[secure_asset](#method-secure-asset)
+[route](#method-route)
+[secure_url](#method-secure-url)
+[url](#method-url)
+
+</div>
+
+<h3 id="&#x5176;&#x4ED6;">&#x5176;&#x4ED6;</h3>
+<div class="collection-method-list" markdown="1">
+
+[abort](#method-abort)
+[abort_if](#method-abort-if)
+[abort_unless](#method-abort-unless)
+[app](#method-app)
+[auth](#method-auth)
+[back](#method-back)
+[bcrypt](#method-bcrypt)
+[blank](#method-blank)
+[broadcast](#method-broadcast)
+[cache](#method-cache)
+[class_uses_recursive](#method-class-uses-recursive)
+[collect](#method-collect)
+[config](#method-config)
+[cookie](#method-cookie)
+[csrf_field](#method-csrf-field)
+[csrf_token](#method-csrf-token)
+[dd](#method-dd)
+[decrypt](#method-decrypt)
+[dispatch](#method-dispatch)
+[dispatch_now](#method-dispatch-now)
+[dump](#method-dump)
+[encrypt](#method-encrypt)
+[env](#method-env)
+[event](#method-event)
+[factory](#method-factory)
+[filled](#method-filled)
+[info](#method-info)
+[logger](#method-logger)
+[method_field](#method-method-field)
+[now](#method-now)
+[old](#method-old)
+[optional](#method-optional)
+[policy](#method-policy)
+[redirect](#method-redirect)
+[report](#method-report)
+[request](#method-request)
+[rescue](#method-rescue)
+[resolve](#method-resolve)
+[response](#method-response)
+[retry](#method-retry)
+[session](#method-session)
+[tap](#method-tap)
+[today](#method-today)
+[throw_if](#method-throw-if)
+[throw_unless](#method-throw-unless)
+[trait_uses_recursive](#method-trait-uses-recursive)
+[transform](#method-transform)
+[validator](#method-validator)
+[value](#method-value)
+[view](#method-view)
+[with](#method-with)
+
+</div>
+
+<p><a name="method-listing"></a></p>
+<h2 id="&#x65B9;&#x6CD5;&#x5217;&#x8868;">&#x65B9;&#x6CD5;&#x5217;&#x8868;</h2>
+<style>
+    #collection-method code {
+        font-size: 14px;
+    }
+
+    #collection-method:not(.first-collection-method) {
+        margin-top: 50px;
+    }
+</style>
+
+<p><a name="arrays"></a></p>
+<h2 id="&#x6570;&#x7EC4;">&#x6570;&#x7EC4;</h2>
+<p><a name="method-array-add"></a></p>
+<h4 id="collection-method .first-collection-method"><code>array_add()</code> </h4>
+<p>&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;&#x5065;&#x4E0D;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x90A3;&#x4E48; <code>array_add</code> &#x51FD;&#x6570;&#x5C06;&#x4F1A;&#x628A;&#x7ED9;&#x5B9A;&#x7684;&#x952E;/&#x503C;&#x5BF9;&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x7EC4;&#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code>$array = array_add([&apos;name&apos; =&gt; &apos;Desk&apos;], &apos;price&apos;, 100);
+
+// [&apos;name&apos; =&gt; &apos;Desk&apos;, &apos;price&apos; =&gt; 100]
+</code></pre><p><a name="method-array-collapse"></a></p>
+<h4 id="collection-method"><code>array_collapse()</code> </h4>
+<p><code>array_collapse</code> &#x51FD;&#x6570;&#x5C06;&#x591A;&#x4E2A;&#x5355;&#x6570;&#x7EC4;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre class="language-"><code>$array = array_collapse([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+
+// [1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre><p><a name="method-array-divide"></a></p>
+<h4 id="collection-method"><code>array_divide()</code> </h4>
+<p><code>array_divide</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E24;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x539F;&#x59CB;&#x6570;&#x7EC4;&#x7684;&#x5065;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x539F;&#x59CB;&#x6570;&#x7EC4;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>list($keys, $values) = array_divide([&apos;name&apos; =&gt; &apos;Desk&apos;]);
+
+// $keys: [&apos;name&apos;]
+
+// $values: [&apos;Desk&apos;]
+</code></pre><p><a name="method-array-dot"></a></p>
+<h4 id="collection-method"><code>array_dot()</code> </h4>
+<p><code>array_dot</code> &#x51FD;&#x6570;&#x5C06;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x5E73;&#x94FA;&#x5230;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x8BE5;&#x6570;&#x7EC4;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x7B26;&#x53F7;&#x8868;&#x793A;&#x6DF1;&#x5EA6;&#xFF1A;</p>
+<pre class="language-"><code>$array = array_dot([&apos;foo&apos; =&gt; [&apos;bar&apos; =&gt; &apos;baz&apos;]]);
+
+// [&apos;foo.bar&apos; =&gt; &apos;baz&apos;];
+</code></pre><p><a name="method-array-except"></a></p>
+<h4 id="collection-method"><code>array_except()</code> </h4>
+<p><code>array_except</code> &#x51FD;&#x6570;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x5220;&#x9664;&#x7ED9;&#x5B9A;&#x7684;&#x952E;/&#x503C;&#x5BF9;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;name&apos; =&gt; &apos;Desk&apos;, &apos;price&apos; =&gt; 100];
+
+$array = array_except($array, [&apos;price&apos;]);
+
+// [&apos;name&apos; =&gt; &apos;Desk&apos;]
+</code></pre><p><a name="method-array-first"></a></p>
+<h4 id="collection-method"><code>array_first()</code> </h4>
+<p><code>array_first</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E2D;&#x7B2C;&#x4E00;&#x4E2A;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x6D4B;&#x8BD5;&#x7684;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre class="language-"><code>$array = [100, 200, 300];
+
+$value = array_first($array, function ($value, $key) {
+    return $value &gt;= 150;
+});
+
+// 200
+</code></pre><p>&#x5C06;&#x9ED8;&#x8BA4;&#x503C;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x503C;&#x901A;&#x8FC7;&#x6D4B;&#x8BD5;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x8BE5;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$value = array_first($array, $callback, $default);
+</code></pre><p><a name="method-array-flatten"></a></p>
+<h4 id="collection-method"><code>array_flatten()</code> </h4>
+<p><code>array_flatten</code> &#x51FD;&#x6570;&#x5C06;&#x591A;&#x7EF4;&#x6570;&#x7EC4;&#x5E73;&#x94FA;&#x4E3A;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;&#x3002;</p>
+<pre class="language-"><code>$array = [&apos;name&apos; =&gt; &apos;Joe&apos;, &apos;languages&apos; =&gt; [&apos;PHP&apos;, &apos;Ruby&apos;]];
+
+$array = array_flatten($array);
+
+// [&apos;Joe&apos;, &apos;PHP&apos;, &apos;Ruby&apos;];
+</code></pre><p><a name="method-array-forget"></a></p>
+<h4 id="collection-method"><code>array_forget()</code> </h4>
+<p><code>array_forget</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x7B26;&#x53F7;&#x4ECE;&#x6DF1;&#x5EA6;&#x5D4C;&#x5957;&#x6570;&#x7EC4;&#x4E2D;&#x79FB;&#x9664;&#x7ED9;&#x5B9A;&#x7684;&#x952E;/&#x503C;&#x5BF9;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100]]];
+
+array_forget($array, &apos;products.desk&apos;);
+
+// [&apos;products&apos; =&gt; []]
+</code></pre><p><a name="method-array-get"></a></p>
+<h4 id="collection-method"><code>array_get()</code> </h4>
+<p><code>array_get</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x7B26;&#x53F7;&#x4ECE;&#x6DF1;&#x5EA6;&#x5D4C;&#x5957;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x68C0;&#x7D22;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100]]];
+
+$value = array_get($array, &apos;products.desk&apos;);
+
+// [&apos;price&apos; =&gt; 100]
+</code></pre><p><code>array_get</code> &#x51FD;&#x6570;&#x4E5F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x5065;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x8BE5;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$value = array_get($array, &apos;names.john&apos;, &apos;default&apos;);
+</code></pre><p><a name="method-array-has"></a></p>
+<h4 id="collection-method"><code>array_has()</code> </h4>
+<p><code>array_has</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x7B26;&#x53F7;&#x68C0;&#x67E5;&#x6570;&#x7EC4;&#x4E2D;&#x662F;&#x5426;&#x5B58;&#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x9879;&#x76EE;&#x6216;&#x9879;&#x76EE;&#x7EC4;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;product&apos; =&gt; [&apos;name&apos; =&gt; &apos;desk&apos;, &apos;price&apos; =&gt; 100]];
+
+$hasItem = array_has($array, &apos;product.name&apos;);
+
+// true
+
+$hasItems = array_has($array, [&apos;product.price&apos;, &apos;product.discount&apos;]);
+
+// false
+</code></pre><p><a name="method-array-last"></a></p>
+<h4 id="collection-method"><code>array_last()</code> </h4>
+<p><code>array_last</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x6D4B;&#x8BD5;&#x7684;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre class="language-"><code>$array = [100, 200, 300, 110];
+
+$value = array_last($array, function ($value, $key) {
+    return $value &gt;= 150;
+});
+
+// 300
+</code></pre><p>&#x5C06;&#x9ED8;&#x8BA4;&#x503C;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x503C;&#x901A;&#x8FC7;&#x6D4B;&#x8BD5;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x8BE5;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$last = array_last($array, $callback, $default);
+</code></pre><p><a name="method-array-only"></a></p>
+<h4 id="collection-method"><code>array_only()</code> </h4>
+<p><code>array_only</code> &#x51FD;&#x6570;&#x4EC5;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x952E;/&#x503C;&#x5BF9;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;name&apos; =&gt; &apos;Desk&apos;, &apos;price&apos; =&gt; 100, &apos;orders&apos; =&gt; 10];
+
+$array = array_only($array, [&apos;name&apos;, &apos;price&apos;]);
+
+// [&apos;name&apos; =&gt; &apos;Desk&apos;, &apos;price&apos; =&gt; 100]
+</code></pre><p><a name="method-array-pluck"></a></p>
+<h4 id="collection-method"><code>array_pluck()</code> </h4>
+<p><code>array_pluck</code> &#x51FD;&#x6570;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x68C0;&#x7D22;&#x7ED9;&#x5B9A;&#x952E;&#x7684;&#x6240;&#x6709;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$array = [
+    [&apos;developer&apos; =&gt; [&apos;id&apos; =&gt; 1, &apos;name&apos; =&gt; &apos;Taylor&apos;]],
+    [&apos;developer&apos; =&gt; [&apos;id&apos; =&gt; 2, &apos;name&apos; =&gt; &apos;Abigail&apos;]],
+];
+
+$array = array_pluck($array, &apos;developer.name&apos;);
+
+// [&apos;Taylor&apos;, &apos;Abigail&apos;];
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x751F;&#x6210;&#x7684;&#x5217;&#x8868;&#x7684;&#x952E;&#xFF1A;</p>
+<pre class="language-"><code>$array = array_pluck($array, &apos;developer.name&apos;, &apos;developer.id&apos;);
+
+// [1 =&gt; &apos;Taylor&apos;, 2 =&gt; &apos;Abigail&apos;];
+</code></pre><p><a name="method-array-prepend"></a></p>
+<h4 id="collection-method"><code>array_prepend()</code> </h4>
+<p><code>array_prepend</code> &#x51FD;&#x6570;&#x5C06;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#x63A8;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x5F00;&#x5934;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;one&apos;, &apos;two&apos;, &apos;three&apos;, &apos;four&apos;];
+
+$array = array_prepend($array, &apos;zero&apos;);
+
+// $array: [&apos;zero&apos;, &apos;one&apos;, &apos;two&apos;, &apos;three&apos;, &apos;four&apos;]
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x7528;&#x4E8E;&#x8BE5;&#x503C;&#x7684;&#x952E;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;price&apos; =&gt; 100];
+
+$array = array_prepend($array, &apos;Desk&apos;, &apos;name&apos;);
+
+// [&apos;name&apos; =&gt; &apos;Desk&apos;, &apos;price&apos; =&gt; 100]
+</code></pre><p><a name="method-array-pull"></a></p>
+<h4 id="collection-method"><code>array_pull()</code> </h4>
+<p><code>array_pull</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5E76;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x5220;&#x9664;&#x952E;/&#x503C;&#x5BF9;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;name&apos; =&gt; &apos;Desk&apos;, &apos;price&apos; =&gt; 100];
+
+$name = array_pull($array, &apos;name&apos;);
+
+// $name: Desk
+
+// $array: [&apos;price&apos; =&gt; 100]
+</code></pre><p>&#x5C06;&#x9ED8;&#x8BA4;&#x503C;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;&#x8BE5;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x8BE5;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$value = array_pull($array, $key, $default);
+</code></pre><p><a name="method-array-random"></a></p>
+<h4 id="collection-method"><code>array_random()</code> </h4>
+<p><code>array_random</code> &#x51FD;&#x6570;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$array = [1, 2, 3, 4, 5];
+
+$random = array_random($array);
+
+// 4 - (&#x968F;&#x673A;&#x83B7;&#x53D6;)
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8981;&#x8FD4;&#x56DE;&#x7684;&#x968F;&#x673A;&#x6570;&#x7684;&#x6570;&#x91CF;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x3002;&#x4E00;&#x65E6;&#x4F60;&#x6307;&#x5B9A;&#x4E86;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5373;&#x4F7F;&#x6570;&#x91CF;&#x4E3A; 1&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E5F;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre class="language-"><code>$items = array_random($array, 2);
+
+// [2, 5] - (&#x968F;&#x673A;&#x83B7;&#x53D6;)
+</code></pre><p><a name="method-array-set"></a></p>
+<h4 id="collection-method"><code>array_set()</code> </h4>
+<p><code>array_set</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x7B26;&#x53F7;&#x5728;&#x6DF1;&#x5EA6;&#x5D4C;&#x5957;&#x7684;&#x6570;&#x7EC4;&#x4E2D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100]]];
+
+array_set($array, &apos;products.desk.price&apos;, 200);
+
+// [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 200]]]
+</code></pre><p><a name="method-array-sort"></a></p>
+<h4 id="collection-method"><code>array_sort()</code> </h4>
+<p><code>array_sort</code> &#x51FD;&#x6570;&#x6309;&#x7167;&#x5176;&#x503C;&#x6392;&#x5E8F;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre class="language-"><code>$array = [&apos;Desk&apos;, &apos;Table&apos;, &apos;Chair&apos;];
+
+$sorted = array_sort($array);
+
+// [&apos;Chair&apos;, &apos;Desk&apos;, &apos;Table&apos;]
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x6309;&#x7ED9;&#x5B9A;&#x7684;&#x95ED;&#x5305;&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5BF9;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF1A;</p>
+<pre class="language-"><code>$array = [
+    [&apos;name&apos; =&gt; &apos;Desk&apos;],
+    [&apos;name&apos; =&gt; &apos;Table&apos;],
+    [&apos;name&apos; =&gt; &apos;Chair&apos;],
+];
+
+$sorted = array_values(array_sort($array, function ($value) {
+    return $value[&apos;name&apos;];
+}));
+
+/*
+    [
+        [&apos;name&apos; =&gt; &apos;Chair&apos;],
+        [&apos;name&apos; =&gt; &apos;Desk&apos;],
+        [&apos;name&apos; =&gt; &apos;Table&apos;],
+    ]
+*/
+</code></pre><p><a name="method-array-sort-recursive"></a></p>
+<h4 id="collection-method"><code>array_sort_recursive()</code> </h4>
+<p><code>array_sort_recursive</code> &#x51FD;&#x6570;&#x4F7F;&#x7528; <code>sort</code> &#x51FD;&#x6570;&#x9012;&#x5F52;&#x6392;&#x5E8F;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre class="language-"><code>$array = [
+    [&apos;Roman&apos;, &apos;Taylor&apos;, &apos;Li&apos;],
+    [&apos;PHP&apos;, &apos;Ruby&apos;, &apos;JavaScript&apos;],
+];
+
+$sorted = array_sort_recursive($array);
+
+/*
+    [
+        [&apos;Li&apos;, &apos;Roman&apos;, &apos;Taylor&apos;],
+        [&apos;JavaScript&apos;, &apos;PHP&apos;, &apos;Ruby&apos;],
+    ]
+*/
+</code></pre><p><a name="method-array-where"></a></p>
+<h4 id="collection-method"><code>array_where()</code> </h4>
+<p><code>array_where</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x95ED;&#x5305;&#x6765;&#x8FC7;&#x6EE4;&#x6570;&#x7EC4;&#xFF1A;</p>
+<pre class="language-"><code>$array = [100, &apos;200&apos;, 300, &apos;400&apos;, 500];
+
+$array = array_where($array, function ($value, $key) {
+    return is_string($value);
+});
+
+// [1 =&gt; 200, 3 =&gt; 400]
+</code></pre><p><a name="method-array-wrap"></a></p>
+<h4 id="collection-method"><code>array_wrap()</code> </h4>
+<p><code>array_wrap</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x5305;&#x88C5;&#x6210;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x3002;&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x5DF2;&#x7ECF;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x5219;&#x4E0D;&#x4F1A;&#x88AB;&#x6539;&#x53D8;&#xFF1A;</p>
+<pre class="language-"><code>$string = &apos;Laravel&apos;;
+
+$array = array_wrap($string);
+
+// [0 =&gt; &apos;Laravel&apos;]
+</code></pre><p><a name="method-data-fill"></a></p>
+<h4 id="collection-method"><code>data_fill()</code> </h4>
+<p><code>data_fill</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x7B26;&#x53F7;&#x5728;&#x5D4C;&#x5957;&#x6570;&#x7EC4;&#x6216;&#x5BF9;&#x8C61;&#x5185;&#x8BBE;&#x7F6E;&#x7F3A;&#x5C11;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$data = [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100]]];
+
+data_fill($data, &apos;products.desk.price&apos;, 200);
+
+// [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100]]]
+
+data_fill($data, &apos;products.desk.discount&apos;, 10);
+
+// [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100, &apos;discount&apos; =&gt; 10]]]
+</code></pre><p>&#x8BE5;&#x51FD;&#x6570;&#x4E5F;&#x63A5;&#x53D7;&#x661F;&#x53F7;&#x300C;*&#x300D;&#x4F5C;&#x4E3A;&#x901A;&#x914D;&#x7B26;&#xFF0C;&#x5E76;&#x76F8;&#x5E94;&#x5730;&#x586B;&#x5199;&#x76EE;&#x6807;&#xFF1A;</p>
+<pre class="language-"><code>$data = [
+    &apos;products&apos; =&gt; [
+        [&apos;name&apos; =&gt; &apos;Desk 1&apos;, &apos;price&apos; =&gt; 100],
+        [&apos;name&apos; =&gt; &apos;Desk 2&apos;],
+    ],
+];
+
+data_fill($data, &apos;products.*.price&apos;, 200);
+
+/*
+    [
+        &apos;products&apos; =&gt; [
+            [&apos;name&apos; =&gt; &apos;Desk 1&apos;, &apos;price&apos; =&gt; 100],
+            [&apos;name&apos; =&gt; &apos;Desk 2&apos;, &apos;price&apos; =&gt; 200],
+        ],
+    ]
+*/
+</code></pre><p><a name="method-data-get"></a></p>
+<h4 id="collection-method"><code>data_get()</code> </h4>
+<p><code>data_get</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x7B26;&#x53F7;&#x4ECE;&#x5D4C;&#x5957;&#x6570;&#x7EC4;&#x6216;&#x5BF9;&#x8C61;&#x4E2D;&#x68C0;&#x7D22;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$data = [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100]]];
+
+$price = data_get($data, &apos;products.desk.price&apos;);
+
+// 100
+</code></pre><p><code>data_get</code> &#x51FD;&#x6570;&#x8FD8;&#x63A5;&#x53D7;&#x9ED8;&#x8BA4;&#x503C;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x627E;&#x4E0D;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x952E;&#xFF0C;&#x5C06;&#x8FD4;&#x56DE;&#x8BE5;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$discount = data_get($data, &apos;products.desk.discount&apos;, 0);
+
+// 0
+</code></pre><p><a name="method-data-set"></a></p>
+<h4 id="collection-method"><code>data_set()</code> </h4>
+<p><code>data_set</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x7B26;&#x53F7;&#x5728;&#x5D4C;&#x5957;&#x6570;&#x7EC4;&#x6216;&#x5BF9;&#x8C61;&#x5185;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$data = [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100]]];
+
+data_set($data, &apos;products.desk.price&apos;, 200);
+
+// [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 200]]]
+</code></pre><p>&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x4E5F;&#x63A5;&#x53D7;&#x901A;&#x914D;&#x7B26;&#x300C;*&#x300D;&#xFF0C;&#x5E76;&#x76F8;&#x5E94;&#x5730;&#x5728;&#x76EE;&#x6807;&#x4E0A;&#x8BBE;&#x7F6E;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>    $data = [
+        &apos;products&apos; =&gt; [
+            [&apos;name&apos; =&gt; &apos;Desk 1&apos;, &apos;price&apos; =&gt; 100],
+            [&apos;name&apos; =&gt; &apos;Desk 2&apos;, &apos;price&apos; =&gt; 150],
+        ],
+    ];
+
+    data_set($data, &apos;products.*.price&apos;, 200);
+
+    /*
+        [
+            &apos;products&apos; =&gt; [
+                [&apos;name&apos; =&gt; &apos;Desk 1&apos;, &apos;price&apos; =&gt; 200],
+                [&apos;name&apos; =&gt; &apos;Desk 2&apos;, &apos;price&apos; =&gt; 200],
+            ],
+        ]
+    */
+</code></pre><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6240;&#x6709;&#x73B0;&#x6709;&#x7684;&#x503C;&#x90FD;&#x4F1A;&#x88AB;&#x8986;&#x76D6;&#x3002;&#x5982;&#x679C;&#x4F60;&#x53EA;&#x60F3;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x503C;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x9012; <code>false</code> &#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code>$data = [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100]]];
+
+data_set($data, &apos;products.desk.price&apos;, 200, false);
+
+// [&apos;products&apos; =&gt; [&apos;desk&apos; =&gt; [&apos;price&apos; =&gt; 100]]]
+</code></pre><p><a name="method-head"></a></p>
+<h4 id="collection-method"><code>head()</code> </h4>
+<p><code>head</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre class="language-"><code>$array = [100, 200, 300];
+
+$first = head($array);
+
+// 100
+</code></pre><p><a name="method-last"></a></p>
+<h4 id="collection-method"><code>last()</code> </h4>
+<p><code>last</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF1A;</p>
+<pre class="language-"><code>$array = [100, 200, 300];
+
+$last = last($array);
+
+// 300
+</code></pre><p><a name="paths"></a></p>
+<h2 id="&#x8DEF;&#x5F84;">&#x8DEF;&#x5F84;</h2>
+<p><a name="method-app-path"></a></p>
+<h4 id="collection-method"><code>app_path()</code> </h4>
+<p><code>app_path</code> &#x8FD4;&#x56DE; <code>app</code> &#x76EE;&#x5F55;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x3002;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>app_path</code> &#x51FD;&#x6570;&#x6765;&#x751F;&#x6210;&#x76F8;&#x5BF9;&#x4E8E; <code>app</code> &#x76EE;&#x5F55;&#x7684;&#x6587;&#x4EF6;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code>$path = app_path();
+
+$path = app_path(&apos;Http/Controllers/Controller.php&apos;);
+</code></pre><p><a name="method-base-path"></a></p>
+<h4 id="collection-method"><code>base_path()</code> </h4>
+<p><code>base_path</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x3002;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>base_path</code> &#x51FD;&#x6570;&#x751F;&#x6210;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x76F8;&#x5BF9;&#x4E8E;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code>$path = base_path();
+
+$path = base_path(&apos;vendor/bin&apos;);
+</code></pre><p><a name="method-config-path"></a></p>
+<h4 id="collection-method"><code>config_path()</code> </h4>
+<p><code>config_path</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x914D;&#x7F6E;&#x76EE;&#x5F55;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>config_path</code> &#x51FD;&#x6570;&#x6765;&#x751F;&#x6210;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x914D;&#x7F6E;&#x76EE;&#x5F55;&#x4E2D;&#x7ED9;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code>$path = config_path();
+</code></pre><p><a name="method-database-path"></a></p>
+<h4 id="collection-method"><code>database_path()</code> </h4>
+<p><code>database_path</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x5E93;&#x76EE;&#x5F55;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>database_path</code> &#x51FD;&#x6570;&#x6765;&#x751F;&#x6210;&#x6570;&#x636E;&#x5E93;&#x76EE;&#x5F55;&#x4E2D;&#x7ED9;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code>$path = database_path();
+</code></pre><p><a name="method-mix"></a></p>
+<h4 id="collection-method"><code>mix()</code> </h4>
+<p><code>mix</code> &#x51FD;&#x6570;&#x83B7;&#x53D6; <a href="docs/mix">&#x7248;&#x672C;&#x5316; Mix &#x6587;&#x4EF6;</a> &#x7684;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code>mix($file);
+</code></pre><p><a name="method-public-path"></a></p>
+<h4 id="collection-method"><code>public_path()</code> </h4>
+<p><code>public_path</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE; <code>public</code> &#x76EE;&#x5F55;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>public_path</code> &#x51FD;&#x6570;&#x6765;&#x751F;&#x6210; <code>public</code> &#x76EE;&#x5F55;&#x4E2D;&#x7ED9;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code>$path = public_path();
+</code></pre><p><a name="method-resource-path"></a></p>
+<h4 id="collection-method"><code>resource_path()</code> </h4>
+<p><code>resource_path</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE; <code>resources</code> &#x76EE;&#x5F55;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>resource_path</code> &#x51FD;&#x6570;&#x6765;&#x751F;&#x6210;&#x76F8;&#x5BF9;&#x4E8E;&#x8D44;&#x6E90;&#x76EE;&#x5F55;&#x7684;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code>$path = resource_path();
+
+$path = resource_path(&apos;assets/sass/app.scss&apos;);
+</code></pre><p><a name="method-storage-path"></a></p>
+<h4 id="collection-method"><code>storage_path()</code> </h4>
+<p><code>storage_path</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE; <code>storage</code> &#x76EE;&#x5F55;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>storage_path</code> &#x6765;&#x751F;&#x6210;&#x76F8;&#x5BF9;&#x4E8E;&#x50A8;&#x5B58;&#x76EE;&#x5F55;&#x7684;&#x6307;&#x5B9A;&#x6587;&#x4EF6;&#x7684;&#x5B8C;&#x6574;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre class="language-"><code>$path = storage_path();
+
+$path = storage_path(&apos;app/file.txt&apos;);
+</code></pre><p><a name="strings"></a></p>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;">&#x5B57;&#x7B26;&#x4E32;</h2>
+<p><a name="method-__"></a></p>
+<h4 id="collection-method"><code>__()</code> </h4>
+<p><code>__</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x4F60;&#x7684; <a href="docs/localization">&#x672C;&#x5730;&#x5316;&#x6587;&#x4EF6;</a> &#x6765;&#x7FFB;&#x8BD1;&#x7ED9;&#x5B9A;&#x7684;&#x7FFB;&#x8BD1;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x7FFB;&#x8BD1;&#x952E;&#xFF1A;</p>
+<pre class="language-"><code>echo __(&apos;Welcome to our application&apos;);
+
+echo __(&apos;messages.welcome&apos;);
+</code></pre><p>&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x7FFB;&#x8BD1;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219; <code>__</code> &#x51FD;&#x6570;&#x4F1A;&#x7B80;&#x5355;&#x5730;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6309;&#x7167;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x7FFB;&#x8BD1;&#x952E; <code>messages.welcome</code> &#x4E0D;&#x5B58;&#x5728;&#xFF0C;<code>__</code> &#x65B9;&#x6CD5;&#x4F1A;&#x5C06;&#x5176;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x3002;</p>
+<p><a name="method-camel-case"></a></p>
+<h4 id="collection-method"><code>camel_case()</code> </h4>
+<p><code>camel_case</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x7B26;&#x4F20;&#x8F6C;&#x6362;&#x4E3A;&#x300C;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x300D;&#xFF1A;</p>
+<pre class="language-"><code>$camel = camel_case(&apos;foo_bar&apos;);
+
+// fooBar
+</code></pre><p><a name="method-class-basename"></a></p>
+<h4 id="collection-method"><code>class_basename()</code> </h4>
+<p><code>class_basename</code> &#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x7C7B;&#x5220;&#x9664;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x7C7B;&#x540D;&#xFF1A;</p>
+<pre class="language-"><code>$class = class_basename(&apos;Foo\Bar\Baz&apos;);
+
+// Baz
+</code></pre><p><a name="method-e"></a></p>
+<h4 id="collection-method"><code>e()</code> </h4>
+<p><code>e</code> &#x51FD;&#x6570;&#x5C06; <code>double_encode</code> &#x9009;&#x9879;&#x8BBE;&#x7F6E;&#x4E3A; <code>false</code> &#x6765;&#x8FD0;&#x884C; PHP &#x7684; <code>htmlspecialchars</code> &#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code>echo e(&apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>foo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>&apos;);
+
+// <span class="token entity" title="&lt;">&amp;lt;</span>html<span class="token entity" title="&gt;">&amp;gt;</span>foo<span class="token entity" title="&lt;">&amp;lt;</span>/html<span class="token entity" title="&gt;">&amp;gt;</span>
+</code></pre><p><a name="method-ends-with"></a></p>
+<h4 id="collection-method"><code>ends_with()</code> </h4>
+<p><code>ends_with</code> &#x51FD;&#x6570;&#x5224;&#x65AD;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x4EE5;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x7ED3;&#x5C3E;&#xFF1A;</p>
+<pre class="language-"><code>$value = ends_with(&apos;This is my name&apos;, &apos;name&apos;);
+
+// true
+</code></pre><p><a name="method-kebab-case"></a></p>
+<h4 id="collection-method"><code>kebab_case()</code> </h4>
+<p><code>kebab_case</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x300C;&#x77ED;&#x6A2A;&#x7EBF;&#x547D;&#x540D;&#x300D;&#xFF1A;</p>
+<pre class="language-"><code>$value = kebab_case(&apos;fooBar&apos;);
+
+// foo-bar
+</code></pre><p><a name="method-preg-replace-array"></a></p>
+<h4 id="pregreplacearray"><code>preg_replace_array()</code></h4>
+<p><code>preg_replace_array</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x987A;&#x5E8F;&#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x7ED9;&#x5B9A;&#x6A21;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code>$string = &apos;&#x6D3B;&#x52A8;&#x5C06;&#x5728; :start &#x548C; :end &#x4E4B;&#x95F4;&#x8FDB;&#x884C;&apos;;
+
+$replaced = preg_replace_array(&apos;/:[a-z_]+/&apos;, [&apos;8:30&apos;, &apos;9:00&apos;], $string);
+
+// &#x6D3B;&#x52A8;&#x5C06;&#x5728; 8:30 &#x81F3; 9:00 &#x4E4B;&#x95F4;&#x8FDB;&#x884C;
+</code></pre><p><a name="method-snake-case"></a></p>
+<h4 id="collection-method"><code>snake_case()</code> </h4>
+<p><code>snake_case</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x300C;&#x86C7;&#x5F62;&#x547D;&#x540D;&#x300D;&#xFF1A;</p>
+<pre class="language-"><code>$snake = snake_case(&apos;fooBar&apos;);
+
+// foo_bar
+</code></pre><p><a name="method-starts-with"></a></p>
+<h4 id="collection-method"><code>starts_with()</code> </h4>
+<p><code>starts_with</code> &#x51FD;&#x6570;&#x5224;&#x65AD;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5F00;&#x5934;&#x662F;&#x5426;&#x662F;&#x6307;&#x5B9A;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$value = starts_with(&apos;This is my name&apos;, &apos;This&apos;);
+
+// true
+</code></pre><p><a name="method-str-after"></a></p>
+<h4 id="collection-method"><code>str_after()</code> </h4>
+<p><code>str_after</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6307;&#x5B9A;&#x503C;&#x4E4B;&#x540E;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code>$slice = str_after(&apos;This is my name&apos;, &apos;This is&apos;);
+
+// &apos; my name&apos;
+</code></pre><p><a name="method-str-before"></a></p>
+<h4 id="collection-method"><code>str_before()</code> </h4>
+<p><code>str_before</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7ED9;&#x5B9A;&#x503C;&#x4E4B;&#x524D;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre class="language-"><code>$slice = str_before(&apos;This is my name&apos;, &apos;my name&apos;);
+
+// &apos;This is &apos;
+</code></pre><p><a name="method-str-contains"></a></p>
+<h4 id="collection-method"><code>str_contains()</code> </h4>
+<p><code>str_contains</code> &#x51FD;&#x6570;&#x5224;&#x65AD;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$value = str_contains(&apos;This is my name&apos;, &apos;my&apos;);
+
+// true
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x503C;&#x7684;&#x6570;&#x7EC4;&#x6765;&#x5224;&#x65AD;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5305;&#x542B;&#x4EFB;&#x4F55;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$value = str_contains(&apos;This is my name&apos;, [&apos;my&apos;, &apos;foo&apos;]);
+
+// true
+</code></pre><p><a name="method-str-finish"></a></p>
+<h4 id="collection-method"><code>str_finish()</code> </h4>
+<p><code>str_finish</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x4EE5;&#x7ED9;&#x5B9A;&#x503C;&#x7ED3;&#x5C3E;&#x8FD4;&#x56DE;&#xFF08;&#x5982;&#x679C;&#x5B83;&#x5C1A;&#x672A;&#x4EE5;&#x7ED9;&#x5B9A;&#x503C;&#x7ED3;&#x5C3E;&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code>$string = str_finish(&apos;this/string&apos;, &apos;/&apos;);
+
+// this/string/
+
+$string2 = str_finish(&apos;this/string/&apos;, &apos;/&apos;);
+
+// this/string/
+</code></pre><p><a name="method-str-is"></a></p>
+<h4 id="collection-method"><code>str_is()</code> </h4>
+<p><code>str_is</code> &#x51FD;&#x6570;&#x5224;&#x65AD;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x5339;&#x914D;&#x7ED9;&#x5B9A;&#x7684;&#x6A21;&#x5F0F;&#x3002;&#x661F;&#x53F7;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x8868;&#x793A;&#x901A;&#x914D;&#x7B26;&#xFF1A;</p>
+<pre class="language-"><code>$value = str_is(&apos;foo*&apos;, &apos;foobar&apos;);
+
+// true
+
+$value = str_is(&apos;baz*&apos;, &apos;foobar&apos;);
+
+// false
+</code></pre><p><a name="method-str-limit"></a></p>
+<h4 id="collection-method"><code>str_limit()</code> </h4>
+<p><code>str_limit</code> &#x51FD;&#x6570;&#x6309;&#x7ED9;&#x5B9A;&#x7684;&#x957F;&#x5EA6;&#x622A;&#x65AD;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre class="language-"><code>$truncated = str_limit(&apos;The quick brown fox jumps over the lazy dog&apos;, 20);
+
+// The quick brown fox...
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x6765;&#x6539;&#x53D8;&#x5C06;&#x88AB;&#x8FFD;&#x52A0;&#x5230;&#x6700;&#x540E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;</p>
+<pre class="language-"><code>$truncated = str_limit(&apos;The quick brown fox jumps over the lazy dog&apos;, 20, &apos; (...)&apos;);
+
+// The quick brown fox (...)
+</code></pre><p><a name="method-str-plural"></a></p>
+<h4 id="collection-method"><code>str_plural()</code> </h4>
+<p><code>str_plural</code> &#x51FD;&#x6570;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x590D;&#x6570;&#x5F62;&#x5F0F;&#x3002;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x82F1;&#x6587;&#xFF1A;</p>
+<pre class="language-"><code>$plural = str_plural(&apos;car&apos;);
+
+// cars
+
+$plural = str_plural(&apos;child&apos;);
+
+// children
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x6765;&#x68C0;&#x7D22;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x5355;&#x6570;&#x6216;&#x590D;&#x6570;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code>$plural = str_plural(&apos;child&apos;, 2);
+
+// children
+
+$plural = str_plural(&apos;child&apos;, 1);
+
+// child
+</code></pre><p><a name="method-str-random"></a></p>
+<h4 id="collection-method"><code>str_random()</code> </h4>
+<p><code>str_random</code> &#x51FD;&#x6570;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x957F;&#x5EA6;&#x7684;&#x968F;&#x673A;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x6570;&#x7528; PHP &#x7684; <code>random_bytes</code> &#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code>$string = str_random(40);
+</code></pre><h4 id="collection-method"><code>str_replace_array()</code> </h4>
+<p><code>str_replace_array</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x6570;&#x7EC4;&#x987A;&#x5E8F;&#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x7ED9;&#x5B9A;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$string = &apos;The event will take place between ? and ?&apos;;
+
+$replaced = str_replace_array(&apos;?&apos;, [&apos;8:30&apos;, &apos;9:00&apos;], $string);
+
+// The event will take place between 8:30 and 9:00
+</code></pre><p><a name="method-str-replace-first"></a></p>
+<h4 id="collection-method"><code>str_replace_first()</code> </h4>
+<p><code>str_replace_first</code> &#x51FD;&#x6570;&#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5339;&#x914D;&#x9879;&#xFF1A;</p>
+<pre class="language-"><code>$replaced = str_replace_first(&apos;the&apos;, &apos;a&apos;, &apos;the quick brown fox jumps over the lazy dog&apos;);
+
+// a quick brown fox jumps over the lazy dog
+</code></pre><p><a name="method-str-replace-last"></a></p>
+<h4 id="collection-method"><code>str_replace_last()</code> </h4>
+<p><code>str_replace_last</code> &#x51FD;&#x6570;&#x66FF;&#x6362;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6700;&#x540E;&#x4E00;&#x6B21;&#x51FA;&#x73B0;&#x7684;&#x7ED9;&#x5B9A;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$replaced = str_replace_last(&apos;the&apos;, &apos;a&apos;, &apos;the quick brown fox jumps over the lazy dog&apos;);
+
+// the quick brown fox jumps over a lazy dog
+</code></pre><p><a name="method-str-singular"></a></p>
+<h4 id="collection-method"><code>str_singular()</code> </h4>
+<p><code>str_singular</code> &#x51FD;&#x6570;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x5355;&#x6570;&#x5F62;&#x5F0F;&#x3002;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x76EE;&#x524D;&#x4EC5;&#x652F;&#x6301;&#x82F1;&#x6587;&#xFF1A;</p>
+<pre class="language-"><code>$singular = str_singular(&apos;cars&apos;);
+
+// car
+</code></pre><p><a name="method-str-slug"></a></p>
+<h4 id="collection-method"><code>str_slug()</code> </h4>
+<p><code>str_slug</code> &#x51FD;&#x6570;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x751F;&#x6210;&#x4E00;&#x4E2A; URL &#x53CB;&#x597D;&#x7684;&#x300C;slug&#x300D;&#xFF1A;</p>
+<pre class="language-"><code>$title = str_slug(&apos;Laravel 5 Framework&apos;, &apos;-&apos;);
+
+// laravel-5-framework
+</code></pre><p><a name="method-str-start"></a></p>
+<h4 id="collection-method"><code>str_start()</code> </h4>
+<p><code>str_start</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x503C;&#x7684;&#x5355;&#x4E2A;&#x5B9E;&#x4F8B;&#x6DFB;&#x52A0;&#x5230;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x5982;&#x679C;&#x5B83;&#x5C1A;&#x672A;&#x4EE5;&#x503C;&#x5F00;&#x59CB;&#xFF09;&#xFF1A;</p>
+<pre class="language-"><code>$adjusted = str_start(&apos;this/string&apos;, &apos;/&apos;);
+
+// /this/string
+
+$adjusted = str_start(&apos;/this/string/&apos;, &apos;/&apos;);
+
+// /this/string
+</code></pre><p><a name="method-studly-case"></a></p>
+<h4 id="collection-method"><code>studly_case()</code> </h4>
+<p><code>studly_case</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x300C;&#x53D8;&#x79CD;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x300D;&#xFF1A;</p>
+<pre class="language-"><code>$value = studly_case(&apos;foo_bar&apos;);
+
+// FooBar
+</code></pre><p><a name="method-title-case"></a></p>
+<h4 id="collection-method"><code>title_case()</code> </h4>
+<p><code>title_case</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x4E3A;&#x300C;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x300D;&#xFF1A;</p>
+<pre class="language-"><code>$title = title_case(&apos;a nice title uses the correct case&apos;);
+
+// A Nice Title Uses The Correct Case
+</code></pre><p><a name="method-trans"></a></p>
+<h4 id="collection-method"><code>trans()</code> </h4>
+<p><code>trans</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x4F60;&#x7684; <a href="docs/localization">&#x672C;&#x5730;&#x5316;&#x6587;&#x4EF6;</a> &#x6765;&#x7FFB;&#x8BD1;&#x7ED9;&#x5B9A;&#x7684;&#x7FFB;&#x8BD1;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x7FFB;&#x8BD1;&#x952E;&#xFF1A;</p>
+<pre class="language-"><code>echo trans(&apos;messages.welcome&apos;);
+</code></pre><p>&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x7FFB;&#x8BD1;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219; <code>trans</code> &#x65B9;&#x6CD5;&#x4F1A;&#x7B80;&#x5355;&#x5730;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x7684;&#x952E;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x5C31;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x800C;&#x8A00;&#xFF0C;&#x5982;&#x679C;&#x7FFB;&#x8BD1;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C; <code>trans</code> &#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE; <code>messages.welcome</code>&#x3002;</p>
+<p><a name="method-trans-choice"></a></p>
+<h4 id="collection-method"><code>trans_choice()</code> </h4>
+<p><code>trans_choice</code> &#x51FD;&#x6570;&#x6839;&#x636E;&#x8BCD;&#x5F62;&#x53D8;&#x5316;&#x6765;&#x7FFB;&#x8BD1;&#x7ED9;&#x5B9A;&#x7684;&#x7FFB;&#x8BD1;&#x952E;&#xFF1A;</p>
+<pre class="language-"><code>echo trans_choice(&apos;messages.notifications&apos;, $unreadCount);
+</code></pre><p>&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x7FFB;&#x8BD1;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;<code>trans_choice</code> &#x65B9;&#x6CD5;&#x4F1A;&#x7B80;&#x5355;&#x5730;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x7684;&#x952E;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x6309;&#x7167;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x7FFB;&#x8BD1;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;<code>trans_choice</code> &#x65B9;&#x6CD5;&#x4F1A;&#x8FD4;&#x56DE; <code>messages.notifications</code>&#x3002;</p>
+<p><a name="urls"></a></p>
+<h2 id="urls">URLs</h2>
+<p><a name="method-action"></a></p>
+<h4 id="collection-method"><code>action()</code> </h4>
+<p><code>action</code> &#x51FD;&#x6570;&#x4E3A;&#x6307;&#x5B9A;&#x7684;&#x63A7;&#x5236;&#x5668;&#x52A8;&#x4F5C;&#x751F;&#x6210;&#x4E00;&#x4E2A; URL&#x3002;&#x4F60;&#x4E0D;&#x9700;&#x8981;&#x4F20;&#x9012;&#x5B8C;&#x6574;&#x7684;&#x63A7;&#x5236;&#x5668;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x3002;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x9012;&#x76F8;&#x5BF9;&#x4E8E; <code>App\Http\Controllers</code> &#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x63A7;&#x5236;&#x5668;&#x7C7B;&#x540D;&#x79F0;&#xFF1A;</p>
+<pre class="language-"><code>$url = action(&apos;HomeController@getIndex&apos;);
+</code></pre><p>&#x5982;&#x679C;&#x8BE5;&#x65B9;&#x6CD5;&#x63A5;&#x53D7;&#x8DEF;&#x7531;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x4F5C;&#x4E3A;&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#xFF1A;</p>
+<pre class="language-"><code>$url = action(&apos;UserController@profile&apos;, [&apos;id&apos; =&gt; 1]);
+</code></pre><p><a name="method-asset"></a></p>
+<h4 id="collection-method"><code>asset()</code> </h4>
+<p><code>asset</code> &#x51FD;&#x6570;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x8BF7;&#x6C42;&#x7684;&#x534F;&#x8BAE;&#xFF08; HTTP &#x6216; HTTPS &#xFF09;&#x4E3A;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x751F;&#x6210; URL&#xFF1A;</p>
+<pre class="language-"><code>$url = asset(&apos;img/photo.jpg&apos;);
+</code></pre><p><a name="method-secure-asset"></a></p>
+<h4 id="collection-method"><code>secure_asset()</code> </h4>
+<p><code>secure_asset</code> &#x51FD;&#x6570;&#x4F7F;&#x7528; HTTPS &#x534F;&#x8BAE;&#x4E3A;&#x8D44;&#x6E90;&#x6587;&#x4EF6;&#x751F;&#x6210; URL:</p>
+<pre class="language-"><code>echo secure_asset(&apos;foo/bar.zip&apos;);
+</code></pre><p><a name="method-route"></a></p>
+<h4 id="collection-method"><code>route()</code> </h4>
+<p><code>route</code> &#x51FD;&#x6570;&#x4E3A;&#x7ED9;&#x5B9A;&#x7684;&#x547D;&#x540D;&#x8DEF;&#x7531;&#x751F;&#x6210;&#x4E00;&#x4E2A; URL&#xFF1A;</p>
+<pre class="language-"><code>$url = route(&apos;routeName&apos;);
+</code></pre><p>&#x5982;&#x679C;&#x8DEF;&#x7531;&#x63A5;&#x53D7;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x4F5C;&#x4E3A;&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#xFF1A;</p>
+<pre class="language-"><code>$url = route(&apos;routeName&apos;, [&apos;id&apos; =&gt; 1]);
+</code></pre><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>route</code> &#x51FD;&#x6570;&#x751F;&#x6210;&#x7684;&#x662F;&#x7EDD;&#x5BF9; URL&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x76F8;&#x5BF9; URL&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x9012; <code>false</code> &#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code>$url = route(&apos;routeName&apos;, [&apos;id&apos; =&gt; 1], false);
+</code></pre><p><a name="method-secure-url"></a></p>
+<h4 id="collection-method"><code>secure_url()</code> </h4>
+<p><code>secure_url</code> &#x51FD;&#x6570;&#x4E3A;&#x7ED9;&#x5B9A;&#x7684;&#x8DEF;&#x5F84;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6807;&#x51C6;&#x7684; HTTPS URL&#xFF1A;</p>
+<pre class="language-"><code>echo secure_url(&apos;user/profile&apos;);
+
+echo secure_url(&apos;user/profile&apos;, [1]);
+</code></pre><p><a name="method-url"></a></p>
+<h4 id="collection-method"><code>url()</code> </h4>
+<p><code>url</code> &#x51FD;&#x6570;&#x751F;&#x6210;&#x7ED9;&#x5B9A;&#x8DEF;&#x5F84;&#x7684;&#x6807;&#x51C6; URL&#xFF1A;</p>
+<pre class="language-"><code>echo url(&apos;user/profile&apos;);
+
+echo url(&apos;user/profile&apos;, [1]);
+</code></pre><p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;&#x8DEF;&#x5F84;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; <code>Illuminate\Routing\UrlGenerator</code> &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>echo url()-&gt;current();
+echo url()-&gt;full();
+echo url()-&gt;previous();
+</code></pre><p><a name="miscellaneous"></a></p>
+<h2 id="&#x5176;&#x4ED6;">&#x5176;&#x4ED6;</h2>
+<p><a name="method-abort"></a></p>
+<h4 id="collection-method"><code>abort()</code> </h4>
+<p><code>abort</code> &#x51FD;&#x6570;&#x629B;&#x51FA; <a href="docs/errors#the-exception-handler">&#x5F02;&#x5E38;&#x5904;&#x7406;</a> &#x7A0B;&#x5E8F;&#x5448;&#x73B0;&#x7684; <a href="docs/errors#http-exceptions">HTTP &#x5F02;&#x5E38;</a>&#xFF1A;</p>
+<pre class="language-"><code>abort(401);
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x989D;&#x5916;&#x7684;&#x54CD;&#x5E94;&#x6587;&#x672C;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x54CD;&#x5E94;&#x6807;&#x5934;&#xFF1A;</p>
+<pre class="language-"><code>abort(403, &apos;Unauthorized.&apos;, $headers);
+</code></pre><p><a name="method-abort-if"></a></p>
+<h4 id="collection-method"><code>abort_if()</code> </h4>
+<p>&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;&#x5E03;&#x5C14;&#x8868;&#x8FBE;&#x5F0F;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4E3A; <code>true</code>&#xFF0C; <code>abort_if</code> &#x51FD;&#x6570;&#x5C06;&#x629B;&#x51FA;&#x4E00;&#x4E2A; HTTP &#x5F02;&#x5E38;&#xFF1A;</p>
+<pre class="language-"><code>abort_if(! Auth::user()-&gt;isAdmin(), 403);
+</code></pre><p>&#x548C; <code>abort</code> &#x65B9;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x5F02;&#x5E38;&#x7684;&#x54CD;&#x5E94;&#x6587;&#x672C;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x54CD;&#x5E94;&#x5934;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<p><a name="method-abort-unless"></a></p>
+<h4 id="collection-method"><code>abort_unless()</code> </h4>
+<p>&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;&#x5E03;&#x5C14;&#x8868;&#x8FBE;&#x5F0F;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4E3A; <code>false</code>&#xFF0C;<code>abort_unless</code> &#x51FD;&#x6570;&#x5C06;&#x629B;&#x51FA;&#x4E00;&#x4E2A; HTTP &#x5F02;&#x5E38;&#xFF1A;</p>
+<pre class="language-"><code>abort_unless(Auth::user()-&gt;isAdmin(), 403);
+</code></pre><p>&#x548C; <code>abort</code> &#x65B9;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x5F02;&#x5E38;&#x7684;&#x54CD;&#x5E94;&#x6587;&#x672C;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x54CD;&#x5E94;&#x5934;&#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x7B2C;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<p><a name="method-app"></a></p>
+<h4 id="collection-method"><code>app()</code> </h4>
+<p><code>app</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE; <a href="docs/container">&#x670D;&#x52A1;&#x5BB9;&#x5668;</a> &#x5B9E;&#x4F8B;</p>
+<pre class="language-"><code>$container = app();
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x7C7B;&#x6216;&#x63A5;&#x53E3;&#x540D;&#x79F0;&#x6765;&#x4ECE;&#x5BB9;&#x5668;&#x4E2D;&#x89E3;&#x6790;&#x5B83;&#xFF1A;</p>
+<pre class="language-"><code>$api = app(&apos;HelpSpot\API&apos;);
+</code></pre><p><a name="method-auth"></a></p>
+<h4 id="collection-method"><code>auth()</code> </h4>
+<p><code>auth</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <a href="docs/authentication">&#x8BA4;&#x8BC1;</a> &#x5B9E;&#x4F8B;&#x3002;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x8D77;&#x89C1;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x66FF;&#x4EE3; <code>Auth</code> facade&#xFF1A;</p>
+<pre class="language-"><code>$user = auth()-&gt;user();
+</code></pre><p>&#x5982;&#x679C;&#x9700;&#x8981;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4F60;&#x60F3;&#x8981;&#x8BBF;&#x95EE;&#x7684;&#x8BA4;&#x8BC1;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>$user = auth(&apos;admin&apos;)-&gt;user();
+</code></pre><p><a name="method-back"></a></p>
+<h4 id="collection-method"><code>back()</code> </h4>
+<p><code>back()</code> &#x51FD;&#x6570;&#x751F;&#x6210;&#x4E00;&#x4E2A; <a href="docs/responses#redirects">&#x91CD;&#x5B9A;&#x5411; HTTP &#x54CD;&#x5E94;</a> &#x5230;&#x7528;&#x6237;&#x4E4B;&#x524D;&#x7684;&#x4F4D;&#x7F6E;&#xFF1A;</p>
+<pre class="language-"><code>return back($status = 302, $headers = [], $fallback = false);
+
+return back();
+</code></pre><p><a name="method-bcrypt"></a></p>
+<h4 id="collection-method"><code>bcrypt()</code> </h4>
+<p><code>bcrypt</code> &#x4F7F;&#x7528; Bcrypt &#x5BF9;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x6563;&#x5217;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x66FF;&#x4EE3; <code>Hash</code> facade&#xFF1A;</p>
+<pre class="language-"><code>$password = bcrypt(&apos;my-secret-password&apos;);
+</code></pre><p><a name="method-broadcast"></a></p>
+<h4 id="collection-method"><code>broadcast()</code> </h4>
+<p><code>broadcast</code> &#x51FD;&#x6570;&#x5C06; <a href="docs/broadcasting">&#x5E7F;&#x64AD;</a> &#x7ED9;&#x5B9A;&#x7684; <a href="docs/events">&#x4E8B;&#x4EF6;</a> &#x5230;&#x5B83;&#x7684;&#x76D1;&#x542C;&#x5668;&#xFF1A;</p>
+<pre class="language-"><code>broadcast(new UserRegistered($user));
+</code></pre><p><a name="method-blank"></a></p>
+<h4 id="collection-method"><code>blank()</code> </h4>
+<p><code>blank</code> &#x51FD;&#x6570;&#x5224;&#x65AD;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x662F;&#x5426;&#x4E3A;&#x300C;&#x7A7A;&#x300D;&#xFF1A;</p>
+<pre class="language-"><code>blank(&apos;&apos;);
+blank(&apos;   &apos;);
+blank(null);
+blank(collect());
+
+// true
+
+blank(0);
+blank(true);
+blank(false);
+
+// false
+</code></pre><p>&#x8981;&#x4F7F;&#x7528;&#x4E0E; <code>blank</code> &#x76F8;&#x53CD;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8BF7;&#x770B; <a href="docs/helpers#method-filled">filled</a> &#x65B9;&#x6CD5;&#x3002;</p>
+<p><a name="method-cache"></a></p>
+<h4 id="collection-method"><code>cache()</code> </h4>
+<p><code>cache</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x4ECE;&#x7F13;&#x5B58;&#x4E2D;&#x83B7;&#x53D6;&#x503C;&#x3002;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x5065;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$value = cache(&apos;key&apos;);
+
+$value = cache(&apos;key&apos;, &apos;default&apos;);
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;&#x4E00;&#x7EC4;&#x952E;/&#x503C;&#x5BF9;&#x4F20;&#x9012;&#x7ED9;&#x51FD;&#x6570;&#x6765;&#x5C06;&#x5176;&#x6DFB;&#x52A0;&#x5230;&#x7F13;&#x5B58;&#x4E2D;&#x3002;&#x4E0E;&#x6B64;&#x540C;&#x65F6;&#xFF0C;&#x4F60;&#x8FD8;&#x5E94;&#x8BE5;&#x4F20;&#x9012;&#x6709;&#x6548;&#x7684;&#x5206;&#x949F;&#x6570;&#x6216;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#x4F5C;&#x4E3A;&#x7F13;&#x5B58;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF1A;</p>
+<pre class="language-"><code>cache([&apos;key&apos; =&gt; &apos;value&apos;], 5);
+
+cache([&apos;key&apos; =&gt; &apos;value&apos;], Carbon::now()-&gt;addSeconds(10));
+</code></pre><p><a name="method-class-uses-recursive"></a></p>
+<h4 id="collection-method"><code>class_uses_recursive()</code> </h4>
+<p><code>class_uses_recursive</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7C7B;&#x4F7F;&#x7528;&#x7684;&#x6240;&#x6709; traits&#xFF0C;&#x5305;&#x62EC;&#x4EFB;&#x4F55;&#x5B50;&#x7C7B;&#x4F7F;&#x7528;&#x7684; traits&#xFF1A;</p>
+<pre class="language-"><code>$traits = class_uses_recursive(App\User::class);
+</code></pre><p><a name="method-collect"></a></p>
+<h4 id="collection-method"><code>collect()</code> </h4>
+<p><code>collect</code> &#x51FD;&#x6570;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x6570;&#x7EC4;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <a href="docs/collections">&#x96C6;&#x5408;</a> &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>$collection = collect([&apos;taylor&apos;, &apos;abigail&apos;]);
+</code></pre><p><a name="method-config"></a></p>
+<h4 id="collection-method"><code>config()</code> </h4>
+<p><code>config</code> &#x51FD;&#x6570;&#x83B7;&#x53D6; <a href="docs/configuration">&#x914D;&#x7F6E;</a> &#x53D8;&#x91CF;&#x7684;&#x503C;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x300C;&#x70B9;&#x300D;&#x8BED;&#x6CD5;&#x8BBF;&#x95EE;&#x914D;&#x7F6E;&#x503C;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#x548C;&#x5E0C;&#x671B;&#x8BBF;&#x95EE;&#x7684;&#x9009;&#x9879;&#x3002;&#x5982;&#x679C;&#x914D;&#x7F6E;&#x9009;&#x9879;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x503C;&#x5E76;&#x8FD4;&#x56DE;&#xFF1A;</p>
+<pre class="language-"><code>$value = config(&apos;app.timezone&apos;);
+
+$value = config(&apos;app.timezone&apos;, $default);
+</code></pre><p>&#x53EF;&#x4EE5;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x4E00;&#x7EC4;&#x952E;/&#x503C;&#x5BF9;&#x6765;&#x8BBE;&#x7F6E;&#x914D;&#x7F6E;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre class="language-"><code>config([&apos;app.debug&apos; =&gt; true]);
+</code></pre><p><a name="method-cookie"></a></p>
+<h4 id="collection-method"><code>cookie()</code> </h4>
+<p><code>cookie</code> &#x51FD;&#x6570;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <a href="docs/requests#cookies">cookie</a> &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>$cookie = cookie(&apos;name&apos;, &apos;value&apos;, $minutes);
+</code></pre><p><a name="method-csrf-field"></a></p>
+<h4 id="collection-method"><code>csrf_field()</code> </h4>
+<p><code>csrf_field</code> &#x51FD;&#x6570;&#x751F;&#x6210;&#x5305;&#x542B; CSRF &#x4EE4;&#x724C;&#x503C;&#x7684; HTML <code>hidden</code> &#x8868;&#x5355;&#x5B57;&#x6BB5;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F7F;&#x7528; <a href="docs/blade">Blade &#x8BED;&#x6CD5;</a>&#xFF1A;</p>
+<pre class="language-"><code>{{ csrf_field() }}
+</code></pre><p><a name="method-csrf-token"></a></p>
+<h4 id="collection-method"><code>csrf_token()</code> </h4>
+<p><code>csrf_token</code> &#x51FD;&#x6570;&#x83B7;&#x53D6;&#x5F53;&#x524D; CSRF &#x4EE4;&#x724C;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$token = csrf_token();
+</code></pre><p><a name="method-dd"></a></p>
+<h4 id="collection-method"><code>dd()</code> </h4>
+<p><code>dd</code> &#x51FD;&#x6570;&#x8F93;&#x51FA;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x5E76;&#x7ED3;&#x675F;&#x811A;&#x672C;&#x8FD0;&#x884C;&#xFF1A;</p>
+<pre class="language-"><code>dd($value);
+
+dd($value1, $value2, $value3, ...);
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x60F3;&#x7EC8;&#x6B62;&#x811A;&#x672C;&#x8FD0;&#x884C;&#xFF0C;&#x8BF7;&#x6539;&#x7528; <code>dump</code> &#x51FD;&#x6570;&#x3002;</p>
+<p><a name="method-decrypt"></a></p>
+<h4 id="collection-method"><code>decrypt()</code> </h4>
+<p><code>decrypt</code> &#x51FD;&#x6570;&#x4F7F;&#x7528; Laravel &#x7684; <a href="docs/encryption">&#x52A0;&#x5BC6;&#x5668;</a> &#x6765;&#x89E3;&#x5BC6;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$decrypted = decrypt($encrypted_value);
+</code></pre><p><a name="method-dispatch"></a></p>
+<h4 id="collection-method"><code>dispatch()</code> </h4>
+<p><code>dispatch</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x7684; <a href="docs/queues#creating-jobs">&#x4EFB;&#x52A1;</a> &#x63A8;&#x9001;&#x5230; Laravel <a href="docs/queues">&#x4EFB;&#x52A1;&#x5217;&#x961F;</a> &#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code>dispatch(new App\Jobs\SendEmails);
+</code></pre><p><a name="method-dispatch-now"></a></p>
+<h4 id="collection-method"><code>dispatch_now()</code> </h4>
+<p><code>dispatch_now</code> &#x51FD;&#x6570;&#x7ACB;&#x5373;&#x8FD0;&#x884C;&#x7ED9;&#x5B9A;&#x7684; <a href="docs/queues#creating-jobs">&#x4EFB;&#x52A1;</a>&#xFF0C;&#x5E76;&#x4ECE;&#x5176; <code>handle</code> &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$result = dispatch_now(new App\Jobs\SendEmails);
+</code></pre><p><a name="method-dump"></a></p>
+<h4 id="collection-method"><code>dump()</code> </h4>
+<p><code>dump</code> &#x51FD;&#x6570;&#x6253;&#x5370;&#x7ED9;&#x5B9A;&#x7684;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre class="language-"><code>dump($value);
+
+dump($value1, $value2, $value3, ...);
+</code></pre><p>&#x5982;&#x679C;&#x8981;&#x5728;&#x6253;&#x5370;&#x53D8;&#x91CF;&#x540E;&#x505C;&#x6B62;&#x6267;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x8BF7;&#x6539;&#x7528; <a href="#method-dd"><code>dd</code></a> &#x51FD;&#x6570;&#x3002;</p>
+<p><a name="method-encrypt"></a></p>
+<h4 id="collection-method"><code>encrypt()</code> </h4>
+<p><code>encrypt</code> &#x51FD;&#x6570;&#x4F7F;&#x7528; Laravel &#x7684; <a href="docs/encryption">&#x52A0;&#x5BC6;&#x5668;</a> &#x5BF9;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#xFF1A;</p>
+<pre class="language-"><code>$encrypted = encrypt($unencrypted_value);
+</code></pre><p><a name="method-env"></a></p>
+<h4 id="collection-method"><code>env()</code> </h4>
+<p><code>env</code> &#x51FD;&#x6570;&#x83B7;&#x53D6; <a href="docs/configuration#environment-configuration">&#x73AF;&#x5883;&#x53D8;&#x91CF;</a> &#x7684;&#x503C;&#x6216;&#x8005;&#x8FD4;&#x56DE;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$env = env(&apos;APP_ENV&apos;);
+
+// &#x5982;&#x679C;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x8FD4;&#x56DE;&#x9ED8;&#x8BA4;&#x503C;...
+$env = env(&apos;APP_ENV&apos;, &apos;production&apos;);
+</code></pre><p><a name="method-event"></a></p>
+<h4 id="collection-method"><code>event()</code> </h4>
+<p><code>event</code> &#x51FD;&#x6570;&#x5C06;&#x7ED9;&#x5B9A;&#x7684; <a href="docs/events">&#x4E8B;&#x4EF6;</a> &#x5206;&#x6D3E;&#x7ED9;&#x5B83;&#x7684;&#x76D1;&#x542C;&#x5668;&#xFF1A;</p>
+<pre class="language-"><code>event(new UserRegistered($user));
+</code></pre><p><a name="method-factory"></a></p>
+<h4 id="collection-method"><code>factory()</code> </h4>
+<p><code>factory</code> &#x51FD;&#x6570;&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x7C7B;&#x3001;&#x540D;&#x79F0;&#x548C;&#x6570;&#x91CF;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x5DE5;&#x5382;&#x6784;&#x5EFA;&#x5668;&#x3002;&#x53EF;&#x4EE5;&#x5728; <a href="docs/database-testing#writing-factories">&#x6D4B;&#x8BD5;</a> or <a href="docs/seeding#using-model-factories">&#x6570;&#x636E;&#x586B;&#x5145;</a> &#x4E2D;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre class="language-"><code>$user = factory(App\User::class)-&gt;make();
+</code></pre><p><a name="method-filled"></a></p>
+<h4 id="collection-method"><code>filled()</code> </h4>
+<p><code>filled</code> &#x51FD;&#x6570;&#x5224;&#x65AD;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x662F;&#x5426;&#x4E0D;&#x4E3A;&#x300C;&#x7A7A;&#x300D;&#xFF1A;</p>
+<pre class="language-"><code>filled(0);
+filled(true);
+filled(false);
+
+// true
+
+filled(&apos;&apos;);
+filled(&apos;   &apos;);
+filled(null);
+filled(collect());
+
+// false
+</code></pre><p>&#x8981;&#x4F7F;&#x7528;&#x4E0E; <code>filled</code> &#x76F8;&#x53CD;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x8BF7;&#x770B; <a href="docs/helpers#method-blank">blank</a> &#x65B9;&#x6CD5;&#x3002;</p>
+<p><a name="method-info"></a></p>
+<h4 id="collection-method"><code>info()</code> </h4>
+<p><code>info</code> &#x51FD;&#x6570;&#x5C06;&#x4FE1;&#x606F;&#x5199;&#x5165;&#x65E5;&#x5FD7;&#xFF1A;</p>
+<pre class="language-"><code>info(&apos;Some helpful information!&apos;);
+</code></pre><p>&#x6709;&#x524D;&#x540E;&#x5173;&#x7CFB;&#x7684;&#x6570;&#x7EC4;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x7ED9;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code>info(&apos;User login attempt failed.&apos;, [&apos;id&apos; =&gt; $user-&gt;id]);
+</code></pre><p><a name="method-logger"></a></p>
+<h4 id="collection-method"><code>logger()</code> </h4>
+<p><code>logger</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5C06;&#x4E00;&#x4E2A; <code>debug</code> &#x7EA7;&#x522B;&#x7684;&#x6D88;&#x606F;&#x5199;&#x5165;&#x5230; <a href="docs/errors#logging">&#x65E5;&#x5FD7;</a> &#x4E2D;&#xFF1A;</p>
+<pre class="language-"><code>logger(&apos;Debug message&apos;);
+</code></pre><p>&#x6709;&#x524D;&#x540E;&#x5173;&#x7CFB;&#x7684;&#x6570;&#x7EC4;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x7ED9;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code>logger(&apos;User has logged in.&apos;, [&apos;id&apos; =&gt; $user-&gt;id]);
+</code></pre><p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F20;&#x503C;&#x7ED9;&#x51FD;&#x6570;&#x5219;&#x8FD4;&#x56DE; <a href="docs/errors#logging">&#x65E5;&#x5FD7;</a> &#x7684;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>logger()-&gt;error(&apos;You are not allowed here.&apos;);
+</code></pre><p><a name="method-method-field"></a></p>
+<h4 id="collection-method"><code>method_field()</code> </h4>
+<p><code>method_field</code> &#x51FD;&#x6570;&#x751F;&#x6210;&#x4E00;&#x4E2A; HTML <code>hidden</code> &#x8868;&#x5355;&#x5B57;&#x6BB5;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x8868;&#x5355;&#x7684; HTTP &#x52A8;&#x4F5C;&#x7684;&#x6B3A;&#x9A97;&#x503C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x4F7F;&#x7528; <a href="docs/blade">Blade &#x8BED;&#x6CD5;</a>&#xFF1A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>POST<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    {{ method_field(&apos;DELETE&apos;) }}
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p><a name="method-now"></a></p>
+<h4 id="collection-method"><code>now()</code> </h4>
+<p><code>now</code> &#x51FD;&#x6570;&#x4E3A;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>Illuminate\Support\Carbon</code> &#x5B9E;&#x4F8B;:</p>
+<pre class="language-"><code>$now = now();
+</code></pre><p><a name="method-old"></a></p>
+<h4 id="collection-method"><code>old()</code> </h4>
+<p><code>old</code> &#x51FD;&#x6570; <a href="docs/requests#retrieving-input">&#x83B7;&#x53D6;</a> &#x4F1A;&#x8BDD;&#x4E2D;&#x95EA;&#x5B58;&#x7684; <a href="docs/requests#old-input">&#x65E7;&#x8F93;&#x5165;</a> &#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$value = old(&apos;value&apos;);
+
+$value = old(&apos;value&apos;, &apos;default&apos;);
+</code></pre><p><a name="method-optional"></a></p>
+<h4 id="collection-method"><code>optional()</code> </h4>
+<p><code>optional</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4EFB;&#x4F55;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x5141;&#x8BB8;&#x4F60;&#x8BBF;&#x95EE;&#x8BE5;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x6216;&#x8005;&#x8C03;&#x7528;&#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;&#x5BF9;&#x8C61;&#x662F; <code>null</code> &#xFF0C; &#x90A3;&#x4E48;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x4F1A;&#x7B80;&#x5355;&#x5730;&#x8FD4;&#x56DE; <code>null</code> &#x800C;&#x4E0D;&#x662F;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#xFF1A;</p>
+<pre class="language-"><code>return optional($user-&gt;address)-&gt;street;
+
+{!! old(&apos;name&apos;, optional($user)-&gt;name) !!}
+</code></pre><p><a name="method-policy"></a></p>
+<h4 id="collection-method"><code>policy()</code> </h4>
+<p><code>policy</code> &#x65B9;&#x6CD5;&#x4E3A;&#x7ED9;&#x5B9A;&#x7684;&#x7C7B;&#x83B7;&#x53D6;&#x4E00;&#x4E2A; <a href="docs/authorization#creating-policies">&#x7B56;&#x7565;</a> &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>$policy = policy(App\User::class);
+</code></pre><p><a name="method-redirect"></a></p>
+<h4 id="collection-method"><code>redirect()</code> </h4>
+<p><code>redirect</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <a href="docs/responses#redirects">&#x91CD;&#x5B9A;&#x5411; HTTP &#x54CD;&#x5E94;</a>&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6CA1;&#x6709;&#x4F20;&#x5165;&#x53C2;&#x6570;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x91CD;&#x5B9A;&#x5411;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>return redirect(&apos;/home&apos;);
+
+return redirect()-&gt;route(&apos;route.name&apos;);
+</code></pre><p><a name="method-report"></a></p>
+<h4 id="collection-method"><code>report()</code> </h4>
+<p><code>report</code> &#x51FD;&#x6570;&#x5C06;&#x4F7F;&#x7528; <a href="docs/errors#the-exception-handler">&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7A0B;&#x5E8F;</a> &#x7684; <code>report</code> &#x65B9;&#x6CD5;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF1A;</p>
+<pre class="language-"><code>report($e);
+</code></pre><p><a name="method-request"></a></p>
+<h4 id="collection-method"><code>request()</code> </h4>
+<p><code>request</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x5F53;&#x524D; <a href="docs/requests">&#x8BF7;&#x6C42;</a> &#x5B9E;&#x4F8B;&#x6216;&#x8005;&#x83B7;&#x53D6;&#x8F93;&#x5165;&#x9879;&#xFF1A;</p>
+<pre class="language-"><code>$request = request();
+
+$value = request(&apos;key&apos;, $default = null)
+</code></pre><p><a name="method-rescue"></a></p>
+<h4 id="collection-method"><code>rescue()</code> </h4>
+<p><code>rescue</code> &#x51FD;&#x6570;&#x6267;&#x884C;&#x7ED9;&#x5B9A;&#x7684;&#x95ED;&#x5305;&#x5E76;&#x6355;&#x83B7;&#x6267;&#x884C;&#x671F;&#x95F4;&#x53D1;&#x751F;&#x7684;&#x4EFB;&#x4F55;&#x5F02;&#x5E38;&#x3002;&#x6240;&#x6709;&#x88AB;&#x6355;&#x83B7;&#x7684;&#x5F02;&#x5E38;&#x5C06;&#x88AB;&#x53D1;&#x9001;&#x5230;&#x4F60;&#x7684; <a href="docs/errors#the-exception-handler">&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7A0B;&#x5E8F;</a> &#x7684; <code>report</code> &#x65B9;&#x6CD5;&#x3002;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x8BE5;&#x8BF7;&#x6C42;&#x5C06;&#x7EE7;&#x7EED;&#x5904;&#x7406;&#xFF1A;</p>
+<pre class="language-"><code>return rescue(function () {
+    return $this-&gt;method();
+});
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9; <code>rescue</code> &#x65B9;&#x6CD5;&#x3002;&#x5982;&#x679C;&#x5728;&#x6267;&#x884C;&#x95ED;&#x5305;&#x65F6;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x5C06;&#x662F;&#x5E94;&#x8BE5;&#x8FD4;&#x56DE;&#x7684;&#x9ED8;&#x8BA4;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>return rescue(function () {
+    return $this-&gt;method();
+}, false);
+
+return rescue(function () {
+    return $this-&gt;method();
+}, function () {
+    return $this-&gt;failure();
+});
+</code></pre><p><a name="method-resolve"></a></p>
+<h4 id="collection-method"><code>resolve()</code> </h4>
+<p><code>resolve</code> &#x51FD;&#x6570;&#x4F7F;&#x7528; <a href="docs/container">&#x670D;&#x52A1;&#x5BB9;&#x5668;</a> &#x5C06;&#x7ED9;&#x5B9A;&#x7684;&#x7C7B;&#x6216;&#x63A5;&#x53E3;&#x540D;&#x79F0;&#x89E3;&#x6790;&#x4E3A;&#x5176;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>$api = resolve(&apos;HelpSpot\API&apos;);
+</code></pre><p><a name="method-response"></a></p>
+<h4 id="collection-method"><code>response()</code> </h4>
+<p><code>response</code> &#x51FD;&#x6570;&#x521B;&#x5EFA; <a href="docs/responses">&#x54CD;&#x5E94;</a> &#x5B9E;&#x4F8B;&#x6216;&#x8005;&#x83B7;&#x53D6;&#x54CD;&#x5E94;&#x5DE5;&#x5382;&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>return response(&apos;Hello World&apos;, 200, $headers);
+
+return response()-&gt;json([&apos;foo&apos; =&gt; &apos;bar&apos;], 200, $headers);
+</code></pre><p><a name="method-retry"></a></p>
+<h4 id="collection-method"><code>retry()</code> </h4>
+<p><code>retry</code> &#x51FD;&#x6570;&#x5C1D;&#x8BD5;&#x6267;&#x884C;&#x7ED9;&#x5B9A;&#x7684;&#x56DE;&#x8C03;&#xFF0C;&#x76F4;&#x5230;&#x5230;&#x8FBE;&#x7ED9;&#x5B9A;&#x7684;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;&#x3002;&#x5982;&#x679C;&#x56DE;&#x8C03;&#x6CA1;&#x6709;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x5C06;&#x88AB;&#x8FD4;&#x56DE;&#x3002;&#x5982;&#x679C;&#x56DE;&#x8C03;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5B83;&#x5C06;&#x81EA;&#x52A8;&#x91CD;&#x8BD5;&#x3002;&#x5982;&#x679C;&#x8D85;&#x8FC7;&#x6700;&#x5927;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;&#xFF0C;&#x5219;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF1A;</p>
+<pre class="language-"><code>return retry(5, function () {
+    // &#x5728; 100ms &#x5DE6;&#x53F3;&#x5C1D;&#x8BD5; 5 &#x6B21;...
+}, 100);
+</code></pre><p><a name="method-session"></a></p>
+<h4 id="collection-method"><code>session()</code> </h4>
+<p><code>session</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x6216;&#x8005;&#x8BBE;&#x7F6E; <a href="docs/session">Session</a> &#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$value = session(&apos;key&apos;);
+</code></pre><p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;&#x4E00;&#x7EC4;&#x952E;/&#x503C;&#x5BF9;&#x4F20;&#x9012;&#x7ED9;&#x8BE5;&#x51FD;&#x6570;&#x6765;&#x8BBE;&#x7F6E;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>session([&apos;chairs&apos; =&gt; 7, &apos;instruments&apos; =&gt; 3]);
+</code></pre><p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F20;&#x9012;&#x503C;&#x7ED9;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x8FD4;&#x56DE; Session &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>$value = session()-&gt;get(&apos;key&apos;);
+
+session()-&gt;put(&apos;key&apos;, $value);
+</code></pre><p><a name="method-tap"></a></p>
+<h4 id="collection-method"><code>tap()</code> </h4>
+<p><code>tap</code> &#x51FD;&#x6570;&#x63A5;&#x53D7;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;&#x4E00;&#x4E2A;&#x4EFB;&#x610F;&#x7684; <code>$value</code> &#x548C;&#x4E00;&#x4E2A;&#x95ED;&#x5305;&#x3002;<code>$value</code> &#x5C06;&#x88AB;&#x4F20;&#x9012;&#x7ED9;&#x95ED;&#x5305;&#xFF0C;&#x7136;&#x540E;&#x7531; <code>tap</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x3002;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x95ED;&#x5305;&#x4E2D;&#x4F7F;&#x7528; <code>return</code> &#x8FD4;&#x56DE;&#x503C;&#x3002;</p>
+<pre class="language-"><code>$user = tap(User::first(), function ($user) {
+    $user-&gt;name = &apos;taylor&apos;;
+
+    $user-&gt;save();
+});
+</code></pre><p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x95ED;&#x5305;&#x88AB;&#x4F20;&#x9012;&#x7ED9; <code>tap</code> &#x51FD;&#x6570;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x7ED9;&#x5B9A; <code>$value</code> &#x7684;&#x4EFB;&#x4F55;&#x65B9;&#x6CD5;&#x3002;&#x800C;&#x4F60;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x59CB;&#x7EC8;&#x4E3A; <code>$value</code> &#xFF0C;&#x65E0;&#x8BBA;&#x65B9;&#x6CD5;&#x5728;&#x5176;&#x5B9A;&#x4E49;&#x4E2D;&#x5B9E;&#x9645;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4EC0;&#x4E48;&#x3002;&#x4F8B;&#x5982;&#xFF0C;Eloquent &#x7684; <code>update</code> &#x65B9;&#x6CD5;&#x901A;&#x5E38;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F3A;&#x5236;&#x901A;&#x8FC7; <code>tap</code> &#x51FD;&#x6570;&#x94FE;&#x5F0F;&#x8C03;&#x7528; <code>update</code> &#x65B9;&#x6CD5;&#x6765;&#x8FD4;&#x56DE;&#x6A21;&#x578B;&#x672C;&#x8EAB;&#xFF1A;</p>
+<pre class="language-"><code>$user = tap($user)-&gt;update([
+    &apos;name&apos; =&gt; $name,
+    &apos;email&apos; =&gt; $email,
+]);
+</code></pre><p><a name="method-today"></a></p>
+<h4 id="collection-method"><code>today()</code> </h4>
+<p><code>today</code> &#x51FD;&#x6570;&#x4E3A;&#x5F53;&#x524D;&#x65E5;&#x671F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>Illuminate\Support\Carbon</code> &#x5B9E;&#x4F8B;:</p>
+<pre class="language-"><code>$today = today();
+</code></pre><p><a name="method-throw-if"></a></p>
+<h4 id="collection-method"><code>throw_if()</code> </h4>
+<p>&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;&#x5E03;&#x5C14;&#x8868;&#x8FBE;&#x5F0F;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4E3A; <code>true</code>&#xFF0C;<code>throw_if</code> &#x51FD;&#x6570;&#x629B;&#x51FA;&#x7ED9;&#x5B9A;&#x7684;&#x5F02;&#x5E38;&#xFF1A;</p>
+<pre class="language-"><code>throw_if(! Auth::user()-&gt;isAdmin(), AuthorizationException::class);
+
+throw_if(
+    ! Auth::user()-&gt;isAdmin(),
+    AuthorizationException::class,
+    &apos;You are not allowed to access this page&apos;
+);
+</code></pre><p><a name="method-throw-unless"></a></p>
+<h4 id="collection-method"><code>throw_unless()</code> </h4>
+<p>&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;&#x5E03;&#x5C14;&#x8868;&#x8FBE;&#x5F0F;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4E3A;<code>false</code>&#xFF0C;&#x5219; <code>throw_unless</code>&#x51FD;&#x6570;&#x4F1A;&#x629B;&#x51FA;&#x7ED9;&#x5B9A;&#x7684;&#x5F02;&#x5E38;&#xFF1A;</p>
+<pre class="language-"><code>throw_unless(Auth::user()-&gt;isAdmin(), AuthorizationException::class);
+
+throw_unless(
+    Auth::user()-&gt;isAdmin(),
+    AuthorizationException::class,
+    &apos;You are not allowed to access this page&apos;
+);
+</code></pre><p><a name="method-trait-uses-recursive"></a></p>
+<h4 id="collection-method"><code>trait_uses_recursive()</code> </h4>
+<p><code>trait_uses_recursive</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7C7B;&#x4F7F;&#x7528;&#x7684;&#x6240;&#x6709; trait&#xFF1A;</p>
+<pre class="language-"><code>$traits = trait_uses_recursive(\Illuminate\Notifications\Notifiable::class);
+</code></pre><p><a name="method-transform"></a></p>
+<h4 id="collection-method"><code>transform()</code> </h4>
+<p>&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x90A3;&#x4E48; <code>transform</code> &#x51FD;&#x6570;&#x5BF9;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x6267;&#x884C;&#x95ED;&#x5305;&#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>$callback = function ($value) {
+    return $value * 2;
+};
+
+$result = transform(5, $callback);
+
+// 10
+</code></pre><p>&#x9ED8;&#x8BA4;&#x503C;&#x6216;&#x95ED;&#x5305;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x3002;&#x5982;&#x679C;&#x7ED9;&#x5B9A;&#x503C;&#x4E3A;&#x7A7A;&#x767D;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x8BE5;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code>$result = transform(null, $callback, &apos;The value is blank&apos;);
+
+// The value is blank
+</code></pre><p><a name="method-validator"></a></p>
+<h4 id="collection-method"><code>validator()</code> </h4>
+<p><code>validator</code> &#x51FD;&#x6570;&#x7528;&#x7ED9;&#x5B9A;&#x7684;&#x53C2;&#x6570;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <a href="docs/validation">&#x9A8C;&#x8BC1;&#x5668;</a> &#x5B9E;&#x4F8B;&#x3002;&#x4E3A;&#x65B9;&#x4FBF;&#x8D77;&#x89C1;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x4EE3;&#x66FF; <code>Validator</code> facade &#xFF1A;</p>
+<pre class="language-"><code>$validator = validator($data, $rules, $messages);
+</code></pre><p><a name="method-value"></a></p>
+<h4 id="collection-method"><code>value()</code> </h4>
+<p><code>value</code> &#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x5C06;&#x4E00;&#x4E2A;&#x95ED;&#x5305;&#x4F20;&#x9012;&#x7ED9;&#x8BE5;&#x51FD;&#x6570;&#xFF0C;&#x5219;&#x5C06;&#x6267;&#x884C;&#x8BE5;&#x95ED;&#x5305;&#x5E76;&#x8FD4;&#x56DE;&#x5176;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>$result = value(true);
+
+// true
+
+$result = value(function () {
+    return false;
+});
+
+// false
+</code></pre><p><a name="method-view"></a></p>
+<h4 id="collection-method"><code>view()</code> </h4>
+<p><code>view</code> &#x51FD;&#x6570;&#x83B7;&#x53D6;&#x4E00;&#x4E2A; <a href="docs/views">&#x89C6;&#x56FE;</a> &#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>return view(&apos;auth.login&apos;);
+</code></pre><p><a name="method-with"></a></p>
+<h4 id="collection-method"><code>with()</code> </h4>
+<p><code>with</code> &#x51FD;&#x6570;&#x4F1A;&#x8FD4;&#x56DE;&#x7ED9;&#x5B9A;&#x7684;&#x503C;&#x3002;&#x5982;&#x679C;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x95ED;&#x5305;&#x4F5C;&#x4E3A;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4F1A;&#x8FD4;&#x56DE;&#x95ED;&#x5305;&#x6267;&#x884C;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>$callback = function ($value) {
+    return (is_numeric($value)) ? $value * 2 : 0;
+};
+
+$result = with(5, $callback);
+
+// 10
+
+$result = with(null, $callback);
+
+// 0
+
+$result = with(5, null);
+
+// 5
+</code></pre><h2 id="&#x8BD1;&#x8005;&#x7F72;&#x540D;">&#x8BD1;&#x8005;&#x7F72;&#x540D;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x7528;&#x6237;&#x540D;</th>
+<th>&#x5934;&#x50CF;</th>
+<th>&#x804C;&#x80FD;</th>
+<th>&#x7B7E;&#x540D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/medz" target="_blank">Seven Du</a></td>
+<td><img class="avatar-66 rm-style" src="https://avatars3.githubusercontent.com/u/5564821?s=300"></td>
+<td>&#x7FFB;&#x8BD1;</td>
+<td>&#x57FA;&#x4E8E; Laravel &#x7684;&#x793E;&#x4EA4;&#x5F00;&#x6E90;&#x7CFB;&#x7EDF; <a href="https://github.com/slimkit/thinksns-plus" target="_blank">ThinkSNS+</a> &#x6B22;&#x8FCE; Star&#x3002;</td>
+</tr>
+<tr>
+<td><a href="https://laravel-china.org/users/5350" target="_blank">@JokerLinly</a></td>
+<td><img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg"></td>
+<td>Review</td>
+<td>Stay Hungry. Stay Foolish.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<blockquote>
+<p>{note} &#x6B22;&#x8FCE;&#x4EFB;&#x4F55;&#x5F62;&#x5F0F;&#x7684;&#x8F6C;&#x8F7D;&#xFF0C;&#x4F46;&#x8BF7;&#x52A1;&#x5FC5;&#x6CE8;&#x660E;&#x51FA;&#x5904;&#xFF0C;&#x5C0A;&#x91CD;&#x4ED6;&#x4EBA;&#x52B3;&#x52A8;&#x5171;&#x521B;&#x5F00;&#x6E90;&#x793E;&#x533A;&#x3002;</p>
+<p>&#x8F6C;&#x8F7D;&#x8BF7;&#x6CE8;&#x660E;&#xFF1A;&#x672C;&#x6587;&#x6863;&#x7531; Laravel China &#x793E;&#x533A; <a href="https://laravel-china.org" target="_blank">laravel-china.org</a> &#x7EC4;&#x7EC7;&#x7FFB;&#x8BD1;&#xFF0C;&#x8BE6;&#x89C1; <a href="https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation" target="_blank">&#x7FFB;&#x8BD1;&#x53EC;&#x96C6;&#x5E16;</a>&#x3002;</p>
+<p>&#x6587;&#x6863;&#x6C38;&#x4E45;&#x5730;&#x5740;&#xFF1A; <a href="https://d.laravel-china.org" target="_blank">https://d.laravel-china.org</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="filesystem.html" class="navigation navigation-prev " aria-label="Previous page: 文件存储">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mail.html" class="navigation navigation-next " aria-label="Next page: 邮件发送">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"辅助函数","level":"1.8.7","depth":2,"next":{"title":"邮件发送","level":"1.8.8","depth":2,"path":"mail.md","ref":"mail.md","articles":[]},"previous":{"title":"文件存储","level":"1.8.6","depth":2,"path":"filesystem.md","ref":"filesystem.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"laravel-china.org","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Laravel 5.5 中文文档","language":"zh-hans","links":{"sidebar":{"Home":"//www.khs1994.com/more"}},"gitbook":"*","description":"Laravel 5.5 中文文档"},"file":{"path":"helpers.md","mtime":"2018-05-18T06:35:48.029Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-18T06:39:05.075Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
