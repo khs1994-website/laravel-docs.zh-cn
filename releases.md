@@ -484,19 +484,3 @@ Redis 和 Memcached 缓存驱动程序现在支持获取和释放原子「锁」
 ````
 
 `sticky` 选项是一个可选的值，可用于在当前请求周期内立即读取已写入数据库的记录。如果启用了 `sticky` 选项，并且在当前请求周期内对数据库执行了「写入」操作，任何进一步的「读取」操作将使用「写入」连接。这确保了在该请求周期期间写入的任何数据可以在同一请求期间立即从数据库读回。你可以决定这是否是你应用程序所需的行为。
-
-## 译者署名
-
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-| [@dongm2ez](https://github.com/dongm2ez)  | <img class="avatar-66 rm-style" src="https://avatars3.githubusercontent.com/u/9032795?v=3&s=460?imageView2/1/w/100/h/100">  |  翻译  | 欢迎在 [Github](https://github.com/dongm2ez) 上关注我 |
-| [@JokerLinly](https://laravel-china.org/users/5350)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg">  |  Review  | Stay Hungry. Stay Foolish. |
-
-
----
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
->
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
->
-> 文档永久地址： https://d.laravel-china.org

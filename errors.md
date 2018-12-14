@@ -259,17 +259,3 @@ Laravel 在强大的 [Monolog](https://github.com/seldaek/monolog) 库上提供�
 Monolog 还提供了各种可用于记录的处理程序。如果需要，你可以访问 Laravel 使用的底层的 Monolog 实例：
 
     $monolog = Log::getMonolog();
-
-## 译者署名
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-|[@ChrisonWang](https://github.com/ChrisonWang)  | <img class="avatar-66 rm-style" src="https://avatars0.githubusercontent.com/u/16531947?v=4&s=80">  |  翻译  | [@王欣](https://www.linkedin.com/in/ChrisonWang/) at LinkedIn|
-| [@JokerLinly](https://laravel-china.org/users/5350)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg">  | Review | Stay Hungry. Stay Foolish. |
-
----
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
->
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
->
-> 文档永久地址： https://d.laravel-china.org

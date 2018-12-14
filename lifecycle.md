@@ -48,18 +48,3 @@ HTTP 内核的 `handle` 方法的方法签名非常简单：接收 `Request` 并
 牢牢掌握 Laravel 应用程序如何通过服务提供器来构建和引导是非常有价值的。应用程序的默认服务提供器存储在 `app/Providers` 目录中。
 
 默认情况下，`AppServiceProvider` 没什么内容。这个提供器是用来添加自定义的应用程序引导和服务容器绑定。对于大型应用程序来说，可以创建几个服务提供器，让每个服务提供器都具有更精细的引导类型。
-
-## 译者署名
-
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-| [@JokerLinly](https://laravel-china.org/users/5350)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg">  |  翻译  | Stay Hungry. Stay Foolish. |
-
-
----
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
->
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
->
-> 文档永久地址： https://d.laravel-china.org

@@ -145,17 +145,3 @@
     }
 
 一旦属性被添加到 `appends` 清单，便会将模型中的数组和 JSON 这两种形式都包含进去。在 `appends`  数组中的属性也遵循模型中 `visible` 和 `hidden` 设置。
-
-
-## 译者署名
-| 用户名                                      | 头像                                       | 职能   | 签名                                       |
-| ---------------------------------------- | ---------------------------------------- | ---- | ---------------------------------------- |
-| [@GanymedeNil](https://github.com/GanymedeNil) | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/6859_1487055454.jpg?imageView2/1/w/100/h/100"> | 翻译   | 争做一个 Full Stack Developer  [@GanymedeNil](http://weibo.com/jinhongyang) |
-
---- 
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
-> 
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
-> 
-> 文档永久地址： https://d.laravel-china.org

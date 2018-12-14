@@ -144,17 +144,3 @@ Laravel 的本地化功能为在应用程序中支持多种语言提供方便的
 部分扩展包可能会附带自己的语言文件。你可以通过在 `resources/lang/vendor/{package}/{locale}` 放置文件来重写它们，而不是直接修改扩展包的核心文件。
 
 例如，你需要重写 `skyrim/hearthfire` 扩展包的英文语言文件 `messages.php` ，则需要把文件放置在 `resources/lang/vendor/hearthfire/en/messages.php` 。在这个文件中只应定义要覆盖的翻译字符串。任何没有被覆盖的翻译字符串仍将从扩展包的原始语言文件中加载。
-
-## 译者署名
-
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-| [@JokerLinly](https://laravel-china.org/users/5350)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg">  | Review | Stay Hungry. Stay Foolish. |
-
----
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
->
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
->
-> 文档永久地址： https://d.laravel-china.org

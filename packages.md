@@ -182,7 +182,7 @@
     public function boot()
     {
         $this->loadTranslationsFrom(__DIR__.'/path/to/translations', 'courier');
-    
+
         $this->publishes([
             __DIR__.'/path/to/translations' => resource_path('lang/vendor/courier'),
         ]);
@@ -227,7 +227,7 @@
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/path/to/views', 'courier');
-    
+
         $this->publishes([
             __DIR__.'/path/to/views' => resource_path('views/vendor/courier'),
         ]);
@@ -291,7 +291,7 @@
         $this->publishes([
             __DIR__.'/../config/package.php' => config_path('package.php')
         ], 'config');
-    
+
         $this->publishes([
             __DIR__.'/../database/migrations/' => database_path('migrations')
         ], 'migrations');
@@ -300,19 +300,3 @@
 现在当你的用户使用 `vendor:publish` Artisan 命令时，就可以通过标签名称分别发布不同分类的资源文件：
 
     php artisan vendor:publish --tag=config
-
-
-
-## 译者署名
-| 用户名                                      | 头像                                       | 职能   | 签名                                       |
-| ---------------------------------------- | ---------------------------------------- | ---- | ---------------------------------------- |
-| [@CraryPrimitiveMan](https://github.com/e421083458) | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/3020_1449383575.jpeg?imageView2/1/w/100/h/100"> | 翻译   | [构建自己的PHP框架](https://github.com/CraryPrimitiveMan/create-your-own-php-framework)，欢迎 Star。 |
-
-
---- 
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
-> 
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
-> 
-> 文档永久地址： https://d.laravel-china.org

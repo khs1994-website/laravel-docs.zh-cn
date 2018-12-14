@@ -166,18 +166,3 @@
 #### `Rules` 目录
 
 `Rules` 目录默认不存在，它会在运行 Artisan 命令 `make:rule` 命令时被创建。`Rules` 目录包含应用自定义验证规则对象。这些规则意在将复杂的验证逻辑封装在一个简单的对象中。更多详情可以查看 [验证文档](/docs/{{version}}/validation)。
-
-## 译者署名
-| 用户名 | 头像 | 职能 | 签名 |
-| --- | --- | --- | --- |
-| [@huiren](https://laravel-china.org/users/5583) | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5583_1472366142.png?imageView2/1/w/100/h/100"> | 翻译 | 认领翻译，只是起点。 |
-| [@JokerLinly](https://laravel-china.org/users/5350)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg">  |  Review  | Stay Hungry. Stay Foolish. |
-
-
----
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
->
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
->
-> 文档永久地址： https://d.laravel-china.org

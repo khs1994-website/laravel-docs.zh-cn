@@ -342,17 +342,3 @@ Mix 提供了一个 `webpackConfig` 方法来合并任何 `Webpack` 配置以覆
 
 正常情况下，Mix 会将每个包的编译的编译结果以系统通知的方式反馈给你。如果你希望停用这些通知（比如在生产服务器上使用了 Mix），可以通过 `disableNotifications` 方法实现：​
     mix.disableNotifications();
-
-## 译者署名
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-| [@zyxcba](https://github.com/cmzz) | <img class="avatar-66 rm-style" src="https://avatars3.githubusercontent.com/u/6111715?v=3&s=100"> | 翻译 | [考拉客](http://kaolake.net) - 考拉微商店主加盟立返100元！ |
-| [@JokerLinly](https://laravel-china.org/users/5350)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg">  | Review | Stay Hungry. Stay Foolish. |
-
----
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
->
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
->
-> 文档永久地址： https://d.laravel-china.org

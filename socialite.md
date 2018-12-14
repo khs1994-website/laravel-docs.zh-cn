@@ -103,7 +103,7 @@ class LoginController extends Controller
 ```
 
  `redirect` 方法负责发送用户到 OAuth 提供商，而 `user` 方法将读取传入的请求并从提供商处检索用户信息。在重定向用户之前，你还可以加入附加的 `scope` 方法来设置请求的「scope」。这个方法会覆盖所有现有的范围。
- 
+
 ```php
 return Socialite::driver('github')
             ->scopes(['scope1', 'scope2'])->redirect();
@@ -173,19 +173,3 @@ $user->getAvatar();
 ```php
 $user = Socialite::driver('github')->userFromToken($token);
 ```
-
-
-## 译者署名
-
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-| [@qufo](https://github.com/qufo)  | <img class="avatar-66 rm-style" src="https://avatars1.githubusercontent.com/u/2526883?v=3&s=460?imageView2/1/w/100/h/100">  |  翻译  | 欢迎共同探讨。[@Qufo](https://github.com/qufo) |
-
-
---- 
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
-> 
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
-> 
-> 文档永久地址： https://d.laravel-china.org

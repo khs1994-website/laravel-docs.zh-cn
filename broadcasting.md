@@ -71,9 +71,9 @@
 
 
     import Echo from "laravel-echo"
-    
+
     window.Pusher = require('pusher-js');
-    
+
     window.Echo = new Echo({
         broadcaster: 'pusher',
         key: 'your-pusher-key'
@@ -99,7 +99,7 @@ Redis 广播器会使用 Redis 的「生产者/消费者」特性来广播消息
 
 
     import Echo from "laravel-echo"
-    
+
     window.Echo = new Echo({
         broadcaster: 'socket.io',
         host: window.location.hostname + ':6001'
@@ -133,16 +133,16 @@ Laravel 的事件广播允许你使用基于驱动的 WebSockets 将服务端的
 
 
     <?php
-    
+
     namespace App\Events;
-    
+
     use Illuminate\Broadcasting\Channel;
     use Illuminate\Queue\SerializesModels;
     use Illuminate\Broadcasting\PrivateChannel;
     use Illuminate\Broadcasting\PresenceChannel;
     use Illuminate\Broadcasting\InteractsWithSockets;
     use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-    
+
     class ShippingStatusUpdated implements ShouldBroadcast
     {
         /**
@@ -195,22 +195,22 @@ Laravel 的事件广播允许你使用基于驱动的 WebSockets 将服务端的
 
 
     <?php
-    
+
     namespace App\Events;
-    
+
     use Illuminate\Broadcasting\Channel;
     use Illuminate\Queue\SerializesModels;
     use Illuminate\Broadcasting\PrivateChannel;
     use Illuminate\Broadcasting\PresenceChannel;
     use Illuminate\Broadcasting\InteractsWithSockets;
     use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-    
+
     class ServerCreated implements ShouldBroadcast
     {
         use SerializesModels;
-    
+
         public $user;
-    
+
         /**
          * 创建一个新的事件实例
          *
@@ -220,7 +220,7 @@ Laravel 的事件广播允许你使用基于驱动的 WebSockets 将服务端的
         {
             $this->user = $user;
         }
-    
+
         /**
          * 指定事件在哪些频道上进行广播
          *
@@ -297,9 +297,9 @@ Laravel 默认会使用事件的类名作为广播名称来广播事件。不过
 
 
     <?php
-    
+
     use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
-    
+
     class ShippingStatusUpdated implements ShouldBroadcastNow
     {
         //
@@ -354,7 +354,7 @@ Laravel 默认会使用事件的类名作为广播名称来广播事件。不过
 
 
     use App\Order;
-    
+
     Broadcast::channel('order.{order}', function ($user, Order $order) {
         return $user->id === $order->user_id;
     });
@@ -410,7 +410,7 @@ Laravel Echo 是一个 JavaScript 库，它使得订阅频道和监听由 Larave
 
 
     import Echo from "laravel-echo"
-    
+
     window.Echo = new Echo({
         broadcaster: 'pusher',
         key: 'your-pusher-key'
@@ -564,17 +564,3 @@ Presence 频道可以像公开和私有频道一样接收事件。使用一个�
         });
 
 在本例中，所有通过 `broadcast` 频道发送到 `App\User` 实例的消息通知都会被该回调接收到。一个针对 `App.User.{id}` 频道的授权回调函数已经被包含在 `Laravel` 的 `BroadcastServiceProvider` 中了。
-
-## 译者署名
-| 用户名                                      | 头像                                       | 职能   | 签名                                       |
-| ---------------------------------------- | ---------------------------------------- | ---- | ---------------------------------------- |
-| [@沈益飞](https://laravel-china.org/users/13655) | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/13655_1490162781.png?imageView2/1/w/100/h/100"> | 翻译   | [@m809745357](https://github.com/m809745357) at Github |
-
-
---- 
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
-> 
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
-> 
-> 文档永久地址： https://d.laravel-china.org

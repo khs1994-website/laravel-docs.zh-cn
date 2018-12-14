@@ -71,19 +71,3 @@ Laravel 会自动为每个活跃用户的会话生成一个 CSRF「令牌」。�
 ## X-XSRF-TOKEN
 
 Laravel 将当前的 CSRF 令牌存储在由框架生成的每个响应中包含的一个 `XSRF-TOKEN` cookie 中。为方便起见，你可以使用 cookie 值来设置 X-XSRF-TOKEN 请求头，而一些 JavaScript 框架和库（如 Angular 和 Axios）会自动将这个值添加到 `X-XSRF-TOKEN` 头中。
-
-## 译者署名
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-| [@王凯波](http://weibo.com/wangkaibo)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/1924_1487053084.jpeg?imageView2/1/w/100/h/100">  |  翻译  | 面向工资编程  [@wangkaibo](https://github.com/wangkaibo/)  |
-| [@Lichmaker](https://laravel-china.org/users/16370)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/16370_1499995124.jpg?imageView2/1/w/100/h/100">  |  翻译 | Happy Coding! :) 我的微博：[神经考拉君](http://weibo.com/1779555595/) |
-| [@JokerLinly](https://laravel-china.org/users/5350)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg">  |  Review  | Stay Hungry. Stay Foolish. |
-
-
----
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
->
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
->
-> 文档永久地址： https://d.laravel-china.org

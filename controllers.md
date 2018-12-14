@@ -189,7 +189,7 @@ Laravel 资源路由将典型的「CRUD」路由分配给具有单行代码的�
 当声明用于 APIs 的资源路由时，通常需要排除显示 HTML 模板的路由（如 `create` 和 `edit` ）。为了方便起见，你可以使用 `apiResource` 方法自动排除这两个路由：
 
     Route::apiResource('photo', 'PhotoController');
-    
+
 你可以传递一个数组给 `apiResources` 方法来注册多个API资源控制器：
 
     Route::apiResources([
@@ -356,17 +356,3 @@ Laravel 使用 [服务容器](/docs/{{version}}/container) 来解析所有的控
 你可以使用 `route:clear` 命令清除路由缓存：
 
     php artisan route:clear
-
-## 译者署名
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-| [@easyFroce](https://github.com/easyForce)  | <img class="avatar-66 rm-style" src="https://s.gravatar.com/avatar/6c3b9c5876f09ef9603c6d64c503ca19?s=80">  |  翻译  | LOL |
-| [@JokerLinly](https://laravel-china.org/users/5350)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/5350_1481857380.jpg">  |  Review  | Stay Hungry. Stay Foolish. |
-
----
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
->
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
->
-> 文档永久地址： https://d.laravel-china.org

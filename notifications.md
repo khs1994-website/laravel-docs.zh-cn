@@ -141,7 +141,7 @@ Laravel 中一条通知就是一个类（通常存在 `app/Notifications` 文件
     $when = Carbon::now()->addMinutes(10);
 
     $user->notify((new InvoicePaid($invoice))->delay($when));
-    
+
 <a name="on-demand-notifications"></a>
 ### 按需通知
 
@@ -297,7 +297,7 @@ Markdown 邮件通知可让您利用邮件通知的预先构建的模板，同�
 要使用相应的 Markdown 模板生成通知，您可以使用 `make：notification` Artisan命令的 `--markdown` 选项：
 
     php artisan make:notification InvoicePaid --markdown=mail.invoice.paid
-    
+
 与所有其他邮件通知一样，使用 Markdown 模板的通知应在其通知类上定义一个 `toMail` 方法。 但是，不使用 `line` 和 `action` 方法来构造通知，而是使用 `markdown` 方法来指定应该使用的 Markdown 模板的名称：
 
     /**
@@ -488,7 +488,7 @@ Markdown 邮件通知使用 Blade 组件和Markdown语法的组合，允许您�
     }
 
 #### 广播队列配置
- 
+
 所有广播通知都排队等待广播。 如果要配置用于广播队列操作的队列连接或队列名称，你可以使用 `BroadcastMessage` 的 `onConnection` 和 `onQueue` 方法：
 
     return new BroadcastMessage($data)
@@ -906,18 +906,3 @@ Laravel 提供了开箱即用的通知频道，但是你可能会想编写自己
             // ...
         }
     }
-
-## 译者署名
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-| [@carlclone](https://laravel-china.org/users/7283)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/7283_1481302280.jpeg?imageView2/1/w/200/h/200">  |  翻译  |  [@carlclone](https://github.com/carlclone) at Github  |
-
-
-
---- 
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
-> 
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
-> 
-> 文档永久地址： https://d.laravel-china.org

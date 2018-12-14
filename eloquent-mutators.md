@@ -7,7 +7,7 @@
 - [日期转换器](#date-mutators)
 - [属性类型转换](#attribute-casting)
     - [数组 & JSON 转换](#array-and-json-casting)
-    
+
 
 <a name="introduction"></a>
 ## 简介
@@ -43,7 +43,7 @@
             return ucfirst($value);
         }
     }
-    
+
 如你所见，字段的原始值被传递到访问器中，允许你对它进行处理并返回结果。如果想获取被修改后的值，你可以在模型实例上访问 `first_name` 属性：
 
     $user = App\User::find(1);
@@ -121,7 +121,7 @@ public function getFullNameAttribute()
             'deleted_at'
         ];
     }
-    
+
 当某个字段被认为是日期格式时，你或许想将其数值设置成一个 UNIX 时间戳、日期字符串（`Y-m-d`）、日期时间（ `date-time` ）字符串，当然还有 `DateTime` 或 `Carbon` 实例，并且让日期值自动正确地保存到你的数据库中：
 
     $user = App\User::find(1);
@@ -135,7 +135,7 @@ public function getFullNameAttribute()
     $user = App\User::find(1);
 
     return $user->deleted_at->getTimestamp();
-    
+
 #### 日期格式
 
 默认情况下，时间戳将会以 `'Y-m-d H:i:s'` 的形式格式化。如果你想要自定义自己的时间戳格式，可在模型中设置 `$dateFormat` 属性。该属性决定了日期属性应以何种格式被保存到数据表中，以及当模型被序列化成数组或是 JSON 格式时，这些日期属性以何种格式被保存：
@@ -201,7 +201,7 @@ public function getFullNameAttribute()
     if ($user->is_admin) {
         //
     }
-    
+
 <a name="array-and-json-casting"></a>
 ### 数组 & JSON 转换
 
@@ -224,7 +224,7 @@ public function getFullNameAttribute()
             'options' => 'array',
         ];
     }
-    
+
 一旦类型转换被定义，你就可以访问 `options` 属性，它将会自动把 JSON 反序列化成一个 PHP 数组。当你设置 `options` 属性的值时，接收到的数组将会被自动序列化成 JSON 以便进行保存：
 
     $user = App\User::find(1);
@@ -236,16 +236,3 @@ public function getFullNameAttribute()
     $user->options = $options;
 
     $user->save();
-## 译者署名
-| 用户名 | 头像 | 职能 | 签名 |
-|---|---|---|---|
-| [@Ucer](http://codehaoshi.com)  | <img class="avatar-66 rm-style" src="https://dn-phphub.qbox.me/uploads/avatars/16042_1493680817.jpeg?imageView2/1/w/200/h/200">  |  翻译  | Php 工程师，[Code好事](http://codehaoshi.com) |
-
-
---- 
-
-> {note} 欢迎任何形式的转载，但请务必注明出处，尊重他人劳动共创开源社区。
-> 
-> 转载请注明：本文档由 Laravel China 社区 [laravel-china.org](https://laravel-china.org) 组织翻译，详见 [翻译召集帖](https://laravel-china.org/topics/5756/laravel-55-document-translation-call-come-and-join-the-translation)。
-> 
-> 文档永久地址： https://d.laravel-china.org
